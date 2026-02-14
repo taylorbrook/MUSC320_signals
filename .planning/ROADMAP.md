@@ -44,11 +44,12 @@ Plans:
   3. The five required topics (digital audio basics, signal vs control, engaging signals, basic operators, envelopes) are each clearly covered by at least one patch in the series
   4. The final build-up patch audibly resembles the opening noise sculpture demo
   5. Every build-up patch includes gain~/limiter before dac~ for volume safety, and scope~ is used where pedagogically useful to visualize signals
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 02-01: TBD
-- [ ] 02-02: TBD
+- [ ] 02-01-PLAN.md -- Create patches 01-03: Hello Signal, First Tone, Control Meets Signal (TOPC-02, TOPC-03, TOPC-04 partial)
+- [ ] 02-02-PLAN.md -- Create patches 04-06: Noise and Amplitude, Envelopes, Modulation and Mixing (TOPC-04 continued, TOPC-05)
+- [ ] 02-03-PLAN.md -- Create patch 07: Noise Sculpture Rebuild (BILD-04) and human verification of all 7 patches
 
 ### Phase 3: Lecture Outline and Diagrams
 **Goal**: The instructor has a timed script that tells them exactly which patch to open when, what to say, and where to cut if running long -- plus visual aids for concepts that can't be shown by patching
@@ -89,6 +90,6 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 | Phase | Plans Complete | Status | Completed |
 |-------|---------------|--------|-----------|
 | 1. Noise Sculpture Demo | 2/2 | ✓ Complete | 2026-02-14 |
-| 2. Build-Up Patch Series | 0/TBD | Not started | - |
+| 2. Build-Up Patch Series | 0/3 | Planned | - |
 | 3. Lecture Outline and Diagrams | 0/TBD | Not started | - |
 | 4. Student Handout and Annotation Polish | 0/TBD | Not started | - |
