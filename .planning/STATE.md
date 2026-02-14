@@ -5,33 +5,34 @@
 See: .planning/PROJECT.md (updated 2026-02-13)
 
 **Core value:** Students leave understanding that MSP signal objects (~) are a fundamentally different (and sonically powerful) way of working in Max -- and they have annotated patches they can study and experiment with on their own.
-**Current focus:** Phase 2: Build-Up Patch Series -- Not started
+**Current focus:** Phase 2: Build-Up Patch Series -- In progress
 
 ## Current Position
 
 Phase: 2 of 4 (Build-Up Patch Series)
-Plan: 0 of TBD in current phase
-Status: Not started
-Last activity: 2026-02-14 -- Phase 1 verified and complete
+Plan: 1 of 3 in current phase
+Status: In progress
+Last activity: 2026-02-14 -- Completed 02-01-PLAN.md (patches 01-03)
 
-Progress: [###.......] 25%
+Progress: [####......] 37%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 2
-- Average duration: 16min
-- Total execution time: 0.5 hours
+- Total plans completed: 3
+- Average duration: 12min
+- Total execution time: 0.6 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01-noise-sculpture-demo | 2 | 31min | 16min |
+| 02-build-up-patch-series | 1 | 4min | 4min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (6min), 01-02 (25min)
-- Trend: -
+- Last 5 plans: 01-01 (6min), 01-02 (25min), 02-01 (4min)
+- Trend: accelerating
 
 *Updated after each plan completion*
 
@@ -53,6 +54,10 @@ Recent decisions affecting current work:
 - [01-02]: Scope tap points at cycle~ output (before *~ scaling) for clean waveform display
 - [01-02]: Voice 3 detuned partial amplitude 0.7 (was 0.5) for richer drone
 - [Verification]: phasor~ accepted into Week 7 object list per instructor decision -- naturally fits as automation engine
+- [02-01]: Each build-up patch gets 17 comment annotations for thorough pedagogical coverage
+- [02-01]: Comparison cycle~ objects in Patch 02 are visual-only (scopes only, no audio output)
+- [02-01]: Unique parameter_longname per patch: Build-01/02/03 Vol (avoids live.gain~ parameter collision)
+- [02-01]: Patch 03 loadbang sets 185 Hz (not 440) for distinctive starting tone
 
 ### Pending Todos
 
@@ -66,5 +71,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-14
-Stopped at: Phase 1 complete and verified. Ready for Phase 2 planning.
+Stopped at: Completed 02-01-PLAN.md (patches 01-03 of build-up series). Ready for 02-02-PLAN.md.
 Resume file: None
