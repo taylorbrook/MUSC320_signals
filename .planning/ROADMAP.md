@@ -28,11 +28,11 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. Playing the demo produces a musically intriguing sound that evolves over time, using only Week 7 objects (noise~, cycle~, *~, +~, line~, sig~, live.gain~, dac~/ezdac~)
   3. A scope~ display shows waveform visualization so students can see the signal, not just hear it
   4. The audio signal passes through gain~/limiter before reaching dac~ so accidental full-amplitude output is impossible
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 01-01: TBD
-- [ ] 01-02: TBD
+- [ ] 01-01-PLAN.md -- Build synthesis engine, 3-voice architecture, automation, and output safety chain
+- [ ] 01-02-PLAN.md -- Add performance sliders, scope displays, Presentation Mode UI, and human verification
 
 ### Phase 2: Build-Up Patch Series
 **Goal**: Students have a numbered series of self-contained patches that reconstruct the demo step by step, with each patch introducing exactly one MSP concept and producing audible output
