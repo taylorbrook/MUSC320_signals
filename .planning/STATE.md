@@ -10,28 +10,28 @@ See: .planning/PROJECT.md (updated 2026-02-13)
 ## Current Position
 
 Phase: 2 of 4 (Build-Up Patch Series)
-Plan: 1 of 3 in current phase
+Plan: 2 of 3 in current phase
 Status: In progress
-Last activity: 2026-02-14 -- Completed 02-01-PLAN.md (patches 01-03)
+Last activity: 2026-02-14 -- Completed 02-02-PLAN.md (patches 04-06)
 
-Progress: [####......] 37%
+Progress: [#####.....] 50%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 3
-- Average duration: 12min
-- Total execution time: 0.6 hours
+- Total plans completed: 4
+- Average duration: 11min
+- Total execution time: 0.7 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01-noise-sculpture-demo | 2 | 31min | 16min |
-| 02-build-up-patch-series | 1 | 4min | 4min |
+| 02-build-up-patch-series | 2 | 10min | 5min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (6min), 01-02 (25min), 02-01 (4min)
+- Last 5 plans: 01-01 (6min), 01-02 (25min), 02-01 (4min), 02-02 (6min)
 - Trend: accelerating
 
 *Updated after each plan completion*
@@ -58,6 +58,9 @@ Recent decisions affecting current work:
 - [02-01]: Comparison cycle~ objects in Patch 02 are visual-only (scopes only, no audio output)
 - [02-01]: Unique parameter_longname per patch: Build-01/02/03 Vol (avoids live.gain~ parameter collision)
 - [02-01]: Patch 03 loadbang sets 185 Hz (not 440) for distinctive starting tone
+- [02-02]: Patch 04 sums noise and cycle~ comparison tone via +~ before output chain (single live.gain~)
+- [02-02]: Patch 05 uses simple on/off envelope (fade in 500ms, fade out 100ms) -- focused teaching
+- [02-02]: Patch 06 master level reuses toggle -> sel -> line~ pattern from Patch 05 for reinforcement
 
 ### Pending Todos
 
@@ -71,5 +74,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-14
-Stopped at: Completed 02-01-PLAN.md (patches 01-03 of build-up series). Ready for 02-02-PLAN.md.
+Stopped at: Completed 02-02-PLAN.md (patches 04-06 of build-up series). Ready for 02-03-PLAN.md.
 Resume file: None
