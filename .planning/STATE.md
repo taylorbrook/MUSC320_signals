@@ -5,32 +5,32 @@
 See: .planning/PROJECT.md (updated 2026-02-13)
 
 **Core value:** Students leave understanding that MSP signal objects (~) are a fundamentally different (and sonically powerful) way of working in Max -- and they have annotated patches they can study and experiment with on their own.
-**Current focus:** Phase 1: Noise Sculpture Demo
+**Current focus:** Phase 1: Noise Sculpture Demo -- Complete, awaiting verification
 
 ## Current Position
 
 Phase: 1 of 4 (Noise Sculpture Demo)
-Plan: 1 of 2 in current phase
-Status: Executing
-Last activity: 2026-02-14 -- Completed 01-01 (Synthesis Engine)
+Plan: 2 of 2 in current phase (all plans complete)
+Status: Verifying
+Last activity: 2026-02-13 -- Completed 01-02 (Presentation Mode UI + Control Signal Visualization)
 
-Progress: [#.........] 10%
+Progress: [##........] 20%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 1
-- Average duration: 6min
-- Total execution time: 0.1 hours
+- Total plans completed: 2
+- Average duration: 16min
+- Total execution time: 0.5 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 01-noise-sculpture-demo | 1 | 6min | 6min |
+| 01-noise-sculpture-demo | 2 | 31min | 16min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (6min)
+- Last 5 plans: 01-01 (6min), 01-02 (25min)
 - Trend: -
 
 *Updated after each plan completion*
@@ -47,6 +47,11 @@ Recent decisions affecting current work:
 - [Roadmap]: Rehearsal/tech-check excluded from roadmap -- real-world activity, not a buildable deliverable
 - [01-01]: Amplitude line~ messages tuned to start/end near 0.05 for click-free retrigger at metro boundaries
 - [01-01]: Stereo clip~ pair for complete output safety on both live.gain~ channels
+- [01-02]: Slider pattern: floatoutput=1 with min/size → sig~ (instructor preference over /127.→math→pack→line~)
+- [01-02]: Mix slider uses !- 1. for control-domain inversion before sig~
+- [01-02]: Phasor automation scopes added to Presentation Mode as control signal visualization (instructor addition)
+- [01-02]: Scope tap points at cycle~ output (before *~ scaling) for clean waveform display
+- [01-02]: Voice 3 detuned partial amplitude 0.7 (was 0.5) for richer drone
 
 ### Pending Todos
 
@@ -54,11 +59,11 @@ None yet.
 
 ### Blockers/Concerns
 
-- .maxpat JSON hand-editing has no official spec; validate by round-tripping through Max 9
-- Sonic quality of the noise sculpture cannot be verified without opening in Max 9 and listening -- JSON validation only confirms structure
+- .maxpat JSON hand-editing has no official spec; validate by round-tripping through Max 9 -- RESOLVED: patch verified in Max 9
+- Sonic quality verified by instructor in Max 9 -- RESOLVED
 
 ## Session Continuity
 
-Last session: 2026-02-14
-Stopped at: Completed 01-01-PLAN.md (Synthesis Engine)
+Last session: 2026-02-13
+Stopped at: Completed 01-02-PLAN.md, proceeding to phase verification
 Resume file: None
