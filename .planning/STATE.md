@@ -5,16 +5,16 @@
 See: .planning/PROJECT.md (updated 2026-02-13)
 
 **Core value:** Students leave understanding that MSP signal objects (~) are a fundamentally different (and sonically powerful) way of working in Max -- and they have annotated patches they can study and experiment with on their own.
-**Current focus:** Phase 1: Noise Sculpture Demo -- Complete, awaiting verification
+**Current focus:** Phase 2: Build-Up Patch Series -- Not started
 
 ## Current Position
 
-Phase: 1 of 4 (Noise Sculpture Demo)
-Plan: 2 of 2 in current phase (all plans complete)
-Status: Verifying
-Last activity: 2026-02-13 -- Completed 01-02 (Presentation Mode UI + Control Signal Visualization)
+Phase: 2 of 4 (Build-Up Patch Series)
+Plan: 0 of TBD in current phase
+Status: Not started
+Last activity: 2026-02-14 -- Phase 1 verified and complete
 
-Progress: [##........] 20%
+Progress: [###.......] 25%
 
 ## Performance Metrics
 
@@ -52,6 +52,7 @@ Recent decisions affecting current work:
 - [01-02]: Phasor automation scopes added to Presentation Mode as control signal visualization (instructor addition)
 - [01-02]: Scope tap points at cycle~ output (before *~ scaling) for clean waveform display
 - [01-02]: Voice 3 detuned partial amplitude 0.7 (was 0.5) for richer drone
+- [Verification]: phasor~ accepted into Week 7 object list per instructor decision -- naturally fits as automation engine
 
 ### Pending Todos
 
@@ -64,6 +65,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-13
-Stopped at: Completed 01-02-PLAN.md, proceeding to phase verification
+Last session: 2026-02-14
+Stopped at: Phase 1 complete and verified. Ready for Phase 2 planning.
 Resume file: None

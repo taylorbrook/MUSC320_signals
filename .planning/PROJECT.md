@@ -35,7 +35,8 @@ Students leave the lecture understanding that MSP signal objects (~) are a funda
 - Filters and subtractive synthesis — that's Week 10
 - UBC Toolbox — that's Week 11
 - Jitter/Vizzie — that's Week 13
-- phasor~ and selector~ — mentioned in Week 7 syllabus but not in the lecture topic list; include only if they naturally fit the demo
+- selector~ — mentioned in Week 7 syllabus but not in the lecture topic list; include only if they naturally fit the demo
+- phasor~ — now included; naturally fits the demo as the automation engine driving evolving modulation
 
 ## Context
 
@@ -63,6 +64,9 @@ Students leave the lecture understanding that MSP signal objects (~) are a funda
 | Finished demo + numbered build-up series | Gives students both the "wow" moment and a step-by-step learning path they can revisit | — Pending |
 | Heavy annotations in patches | Students can't build along in class, so annotated patches serve as study material after the lecture | — Pending |
 | All 5 topics at even pace | Breadth over depth for this introductory lecture; depth comes in later weeks | — Pending |
+| phasor~ included in Week 7 objects | Naturally fits as the automation engine driving evolving modulation; listed in Week 7 sidebar | Accepted |
+| Float slider → sig~ pattern | Simpler and more pedagogically transparent than /127.→math→pack→line~ chains | Accepted |
+| Control signal visualization in Presentation Mode | 6 phasor automation scopes visible to students — shows modulation shaping the sound | Accepted |
 
 ---
-*Last updated: 2026-02-13 after initialization*
+*Last updated: 2026-02-14 after phase 1 completion*

@@ -12,7 +12,7 @@ This roadmap delivers a complete 45-minute guest lecture kit introducing MSP to 
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Noise Sculpture Demo** - Create the finished demo patch that hooks student interest and anchors the entire kit
+- [x] **Phase 1: Noise Sculpture Demo** - Create the finished demo patch that hooks student interest and anchors the entire kit
 - [ ] **Phase 2: Build-Up Patch Series** - Deconstruct the demo into numbered concept-per-patch progression covering all 5 topics
 - [ ] **Phase 3: Lecture Outline and Diagrams** - Write the timed instructor script and visual aids grounded in actual patches
 - [ ] **Phase 4: Student Handout and Annotation Polish** - Produce the student reference card and apply systematic annotation pass across all patches
@@ -25,14 +25,14 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Requirements**: DEMO-01, DEMO-02, DEMO-03, DEMO-04
 **Success Criteria** (what must be TRUE):
   1. Opening the demo patch in Presentation Mode shows a clean performance UI with visible gain control -- no patching clutter visible to students
-  2. Playing the demo produces a musically intriguing sound that evolves over time, using only Week 7 objects (noise~, cycle~, *~, +~, line~, sig~, live.gain~, dac~/ezdac~)
+  2. Playing the demo produces a musically intriguing sound that evolves over time, using only Week 7 objects (noise~, cycle~, *~, +~, line~, sig~, phasor~, live.gain~, dac~/ezdac~)
   3. A scope~ display shows waveform visualization so students can see the signal, not just hear it
   4. The audio signal passes through gain~/limiter before reaching dac~ so accidental full-amplitude output is impossible
 **Plans**: 2 plans
 
 Plans:
-- [ ] 01-01-PLAN.md -- Build synthesis engine, 3-voice architecture, automation, and output safety chain
-- [ ] 01-02-PLAN.md -- Add performance sliders, scope displays, Presentation Mode UI, and human verification
+- [x] 01-01-PLAN.md -- Build synthesis engine, 3-voice architecture, automation, and output safety chain
+- [x] 01-02-PLAN.md -- Add performance sliders, scope displays, Presentation Mode UI, and human verification
 
 ### Phase 2: Build-Up Patch Series
 **Goal**: Students have a numbered series of self-contained patches that reconstruct the demo step by step, with each patch introducing exactly one MSP concept and producing audible output
@@ -88,7 +88,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|---------------|--------|-----------|
-| 1. Noise Sculpture Demo | 0/TBD | Not started | - |
+| 1. Noise Sculpture Demo | 2/2 | ✓ Complete | 2026-02-14 |
 | 2. Build-Up Patch Series | 0/TBD | Not started | - |
 | 3. Lecture Outline and Diagrams | 0/TBD | Not started | - |
 | 4. Student Handout and Annotation Polish | 0/TBD | Not started | - |
