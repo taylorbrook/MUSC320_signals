@@ -10,9 +10,19 @@
         },
         "classnamespace": "box",
         "rect": [ 100.0, 100.0, 900.0, 750.0 ],
-        "default_fontsize": 12.0,
-        "description": "05 \u2014 Envelopes: line~ and *~ create amplitude envelopes (MUSC 320 Week 7)",
+        "description": "05 — Envelopes: line~ and *~ create amplitude envelopes (MUSC 320 Week 7)",
         "boxes": [
+            {
+                "box": {
+                    "bgcolor": [ 0.1, 0.1, 0.12, 1.0 ],
+                    "id": "obj-6",
+                    "maxclass": "live.scope~",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [ "bang" ],
+                    "patching_rect": [ 160.0, 102.0, 180.0, 60.0 ]
+                }
+            },
             {
                 "box": {
                     "fontface": 1,
@@ -22,7 +32,7 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [ 30.0, 10.0, 350.0, 24.0 ],
-                    "text": "05 \u2014 Envelopes"
+                    "text": "05 — Envelopes"
                 }
             },
             {
@@ -43,7 +53,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 350.0, 62.0, 520.0, 19.0 ],
+                    "patching_rect": [ 350.0, 62.0, 583.0, 19.0 ],
                     "text": "line~ -- the signal version of 'line' (which you already know from Max). It ramps smoothly between values at audio rate.",
                     "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
                 }
@@ -79,7 +89,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 350.0, 128.0, 530.0, 19.0 ],
+                    "patching_rect": [ 350.0, 128.0, 546.0, 19.0 ],
                     "text": "Multiplying the tone by line~'s output is like turning a volume knob: 0 = silent, 1 = full volume, 0.5 = half volume",
                     "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
                 }
@@ -212,7 +222,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 120.0, 172.0, 80.0, 20.0 ],
+                    "patching_rect": [ 160.0, 167.5, 80.0, 20.0 ],
                     "text": "ON / OFF"
                 }
             },
@@ -355,6 +365,7 @@
             {
                 "box": {
                     "id": "obj-gain",
+                    "lastchannelcount": 0,
                     "maxclass": "live.gain~",
                     "numinlets": 2,
                     "numoutlets": 5,
@@ -422,94 +433,112 @@
         "lines": [
             {
                 "patchline": {
-                    "source": [ "obj-cycle", 0 ],
-                    "destination": [ "obj-mult", 0 ]
+                    "destination": [ "obj-dac", 0 ],
+                    "source": [ "obj-clip-l", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-toggle", 0 ],
-                    "destination": [ "obj-sel", 0 ]
+                    "destination": [ "obj-dac", 1 ],
+                    "source": [ "obj-clip-r", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-sel", 0 ],
-                    "destination": [ "obj-msg-off", 0 ]
+                    "destination": [ "obj-mult", 0 ],
+                    "source": [ "obj-cycle", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-sel", 1 ],
-                    "destination": [ "obj-msg-on", 0 ]
+                    "destination": [ "obj-clip-l", 0 ],
+                    "source": [ "obj-gain", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-msg-off", 0 ],
-                    "destination": [ "obj-line", 0 ]
+                    "destination": [ "obj-clip-r", 0 ],
+                    "source": [ "obj-gain", 1 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-msg-on", 0 ],
-                    "destination": [ "obj-line", 0 ]
+                    "destination": [ "obj-mult", 1 ],
+                    "order": 1,
+                    "source": [ "obj-line", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-line", 0 ],
-                    "destination": [ "obj-mult", 1 ]
+                    "destination": [ "obj-scope-env", 0 ],
+                    "order": 0,
+                    "source": [ "obj-line", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-line", 0 ],
-                    "destination": [ "obj-scope-env", 0 ]
+                    "destination": [ "obj-line", 0 ],
+                    "source": [ "obj-msg-off", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-mult", 0 ],
-                    "destination": [ "obj-scope-tone", 0 ]
+                    "destination": [ "obj-line", 0 ],
+                    "source": [ "obj-msg-on", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-mult", 0 ],
-                    "destination": [ "obj-gain", 0 ]
+                    "destination": [ "obj-gain", 1 ],
+                    "order": 1,
+                    "source": [ "obj-mult", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-mult", 0 ],
-                    "destination": [ "obj-gain", 1 ]
+                    "destination": [ "obj-gain", 0 ],
+                    "order": 2,
+                    "source": [ "obj-mult", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-gain", 0 ],
-                    "destination": [ "obj-clip-l", 0 ]
+                    "destination": [ "obj-scope-tone", 0 ],
+                    "order": 0,
+                    "source": [ "obj-mult", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-gain", 1 ],
-                    "destination": [ "obj-clip-r", 0 ]
+                    "destination": [ "obj-msg-off", 0 ],
+                    "source": [ "obj-sel", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-clip-l", 0 ],
-                    "destination": [ "obj-dac", 0 ]
+                    "destination": [ "obj-msg-on", 0 ],
+                    "source": [ "obj-sel", 1 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-clip-r", 0 ],
-                    "destination": [ "obj-dac", 1 ]
+                    "destination": [ "obj-sel", 0 ],
+                    "source": [ "obj-toggle", 0 ]
                 }
             }
-        ]
+        ],
+        "parameters": {
+            "obj-gain": [ "Build-05 Vol", "Vol", 0 ],
+            "parameterbanks": {
+                "0": {
+                    "index": 0,
+                    "name": "",
+                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
+                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+                }
+            },
+            "inherited_shortname": 1
+        },
+        "autosave": 0
     }
 }

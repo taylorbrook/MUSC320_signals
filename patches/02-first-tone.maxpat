@@ -9,10 +9,42 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 100.0, 100.0, 1000.0, 750.0 ],
-        "default_fontsize": 12.0,
+        "rect": [ 100.0, 100.0, 1430.0, 797.0 ],
         "description": "02 — First Tone: cycle~ frequency and amplitude, *~ scaling (MUSC 320 Week 7)",
         "boxes": [
+            {
+                "box": {
+                    "id": "obj-3",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [ "signal" ],
+                    "patching_rect": [ 530.0, 306.0, 66.0, 22.0 ],
+                    "text": "cycle~ 220"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-4",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [ "signal" ],
+                    "patching_rect": [ 774.0, 306.0, 66.0, 22.0 ],
+                    "text": "cycle~ 440"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-5",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [ "signal" ],
+                    "patching_rect": [ 1023.0, 306.0, 66.0, 22.0 ],
+                    "text": "cycle~ 880"
+                }
+            },
             {
                 "box": {
                     "fontface": 1,
@@ -66,7 +98,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 30.0, 155.0, 480.0, 19.0 ],
+                    "patching_rect": [ 30.0, 155.0, 485.0, 19.0 ],
                     "text": "cycle~ — cosine wave oscillator. The number after it is the frequency in Hertz (cycles per second)."
                 }
             },
@@ -242,24 +274,13 @@
             },
             {
                 "box": {
-                    "fontsize": 11.0,
-                    "id": "obj-ann-octave",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 530.0, 105.0, 430.0, 19.0 ],
-                    "text": "440 Hz = A above middle C. Double the frequency = up one octave."
-                }
-            },
-            {
-                "box": {
                     "id": "obj-cycle-220",
                     "maxclass": "newobj",
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "signal" ],
-                    "patching_rect": [ 530.0, 140.0, 72.0, 22.0 ],
-                    "text": "cycle~ 220"
+                    "patching_rect": [ 530.0, 140.0, 53.0, 22.0 ],
+                    "text": "cycle~ 1"
                 }
             },
             {
@@ -269,7 +290,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 530.0, 220.0, 130.0, 18.0 ],
+                    "patching_rect": [ 530.0, 333.0, 148.0, 18.0 ],
                     "text": "220 Hz — one octave below A4"
                 }
             },
@@ -281,7 +302,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "bang" ],
-                    "patching_rect": [ 530.0, 170.0, 80.0, 40.0 ]
+                    "patching_rect": [ 530.0, 170.0, 200.0, 91.0 ]
                 }
             },
             {
@@ -291,8 +312,8 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "signal" ],
-                    "patching_rect": [ 680.0, 140.0, 72.0, 22.0 ],
-                    "text": "cycle~ 440"
+                    "patching_rect": [ 774.0, 140.0, 53.0, 22.0 ],
+                    "text": "cycle~ 2"
                 }
             },
             {
@@ -302,7 +323,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 680.0, 220.0, 130.0, 18.0 ],
+                    "patching_rect": [ 774.0, 333.0, 134.0, 18.0 ],
                     "text": "440 Hz — A4 (concert pitch)"
                 }
             },
@@ -314,7 +335,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "bang" ],
-                    "patching_rect": [ 680.0, 170.0, 80.0, 40.0 ]
+                    "patching_rect": [ 774.0, 170.0, 200.0, 91.0 ]
                 }
             },
             {
@@ -324,8 +345,8 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "signal" ],
-                    "patching_rect": [ 830.0, 140.0, 72.0, 22.0 ],
-                    "text": "cycle~ 880"
+                    "patching_rect": [ 1023.0, 140.0, 53.0, 22.0 ],
+                    "text": "cycle~ 4"
                 }
             },
             {
@@ -335,7 +356,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 830.0, 220.0, 140.0, 18.0 ],
+                    "patching_rect": [ 1023.0, 333.0, 149.0, 18.0 ],
                     "text": "880 Hz — one octave above A4"
                 }
             },
@@ -347,7 +368,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "bang" ],
-                    "patching_rect": [ 830.0, 170.0, 80.0, 40.0 ]
+                    "patching_rect": [ 1023.0, 170.0, 200.0, 91.0 ]
                 }
             },
             {
@@ -357,58 +378,24 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 530.0, 250.0, 430.0, 19.0 ],
-                    "text": "live.scope~ shows the waveform. Notice: 880 Hz has twice as many cycles on screen as 440 Hz."
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 11.0,
-                    "id": "obj-ann-compare-note",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 530.0, 270.0, 430.0, 19.0 ],
-                    "text": "(These comparison tones only go to their scopes — they do not produce sound.)",
-                    "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
+                    "patching_rect": [ 530.0, 275.0, 693.0, 19.0 ],
+                    "text": "live.scope~ shows the waveform. Notice: 4 Hz has twice as many cycles on screen as 2 Hz, which is twice as much as 1"
                 }
             }
         ],
         "lines": [
             {
                 "patchline": {
-                    "destination": [ "obj-amp-main", 0 ],
-                    "source": [ "obj-cycle-main", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-scope-main", 0 ],
-                    "source": [ "obj-cycle-main", 0 ]
+                    "destination": [ "obj-gain", 1 ],
+                    "order": 0,
+                    "source": [ "obj-amp-main", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-gain", 0 ],
+                    "order": 1,
                     "source": [ "obj-amp-main", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-gain", 1 ],
-                    "source": [ "obj-amp-main", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-clipL", 0 ],
-                    "source": [ "obj-gain", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-clipR", 0 ],
-                    "source": [ "obj-gain", 1 ]
                 }
             },
             {
@@ -440,7 +427,46 @@
                     "destination": [ "obj-scope-880", 0 ],
                     "source": [ "obj-cycle-880", 0 ]
                 }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-amp-main", 0 ],
+                    "order": 1,
+                    "source": [ "obj-cycle-main", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-scope-main", 0 ],
+                    "order": 0,
+                    "source": [ "obj-cycle-main", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-clipL", 0 ],
+                    "source": [ "obj-gain", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-clipR", 0 ],
+                    "source": [ "obj-gain", 1 ]
+                }
             }
-        ]
+        ],
+        "parameters": {
+            "obj-gain": [ "Build-02 Vol", "Vol", 0 ],
+            "parameterbanks": {
+                "0": {
+                    "index": 0,
+                    "name": "",
+                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
+                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+                }
+            },
+            "inherited_shortname": 1
+        },
+        "autosave": 0
     }
 }

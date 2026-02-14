@@ -10,8 +10,7 @@
         },
         "classnamespace": "box",
         "rect": [ 100.0, 100.0, 1100.0, 850.0 ],
-        "default_fontsize": 12.0,
-        "description": "06 \u2014 Modulation and Mixing: phasor~ automation, +~ voice mixing, multi-voice architecture (MUSC 320 Week 7)",
+        "description": "06 — Modulation and Mixing: phasor~ automation, +~ voice mixing, multi-voice architecture (MUSC 320 Week 7)",
         "boxes": [
             {
                 "box": {
@@ -22,7 +21,7 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [ 30.0, 10.0, 400.0, 24.0 ],
-                    "text": "06 \u2014 Modulation and Mixing"
+                    "text": "06 — Modulation and Mixing"
                 }
             },
             {
@@ -67,7 +66,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 30.0, 102.0, 740.0, 19.0 ],
+                    "patching_rect": [ 30.0, 102.0, 761.0, 19.0 ],
                     "text": "phasor~ -> cycle~ phase = smooth cyclical modulation. Think of phasor~ as 'metro for signals' -- it repeats automatically without any control-domain timing.",
                     "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
                 }
@@ -103,7 +102,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 560.0, 170.0, 500.0, 19.0 ],
+                    "patching_rect": [ 560.0, 170.0, 530.0, 19.0 ],
                     "text": "The 3 Hz difference between 220 and 223 creates a gentle beating effect -- two nearly identical frequencies",
                     "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
                 }
@@ -291,7 +290,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "signal" ],
-                    "patching_rect": [ 30.0, 195.0, 66.0, 22.0 ],
+                    "patching_rect": [ 30.0, 195.0, 72.0, 22.0 ],
                     "text": "phasor~ 0.5"
                 }
             },
@@ -302,7 +301,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "signal" ],
-                    "patching_rect": [ 30.0, 225.0, 52.0, 22.0 ],
+                    "patching_rect": [ 30.0, 225.0, 53.0, 22.0 ],
                     "text": "cycle~ 0"
                 }
             },
@@ -324,7 +323,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "signal" ],
-                    "patching_rect": [ 30.0, 285.0, 42.0, 22.0 ],
+                    "patching_rect": [ 30.0, 285.0, 43.0, 22.0 ],
                     "text": "+~ 0.5"
                 }
             },
@@ -495,7 +494,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 200.0, 460.0, 200.0, 20.0 ],
+                    "patching_rect": [ 254.0, 491.0, 200.0, 20.0 ],
                     "text": "Mix Bus"
                 }
             },
@@ -524,6 +523,7 @@
             {
                 "box": {
                     "id": "obj-gain",
+                    "lastchannelcount": 0,
                     "maxclass": "live.gain~",
                     "numinlets": 2,
                     "numoutlets": 5,
@@ -591,160 +591,181 @@
         "lines": [
             {
                 "patchline": {
-                    "source": [ "obj-phasor", 0 ],
-                    "destination": [ "obj-lfo-cycle", 1 ]
+                    "destination": [ "obj-scope-voiceA", 0 ],
+                    "order": 1,
+                    "source": [ "obj-am", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-lfo-cycle", 0 ],
-                    "destination": [ "obj-lfo-scale", 0 ]
+                    "destination": [ "obj-voice-mix", 0 ],
+                    "order": 0,
+                    "source": [ "obj-am", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-lfo-scale", 0 ],
-                    "destination": [ "obj-lfo-offset", 0 ]
+                    "destination": [ "obj-dac", 0 ],
+                    "source": [ "obj-clip-l", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-lfo-offset", 0 ],
-                    "destination": [ "obj-am", 1 ]
+                    "destination": [ "obj-dac", 1 ],
+                    "source": [ "obj-clip-r", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-lfo-offset", 0 ],
-                    "destination": [ "obj-scope-lfo", 0 ]
+                    "destination": [ "obj-drone-scale", 0 ],
+                    "source": [ "obj-drone-det", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-tone-A", 0 ],
-                    "destination": [ "obj-am", 0 ]
+                    "destination": [ "obj-drone-sum", 0 ],
+                    "source": [ "obj-drone-fund", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-am", 0 ],
-                    "destination": [ "obj-scope-voiceA", 0 ]
+                    "destination": [ "obj-drone-sum", 1 ],
+                    "source": [ "obj-drone-scale", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-am", 0 ],
-                    "destination": [ "obj-voice-mix", 0 ]
+                    "destination": [ "obj-scope-voiceB", 0 ],
+                    "order": 0,
+                    "source": [ "obj-drone-sum", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-drone-fund", 0 ],
-                    "destination": [ "obj-drone-sum", 0 ]
+                    "destination": [ "obj-voice-mix", 1 ],
+                    "order": 1,
+                    "source": [ "obj-drone-sum", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-drone-det", 0 ],
-                    "destination": [ "obj-drone-scale", 0 ]
+                    "destination": [ "obj-clip-l", 0 ],
+                    "source": [ "obj-gain", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-drone-scale", 0 ],
-                    "destination": [ "obj-drone-sum", 1 ]
+                    "destination": [ "obj-clip-r", 0 ],
+                    "source": [ "obj-gain", 1 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-drone-sum", 0 ],
-                    "destination": [ "obj-scope-voiceB", 0 ]
+                    "destination": [ "obj-lfo-scale", 0 ],
+                    "source": [ "obj-lfo-cycle", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-drone-sum", 0 ],
-                    "destination": [ "obj-voice-mix", 1 ]
+                    "destination": [ "obj-am", 1 ],
+                    "order": 0,
+                    "source": [ "obj-lfo-offset", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-voice-mix", 0 ],
-                    "destination": [ "obj-master-mult", 0 ]
+                    "destination": [ "obj-scope-lfo", 0 ],
+                    "order": 1,
+                    "source": [ "obj-lfo-offset", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-master-toggle", 0 ],
-                    "destination": [ "obj-master-sel", 0 ]
+                    "destination": [ "obj-lfo-offset", 0 ],
+                    "source": [ "obj-lfo-scale", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-master-sel", 0 ],
-                    "destination": [ "obj-master-off", 0 ]
+                    "destination": [ "obj-master-mult", 1 ],
+                    "source": [ "obj-master-line", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-master-sel", 1 ],
-                    "destination": [ "obj-master-on", 0 ]
+                    "destination": [ "obj-gain", 1 ],
+                    "order": 0,
+                    "source": [ "obj-master-mult", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-master-off", 0 ],
-                    "destination": [ "obj-master-line", 0 ]
+                    "destination": [ "obj-gain", 0 ],
+                    "order": 1,
+                    "source": [ "obj-master-mult", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-master-on", 0 ],
-                    "destination": [ "obj-master-line", 0 ]
+                    "destination": [ "obj-master-line", 0 ],
+                    "source": [ "obj-master-off", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-master-line", 0 ],
-                    "destination": [ "obj-master-mult", 1 ]
+                    "destination": [ "obj-master-line", 0 ],
+                    "source": [ "obj-master-on", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-master-mult", 0 ],
-                    "destination": [ "obj-gain", 0 ]
+                    "destination": [ "obj-master-off", 0 ],
+                    "source": [ "obj-master-sel", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-master-mult", 0 ],
-                    "destination": [ "obj-gain", 1 ]
+                    "destination": [ "obj-master-on", 0 ],
+                    "source": [ "obj-master-sel", 1 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-gain", 0 ],
-                    "destination": [ "obj-clip-l", 0 ]
+                    "destination": [ "obj-master-sel", 0 ],
+                    "source": [ "obj-master-toggle", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-gain", 1 ],
-                    "destination": [ "obj-clip-r", 0 ]
+                    "destination": [ "obj-lfo-cycle", 1 ],
+                    "source": [ "obj-phasor", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-clip-l", 0 ],
-                    "destination": [ "obj-dac", 0 ]
+                    "destination": [ "obj-am", 0 ],
+                    "source": [ "obj-tone-A", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-clip-r", 0 ],
-                    "destination": [ "obj-dac", 1 ]
+                    "destination": [ "obj-master-mult", 0 ],
+                    "source": [ "obj-voice-mix", 0 ]
                 }
             }
-        ]
+        ],
+        "parameters": {
+            "obj-gain": [ "Build-06 Vol", "Vol", 0 ],
+            "parameterbanks": {
+                "0": {
+                    "index": 0,
+                    "name": "",
+                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
+                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+                }
+            },
+            "inherited_shortname": 1
+        },
+        "autosave": 0
     }
 }

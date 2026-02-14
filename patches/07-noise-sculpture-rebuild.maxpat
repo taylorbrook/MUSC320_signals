@@ -9,7 +9,7 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 100.0, 100.0, 1100.0, 1200.0 ],
+        "rect": [ 100.0, 95.0, 1100.0, 932.0 ],
         "description": "07 — Noise Sculpture Rebuild: complete demo reconstruction from all concepts (MUSC 320 Week 7)",
         "boxes": [
             {
@@ -55,7 +55,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 540.0, 28.0, 530.0, 18.0 ],
+                    "patching_rect": [ 540.0, 28.0, 540.0, 18.0 ],
                     "text": "Compare this patch to the demo: same sound, same objects, different layout. The demo adds Presentation Mode polish.",
                     "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
                 }
@@ -72,7 +72,6 @@
                     "textcolor": [ 0.3, 0.6, 0.3, 1.0 ]
                 }
             },
-
             {
                 "box": {
                     "fontface": 1,
@@ -161,7 +160,6 @@
                     "text": "line~"
                 }
             },
-
             {
                 "box": {
                     "fontface": 1,
@@ -185,7 +183,6 @@
                     "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
                 }
             },
-
             {
                 "box": {
                     "fontsize": 10.0,
@@ -258,7 +255,6 @@
                     "textcolor": [ 0.85, 0.75, 0.3, 1.0 ]
                 }
             },
-
             {
                 "box": {
                     "id": "obj-ph1",
@@ -292,7 +288,6 @@
                     "text": "*~ 1.5"
                 }
             },
-
             {
                 "box": {
                     "id": "obj-ph2",
@@ -337,7 +332,6 @@
                     "text": "+~ 0.5"
                 }
             },
-
             {
                 "box": {
                     "id": "obj-ph3",
@@ -371,7 +365,6 @@
                     "text": "*~ 20"
                 }
             },
-
             {
                 "box": {
                     "id": "obj-ph4",
@@ -416,7 +409,6 @@
                     "text": "+~ 0.5"
                 }
             },
-
             {
                 "box": {
                     "id": "obj-ph5",
@@ -461,7 +453,6 @@
                     "text": "+~ 110"
                 }
             },
-
             {
                 "box": {
                     "id": "obj-ph6",
@@ -506,7 +497,6 @@
                     "text": "+~ 0.45"
                 }
             },
-
             {
                 "box": {
                     "bgcolor": [ 0.1, 0.1, 0.12, 1.0 ],
@@ -573,7 +563,6 @@
                     "patching_rect": [ 760.0, 365.0, 120.0, 35.0 ]
                 }
             },
-
             {
                 "box": {
                     "fontface": 1,
@@ -592,7 +581,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 30.0, 435.0, 300.0, 18.0 ],
+                    "patching_rect": [ 30.0, 435.0, 329.0, 18.0 ],
                     "text": "Voice 1 uses noise~ (Patch 04) with phasor~ LFO modulation (Patch 06)",
                     "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
                 }
@@ -697,7 +686,6 @@
                     "text": "*~"
                 }
             },
-
             {
                 "box": {
                     "fontface": 1,
@@ -716,7 +704,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 350.0, 435.0, 300.0, 18.0 ],
+                    "patching_rect": [ 350.0, 435.0, 349.0, 18.0 ],
                     "text": "Voice 2 uses ring modulation: two detuned cycle~ multiplied (Patches 02, 06)",
                     "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
                 }
@@ -810,7 +798,6 @@
                     "text": "*~"
                 }
             },
-
             {
                 "box": {
                     "fontface": 1,
@@ -829,7 +816,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 650.0, 435.0, 330.0, 18.0 ],
+                    "patching_rect": [ 650.0, 435.0, 356.0, 18.0 ],
                     "text": "Voice 3 uses additive synthesis: two detuned cycle~ summed (Patches 02, 06)",
                     "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
                 }
@@ -923,7 +910,6 @@
                     "text": "*~"
                 }
             },
-
             {
                 "box": {
                     "fontface": 1,
@@ -942,7 +928,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 58.0, 685.0, 520.0, 18.0 ],
+                    "patching_rect": [ 58.0, 685.0, 538.0, 18.0 ],
                     "text": "The mix slider uses !- 1. — a control-domain trick: one slider controls noise level (direct) and tone+drone level (inverted)",
                     "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
                 }
@@ -1052,7 +1038,6 @@
                     "size": 10.0
                 }
             },
-
             {
                 "box": {
                     "id": "obj-sig1",
@@ -1119,7 +1104,6 @@
                     "text": "sig~"
                 }
             },
-
             {
                 "box": {
                     "fontface": 0,
@@ -1195,7 +1179,6 @@
                     "sig": 0.0
                 }
             },
-
             {
                 "box": {
                     "id": "obj-lb",
@@ -1262,7 +1245,6 @@
                     "text": "3."
                 }
             },
-
             {
                 "box": {
                     "fontface": 1,
@@ -1374,7 +1356,6 @@
                     "patching_rect": [ 320.0, 1160.0, 45.0, 45.0 ]
                 }
             },
-
             {
                 "box": {
                     "fontface": 1,
@@ -1482,579 +1463,198 @@
         "lines": [
             {
                 "patchline": {
-                    "destination": [ "obj-sel", 0 ],
-                    "source": [ "obj-tog", 0 ]
+                    "destination": [ "obj-dac", 0 ],
+                    "midpoints": [ 259.5, 1149.0, 259.5, 1149.0 ],
+                    "source": [ "obj-clipL", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-msg-off", 0 ],
-                    "source": [ "obj-sel", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-msg-on", 0 ],
-                    "source": [ "obj-sel", 1 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-line-master", 0 ],
-                    "source": [ "obj-msg-on", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-line-master", 0 ],
-                    "source": [ "obj-msg-off", 0 ]
-                }
-            },
-
-            {
-                "patchline": {
-                    "destination": [ "obj-cy1", 1 ],
-                    "source": [ "obj-ph1", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-sc1", 0 ],
-                    "order": 1,
-                    "source": [ "obj-cy1", 0 ]
+                    "destination": [ "obj-dac", 1 ],
+                    "midpoints": [ 349.5, 1149.0, 276.0, 1149.0, 276.0, 1155.0, 275.5, 1155.0 ],
+                    "source": [ "obj-clipR", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-phsc1", 0 ],
+                    "midpoints": [ 39.5, 309.0, 15.0, 309.0, 15.0, 351.0, 39.5, 351.0 ],
                     "order": 0,
                     "source": [ "obj-cy1", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-v1-lfo-add", 1 ],
-                    "source": [ "obj-sc1", 0 ]
-                }
-            },
-
-            {
-                "patchline": {
-                    "destination": [ "obj-cy2", 1 ],
-                    "source": [ "obj-ph2", 0 ]
+                    "destination": [ "obj-sc1", 0 ],
+                    "midpoints": [ 39.5, 309.0, 37.5, 309.0 ],
+                    "order": 1,
+                    "source": [ "obj-cy1", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-sc2a", 0 ],
+                    "midpoints": [ 179.5, 309.0, 179.5, 309.0 ],
                     "source": [ "obj-cy2", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-sc2b", 0 ],
-                    "source": [ "obj-sc2a", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-v1-amp", 1 ],
-                    "order": 1,
-                    "source": [ "obj-sc2b", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-phsc2", 0 ],
+                    "destination": [ "obj-phsc3", 0 ],
+                    "midpoints": [ 329.5, 309.0, 306.0, 309.0, 306.0, 351.0, 329.5, 351.0 ],
                     "order": 0,
-                    "source": [ "obj-sc2b", 0 ]
-                }
-            },
-
-            {
-                "patchline": {
-                    "destination": [ "obj-cy3", 1 ],
-                    "source": [ "obj-ph3", 0 ]
+                    "source": [ "obj-cy3", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-sc3", 0 ],
+                    "midpoints": [ 329.5, 309.0, 329.5, 309.0 ],
                     "order": 1,
                     "source": [ "obj-cy3", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-phsc3", 0 ],
-                    "order": 0,
-                    "source": [ "obj-cy3", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-v2-freqadd", 1 ],
-                    "source": [ "obj-sc3", 0 ]
-                }
-            },
-
-            {
-                "patchline": {
-                    "destination": [ "obj-cy4", 1 ],
-                    "source": [ "obj-ph4", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-sc4a", 0 ],
+                    "midpoints": [ 469.5, 309.0, 469.5, 309.0 ],
                     "source": [ "obj-cy4", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-sc4b", 0 ],
-                    "source": [ "obj-sc4a", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-v2-amp", 1 ],
-                    "order": 1,
-                    "source": [ "obj-sc4b", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-phsc4", 0 ],
+                    "destination": [ "obj-phsc5", 0 ],
+                    "midpoints": [ 619.5, 309.0, 597.0, 309.0, 597.0, 360.0, 619.5, 360.0 ],
                     "order": 0,
-                    "source": [ "obj-sc4b", 0 ]
-                }
-            },
-
-            {
-                "patchline": {
-                    "destination": [ "obj-cy5", 1 ],
-                    "source": [ "obj-ph5", 0 ]
+                    "source": [ "obj-cy5", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-sc5a", 0 ],
+                    "midpoints": [ 619.5, 309.0, 619.5, 309.0 ],
                     "order": 1,
                     "source": [ "obj-cy5", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-phsc5", 0 ],
-                    "order": 0,
-                    "source": [ "obj-cy5", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-sc5b", 0 ],
-                    "source": [ "obj-sc5a", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-v3-cy1", 0 ],
-                    "order": 1,
-                    "source": [ "obj-sc5b", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-v3-detuneadd", 0 ],
-                    "order": 0,
-                    "source": [ "obj-sc5b", 0 ]
-                }
-            },
-
-            {
-                "patchline": {
-                    "destination": [ "obj-cy6", 1 ],
-                    "source": [ "obj-ph6", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-sc6a", 0 ],
+                    "midpoints": [ 769.5, 309.0, 769.5, 309.0 ],
                     "source": [ "obj-cy6", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-sc6b", 0 ],
-                    "source": [ "obj-sc6a", 0 ]
+                    "destination": [ "obj-clipL", 0 ],
+                    "midpoints": [ 259.5, 1113.0, 259.5, 1113.0 ],
+                    "source": [ "obj-gain", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-v3-amp", 1 ],
-                    "order": 1,
-                    "source": [ "obj-sc6b", 0 ]
+                    "destination": [ "obj-clipR", 0 ],
+                    "midpoints": [ 266.75, 1119.0, 349.5, 1119.0 ],
+                    "source": [ "obj-gain", 1 ]
                 }
             },
-            {
-                "patchline": {
-                    "destination": [ "obj-phsc6", 0 ],
-                    "order": 0,
-                    "source": [ "obj-sc6b", 0 ]
-                }
-            },
-
-            {
-                "patchline": {
-                    "destination": [ "obj-v1-gate", 0 ],
-                    "source": [ "obj-noise", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-v1-lfo-cy", 0 ],
-                    "source": [ "obj-v1-lfo-add", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-v1-lfo-half", 0 ],
-                    "source": [ "obj-v1-lfo-cy", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-v1-lfo-uni", 0 ],
-                    "source": [ "obj-v1-lfo-half", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-v1-gate", 1 ],
-                    "source": [ "obj-v1-lfo-uni", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-v1-amp", 0 ],
-                    "source": [ "obj-v1-gate", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-v1-mix", 0 ],
-                    "order": 1,
-                    "source": [ "obj-v1-amp", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-scope-v1", 0 ],
-                    "order": 0,
-                    "source": [ "obj-v1-amp", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-mix1", 0 ],
-                    "source": [ "obj-v1-mix", 0 ]
-                }
-            },
-
-            {
-                "patchline": {
-                    "destination": [ "obj-v2-cy1", 0 ],
-                    "order": 1,
-                    "source": [ "obj-v2-freqadd", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-v2-detune", 0 ],
-                    "order": 0,
-                    "source": [ "obj-v2-freqadd", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-v2-cy2", 0 ],
-                    "source": [ "obj-v2-detune", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-v2-ring", 0 ],
-                    "source": [ "obj-v2-cy1", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-v2-ring", 1 ],
-                    "source": [ "obj-v2-cy2", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-v2-amp", 0 ],
-                    "source": [ "obj-v2-ring", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-v2-mix", 0 ],
-                    "order": 1,
-                    "source": [ "obj-v2-amp", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-scope-v2", 0 ],
-                    "order": 0,
-                    "source": [ "obj-v2-amp", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-mix1", 1 ],
-                    "source": [ "obj-v2-mix", 0 ]
-                }
-            },
-
-            {
-                "patchline": {
-                    "destination": [ "obj-v3-cy2", 0 ],
-                    "source": [ "obj-v3-detuneadd", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-v3-sum", 0 ],
-                    "source": [ "obj-v3-cy1", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-v3-partial", 0 ],
-                    "source": [ "obj-v3-cy2", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-v3-sum", 1 ],
-                    "source": [ "obj-v3-partial", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-v3-amp", 0 ],
-                    "source": [ "obj-v3-sum", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-v3-mix", 0 ],
-                    "order": 1,
-                    "source": [ "obj-v3-amp", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-scope-v3", 0 ],
-                    "order": 0,
-                    "source": [ "obj-v3-amp", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-mix2", 1 ],
-                    "source": [ "obj-v3-mix", 0 ]
-                }
-            },
-
-            {
-                "patchline": {
-                    "destination": [ "obj-sig1", 0 ],
-                    "source": [ "obj-s1", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-v1-lfo-add", 0 ],
-                    "order": 0,
-                    "source": [ "obj-sig1", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-num1", 0 ],
-                    "order": 1,
-                    "source": [ "obj-sig1", 0 ]
-                }
-            },
-
-            {
-                "patchline": {
-                    "destination": [ "obj-sig2", 0 ],
-                    "source": [ "obj-s2", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-v2-freqadd", 0 ],
-                    "order": 0,
-                    "source": [ "obj-sig2", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-num2", 0 ],
-                    "order": 1,
-                    "source": [ "obj-sig2", 0 ]
-                }
-            },
-
-            {
-                "patchline": {
-                    "destination": [ "obj-s3inv", 0 ],
-                    "order": 0,
-                    "source": [ "obj-s3", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-sig3", 0 ],
-                    "order": 1,
-                    "source": [ "obj-s3", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-v1-mix", 1 ],
-                    "order": 0,
-                    "source": [ "obj-sig3", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-num3", 0 ],
-                    "order": 1,
-                    "source": [ "obj-sig3", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-sig3b", 0 ],
-                    "source": [ "obj-s3inv", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-v2-mix", 1 ],
-                    "order": 0,
-                    "source": [ "obj-sig3b", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-v3-mix", 1 ],
-                    "order": 1,
-                    "source": [ "obj-sig3b", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-num3b", 0 ],
-                    "order": 2,
-                    "source": [ "obj-sig3b", 0 ]
-                }
-            },
-
-            {
-                "patchline": {
-                    "destination": [ "obj-sig4", 0 ],
-                    "source": [ "obj-s4", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-v3-detuneadd", 1 ],
-                    "order": 0,
-                    "source": [ "obj-sig4", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-num4", 0 ],
-                    "order": 1,
-                    "source": [ "obj-sig4", 0 ]
-                }
-            },
-
             {
                 "patchline": {
                     "destination": [ "obj-lbt", 0 ],
+                    "midpoints": [ 709.5, 741.0, 696.0, 741.0, 696.0, 768.0, 709.5, 768.0 ],
                     "source": [ "obj-lb", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-lbd1", 0 ],
-                    "source": [ "obj-lbt", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-lbd2", 0 ],
-                    "source": [ "obj-lbt", 1 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-lbd3", 0 ],
-                    "source": [ "obj-lbt", 2 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-lbd4", 0 ],
-                    "source": [ "obj-lbt", 3 ]
-                }
-            },
-            {
-                "patchline": {
                     "destination": [ "obj-s1", 0 ],
+                    "midpoints": [ 709.5, 768.0, 660.0, 768.0, 660.0, 831.0, 24.0, 831.0, 24.0, 714.0, 46.5, 714.0 ],
                     "source": [ "obj-lbd1", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-s2", 0 ],
+                    "midpoints": [ 744.5, 768.0, 660.0, 768.0, 660.0, 831.0, 156.0, 831.0, 156.0, 738.0, 165.0, 738.0, 165.0, 714.0, 179.5, 714.0 ],
                     "source": [ "obj-lbd2", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-s3", 0 ],
+                    "midpoints": [ 779.5, 768.0, 660.0, 768.0, 660.0, 831.0, 336.0, 831.0, 336.0, 714.0, 359.5, 714.0 ],
                     "source": [ "obj-lbd3", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-s4", 0 ],
+                    "midpoints": [ 814.5, 768.0, 660.0, 768.0, 660.0, 789.0, 537.0, 789.0, 537.0, 714.0, 559.5, 714.0 ],
                     "source": [ "obj-lbd4", 0 ]
                 }
             },
-
+            {
+                "patchline": {
+                    "destination": [ "obj-lbd1", 0 ],
+                    "midpoints": [ 709.5, 798.0, 687.0, 798.0, 687.0, 741.0, 709.5, 741.0 ],
+                    "source": [ "obj-lbt", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-lbd2", 0 ],
+                    "midpoints": [ 747.8333333333334, 807.0, 687.0, 807.0, 687.0, 741.0, 744.5, 741.0 ],
+                    "source": [ "obj-lbt", 1 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-lbd3", 0 ],
+                    "midpoints": [ 786.1666666666666, 807.0, 846.0, 807.0, 846.0, 732.0, 779.5, 732.0 ],
+                    "source": [ "obj-lbt", 2 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-lbd4", 0 ],
+                    "midpoints": [ 824.5, 798.0, 846.0, 798.0, 846.0, 732.0, 814.5, 732.0 ],
+                    "source": [ "obj-lbt", 3 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-master-mul", 1 ],
+                    "midpoints": [ 14.5, 936.0, 270.5, 936.0 ],
+                    "source": [ "obj-line-master", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-gain", 1 ],
+                    "midpoints": [ 259.5, 969.0, 288.5, 969.0 ],
+                    "order": 0,
+                    "source": [ "obj-master-mul", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-gain", 0 ],
+                    "midpoints": [ 259.5, 963.0, 259.5, 963.0 ],
+                    "order": 1,
+                    "source": [ "obj-master-mul", 0 ]
+                }
+            },
             {
                 "patchline": {
                     "destination": [ "obj-mix2", 0 ],
+                    "midpoints": [ 259.5, 900.0, 259.5, 900.0 ],
                     "source": [ "obj-mix1", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-master-mul", 0 ],
+                    "midpoints": [ 259.5, 930.0, 259.5, 930.0 ],
                     "order": 1,
                     "source": [ "obj-mix2", 0 ]
                 }
@@ -2062,65 +1662,519 @@
             {
                 "patchline": {
                     "destination": [ "obj-scope-main", 0 ],
+                    "midpoints": [ 259.5, 930.0, 486.0, 930.0, 486.0, 885.0, 509.5, 885.0 ],
                     "order": 0,
                     "source": [ "obj-mix2", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-master-mul", 1 ],
-                    "source": [ "obj-line-master", 0 ]
+                    "destination": [ "obj-line-master", 0 ],
+                    "midpoints": [ 34.5, 174.0, 14.5, 174.0 ],
+                    "source": [ "obj-msg-off", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-gain", 0 ],
-                    "order": 1,
-                    "source": [ "obj-master-mul", 0 ]
+                    "destination": [ "obj-line-master", 0 ],
+                    "midpoints": [ 151.5, 189.0, 42.0, 189.0, 42.0, 186.0, 14.5, 186.0 ],
+                    "source": [ "obj-msg-on", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-gain", 1 ],
+                    "destination": [ "obj-v1-gate", 0 ],
+                    "midpoints": [ 39.5, 495.0, 39.5, 495.0 ],
+                    "source": [ "obj-noise", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-cy1", 1 ],
+                    "midpoints": [ 39.5, 282.0, 73.5, 282.0 ],
+                    "source": [ "obj-ph1", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-cy2", 1 ],
+                    "midpoints": [ 179.5, 282.0, 213.5, 282.0 ],
+                    "source": [ "obj-ph2", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-cy3", 1 ],
+                    "midpoints": [ 329.5, 282.0, 363.5, 282.0 ],
+                    "source": [ "obj-ph3", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-cy4", 1 ],
+                    "midpoints": [ 469.5, 282.0, 503.5, 282.0 ],
+                    "source": [ "obj-ph4", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-cy5", 1 ],
+                    "midpoints": [ 619.5, 282.0, 653.5, 282.0 ],
+                    "source": [ "obj-ph5", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-cy6", 1 ],
+                    "midpoints": [ 769.5, 282.0, 803.5, 282.0 ],
+                    "source": [ "obj-ph6", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-sig1", 0 ],
+                    "midpoints": [ 46.5, 741.0, 46.5, 741.0 ],
+                    "source": [ "obj-s1", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-sig2", 0 ],
+                    "midpoints": [ 179.5, 741.0, 179.5, 741.0 ],
+                    "source": [ "obj-s2", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-s3inv", 0 ],
+                    "midpoints": [ 359.5, 741.0, 432.0, 741.0, 432.0, 738.0, 444.5, 738.0 ],
                     "order": 0,
-                    "source": [ "obj-master-mul", 0 ]
+                    "source": [ "obj-s3", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-clipL", 0 ],
-                    "source": [ "obj-gain", 0 ]
+                    "destination": [ "obj-sig3", 0 ],
+                    "midpoints": [ 359.5, 741.0, 359.5, 741.0 ],
+                    "order": 1,
+                    "source": [ "obj-s3", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-clipR", 0 ],
-                    "source": [ "obj-gain", 1 ]
+                    "destination": [ "obj-sig3b", 0 ],
+                    "midpoints": [ 444.5, 768.0, 444.5, 768.0 ],
+                    "source": [ "obj-s3inv", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-dac", 0 ],
-                    "source": [ "obj-clipL", 0 ]
+                    "destination": [ "obj-sig4", 0 ],
+                    "midpoints": [ 559.5, 741.0, 559.5, 741.0 ],
+                    "source": [ "obj-s4", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-dac", 1 ],
-                    "source": [ "obj-clipR", 0 ]
+                    "destination": [ "obj-v1-lfo-add", 1 ],
+                    "midpoints": [ 37.5, 351.0, 160.5, 351.0 ],
+                    "source": [ "obj-sc1", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-sc2b", 0 ],
+                    "midpoints": [ 179.5, 333.0, 179.5, 333.0 ],
+                    "source": [ "obj-sc2a", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-phsc2", 0 ],
+                    "midpoints": [ 179.5, 360.0, 179.5, 360.0 ],
+                    "order": 0,
+                    "source": [ "obj-sc2b", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-v1-amp", 1 ],
+                    "midpoints": [ 179.5, 360.0, 15.0, 360.0, 15.0, 555.0, 50.5, 555.0 ],
+                    "order": 1,
+                    "source": [ "obj-sc2b", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-v2-freqadd", 1 ],
+                    "midpoints": [ 329.5, 351.0, 213.0, 351.0, 213.0, 357.0, 156.0, 357.0, 156.0, 351.0, 15.0, 351.0, 15.0, 465.0, 357.0, 465.0, 357.0, 477.0, 402.0, 477.0, 402.0, 453.0, 390.5, 453.0 ],
+                    "source": [ "obj-sc3", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-sc4b", 0 ],
+                    "midpoints": [ 469.5, 333.0, 469.5, 333.0 ],
+                    "source": [ "obj-sc4a", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-phsc4", 0 ],
+                    "midpoints": [ 469.5, 360.0, 469.5, 360.0 ],
+                    "order": 0,
+                    "source": [ "obj-sc4b", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-v2-amp", 1 ],
+                    "midpoints": [ 469.5, 360.0, 390.0, 360.0, 390.0, 351.0, 213.0, 351.0, 213.0, 357.0, 156.0, 357.0, 156.0, 351.0, 15.0, 351.0, 15.0, 555.0, 126.0, 555.0, 126.0, 564.0, 357.0, 564.0, 357.0, 555.0, 390.5, 555.0 ],
+                    "order": 1,
+                    "source": [ "obj-sc4b", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-sc5b", 0 ],
+                    "midpoints": [ 619.5, 333.0, 619.5, 333.0 ],
+                    "source": [ "obj-sc5a", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-v3-cy1", 0 ],
+                    "midpoints": [ 619.5, 360.0, 669.0, 360.0, 669.0, 351.0, 747.0, 351.0, 747.0, 357.0, 819.0, 357.0, 819.0, 351.0, 1017.0, 351.0, 1017.0, 483.0, 714.0, 483.0, 714.0, 465.0, 669.5, 465.0 ],
+                    "order": 1,
+                    "source": [ "obj-sc5b", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-v3-detuneadd", 0 ],
+                    "midpoints": [ 619.5, 360.0, 819.0, 360.0, 819.0, 351.0, 1017.0, 351.0, 1017.0, 465.0, 762.0, 465.0, 762.0, 456.0, 739.5, 456.0 ],
+                    "order": 0,
+                    "source": [ "obj-sc5b", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-sc6b", 0 ],
+                    "midpoints": [ 769.5, 333.0, 769.5, 333.0 ],
+                    "source": [ "obj-sc6a", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-phsc6", 0 ],
+                    "midpoints": [ 769.5, 360.0, 769.5, 360.0 ],
+                    "order": 0,
+                    "source": [ "obj-sc6b", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-v3-amp", 1 ],
+                    "midpoints": [ 769.5, 360.0, 819.0, 360.0, 819.0, 351.0, 1017.0, 351.0, 1017.0, 585.0, 680.5, 585.0 ],
+                    "order": 1,
+                    "source": [ "obj-sc6b", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-msg-off", 0 ],
+                    "midpoints": [ 109.5, 153.0, 75.0, 153.0, 75.0, 135.0, 34.5, 135.0 ],
+                    "source": [ "obj-sel", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-msg-on", 0 ],
+                    "midpoints": [ 140.0, 153.0, 151.5, 153.0 ],
+                    "source": [ "obj-sel", 1 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-num1", 0 ],
+                    "midpoints": [ 46.5, 780.0, 75.0, 780.0, 75.0, 753.0, 88.5, 753.0 ],
+                    "order": 1,
+                    "source": [ "obj-sig1", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-v1-lfo-add", 0 ],
+                    "midpoints": [ 46.5, 780.0, 15.0, 780.0, 15.0, 411.0, 149.5, 411.0 ],
+                    "order": 0,
+                    "source": [ "obj-sig1", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-num2", 0 ],
+                    "midpoints": [ 179.5, 780.0, 204.0, 780.0, 204.0, 753.0, 216.5, 753.0 ],
+                    "order": 1,
+                    "source": [ "obj-sig2", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-v2-freqadd", 0 ],
+                    "midpoints": [ 179.5, 789.0, 15.0, 789.0, 15.0, 600.0, 195.0, 600.0, 195.0, 519.0, 192.0, 519.0, 192.0, 486.0, 357.0, 486.0, 357.0, 453.0, 379.5, 453.0 ],
+                    "order": 0,
+                    "source": [ "obj-sig2", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-num3", 0 ],
+                    "midpoints": [ 359.5, 780.0, 359.5, 780.0 ],
+                    "order": 0,
+                    "source": [ "obj-sig3", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-v1-mix", 1 ],
+                    "midpoints": [ 359.5, 780.0, 273.0, 780.0, 273.0, 789.0, 15.0, 789.0, 15.0, 606.0, 50.5, 606.0 ],
+                    "order": 1,
+                    "source": [ "obj-sig3", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-num3b", 0 ],
+                    "midpoints": [ 444.5, 792.0, 444.5, 792.0 ],
+                    "order": 1,
+                    "source": [ "obj-sig3b", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-v2-mix", 1 ],
+                    "midpoints": [ 444.5, 792.0, 681.0, 792.0, 681.0, 654.0, 411.0, 654.0, 411.0, 585.0, 390.5, 585.0 ],
+                    "order": 2,
+                    "source": [ "obj-sig3b", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-v3-mix", 1 ],
+                    "midpoints": [ 444.5, 792.0, 687.0, 792.0, 687.0, 654.0, 702.0, 654.0, 702.0, 615.0, 680.5, 615.0 ],
+                    "order": 0,
+                    "source": [ "obj-sig3b", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-num4", 0 ],
+                    "midpoints": [ 559.5, 780.0, 591.0, 780.0, 591.0, 753.0, 603.5, 753.0 ],
+                    "order": 1,
+                    "source": [ "obj-sig4", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-v3-detuneadd", 1 ],
+                    "midpoints": [ 559.5, 789.0, 687.0, 789.0, 687.0, 654.0, 717.0, 654.0, 717.0, 456.0, 750.5, 456.0 ],
+                    "order": 0,
+                    "source": [ "obj-sig4", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-sel", 0 ],
+                    "midpoints": [ 109.5, 126.0, 109.5, 126.0 ],
+                    "source": [ "obj-tog", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-scope-v1", 0 ],
+                    "midpoints": [ 39.5, 606.0, 15.0, 606.0, 15.0, 837.0, 486.0, 837.0, 486.0, 939.0, 636.0, 939.0, 636.0, 885.0, 659.5, 885.0 ],
+                    "order": 0,
+                    "source": [ "obj-v1-amp", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-v1-mix", 0 ],
+                    "midpoints": [ 39.5, 591.0, 39.5, 591.0 ],
+                    "order": 1,
+                    "source": [ "obj-v1-amp", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-v1-amp", 0 ],
+                    "midpoints": [ 39.5, 543.0, 39.5, 543.0 ],
+                    "source": [ "obj-v1-gate", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-v1-lfo-cy", 0 ],
+                    "midpoints": [ 149.5, 465.0, 149.5, 465.0 ],
+                    "source": [ "obj-v1-lfo-add", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-v1-lfo-half", 0 ],
+                    "midpoints": [ 149.5, 495.0, 149.5, 495.0 ],
+                    "source": [ "obj-v1-lfo-cy", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-v1-lfo-uni", 0 ],
+                    "midpoints": [ 149.5, 525.0, 149.5, 525.0 ],
+                    "source": [ "obj-v1-lfo-half", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-v1-gate", 1 ],
+                    "midpoints": [ 149.5, 555.0, 72.0, 555.0, 72.0, 516.0, 50.5, 516.0 ],
+                    "source": [ "obj-v1-lfo-uni", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-mix1", 0 ],
+                    "midpoints": [ 39.5, 687.0, 24.0, 687.0, 24.0, 870.0, 259.5, 870.0 ],
+                    "source": [ "obj-v1-mix", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-scope-v2", 0 ],
+                    "midpoints": [ 379.5, 585.0, 645.0, 585.0, 645.0, 687.0, 687.0, 687.0, 687.0, 837.0, 747.0, 837.0, 747.0, 885.0, 759.5, 885.0 ],
+                    "order": 0,
+                    "source": [ "obj-v2-amp", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-v2-mix", 0 ],
+                    "midpoints": [ 379.5, 585.0, 379.5, 585.0 ],
+                    "order": 1,
+                    "source": [ "obj-v2-amp", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-v2-ring", 0 ],
+                    "midpoints": [ 379.5, 510.0, 379.5, 510.0 ],
+                    "source": [ "obj-v2-cy1", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-v2-ring", 1 ],
+                    "midpoints": [ 469.5, 534.0, 411.0, 534.0, 411.0, 525.0, 390.5, 525.0 ],
+                    "source": [ "obj-v2-cy2", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-v2-cy2", 0 ],
+                    "midpoints": [ 469.5, 495.0, 469.5, 495.0 ],
+                    "source": [ "obj-v2-detune", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-v2-cy1", 0 ],
+                    "midpoints": [ 379.5, 480.0, 379.5, 480.0 ],
+                    "order": 1,
+                    "source": [ "obj-v2-freqadd", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-v2-detune", 0 ],
+                    "midpoints": [ 379.5, 480.0, 447.0, 480.0, 447.0, 465.0, 469.5, 465.0 ],
+                    "order": 0,
+                    "source": [ "obj-v2-freqadd", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-mix1", 1 ],
+                    "midpoints": [ 379.5, 651.0, 45.0, 651.0, 45.0, 687.0, 24.0, 687.0, 24.0, 870.0, 270.5, 870.0 ],
+                    "source": [ "obj-v2-mix", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-v2-amp", 0 ],
+                    "midpoints": [ 379.5, 555.0, 379.5, 555.0 ],
+                    "source": [ "obj-v2-ring", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-scope-v3", 0 ],
+                    "midpoints": [ 669.5, 615.0, 846.0, 615.0, 846.0, 885.0, 859.5, 885.0 ],
+                    "order": 0,
+                    "source": [ "obj-v3-amp", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-v3-mix", 0 ],
+                    "midpoints": [ 669.5, 615.0, 669.5, 615.0 ],
+                    "order": 1,
+                    "source": [ "obj-v3-amp", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-v3-sum", 0 ],
+                    "midpoints": [ 669.5, 504.0, 669.5, 504.0 ],
+                    "source": [ "obj-v3-cy1", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-v3-partial", 0 ],
+                    "midpoints": [ 739.5, 525.0, 739.5, 525.0 ],
+                    "source": [ "obj-v3-cy2", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-v3-cy2", 0 ],
+                    "midpoints": [ 739.5, 483.0, 739.5, 483.0 ],
+                    "source": [ "obj-v3-detuneadd", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-mix2", 1 ],
+                    "midpoints": [ 669.5, 705.0, 681.0, 705.0, 681.0, 837.0, 480.0, 837.0, 480.0, 900.0, 270.5, 900.0 ],
+                    "source": [ "obj-v3-mix", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-v3-sum", 1 ],
+                    "midpoints": [ 739.5, 555.0, 680.5, 555.0 ],
+                    "source": [ "obj-v3-partial", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-v3-amp", 0 ],
+                    "midpoints": [ 669.5, 585.0, 669.5, 585.0 ],
+                    "source": [ "obj-v3-sum", 0 ]
                 }
             }
         ],
         "parameters": {
             "obj-gain": [ "Build-07 Vol", "Vol", 0 ],
-            "parameterbanks": {
-                "0": {
-                    "index": 0,
-                    "name": "",
-                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
-                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
-                }
-            },
             "inherited_shortname": 1
         },
         "autosave": 0

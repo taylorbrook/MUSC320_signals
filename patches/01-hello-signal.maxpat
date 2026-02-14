@@ -10,9 +10,20 @@
         },
         "classnamespace": "box",
         "rect": [ 100.0, 100.0, 900.0, 700.0 ],
-        "default_fontsize": 12.0,
         "description": "01 — Hello Signal: engaging signals with dac~, ezdac~, and your first tone (MUSC 320 Week 7)",
         "boxes": [
+            {
+                "box": {
+                    "bgcolor": [ 0.1, 0.1, 0.12, 1.0 ],
+                    "id": "obj-1",
+                    "interval": 8.0,
+                    "maxclass": "live.scope~",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [ "bang" ],
+                    "patching_rect": [ 250.0, 283.0, 138.0, 46.0 ]
+                }
+            },
             {
                 "box": {
                     "fontface": 1,
@@ -79,8 +90,8 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "signal" ],
-                    "patching_rect": [ 200.0, 170.0, 72.0, 22.0 ],
-                    "text": "cycle~ 440"
+                    "patching_rect": [ 200.0, 170.0, 66.0, 22.0 ],
+                    "text": "cycle~ 220"
                 }
             },
             {
@@ -91,7 +102,7 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [ 400.0, 160.0, 460.0, 19.0 ],
-                    "text": "cycle~ 440 — generates a cosine wave at 440 Hz (A above middle C)."
+                    "text": "cycle~ 440 — generates a cosine wave at 440 Hz (A below middle C)."
                 }
             },
             {
@@ -123,7 +134,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 400.0, 240.0, 460.0, 19.0 ],
+                    "patching_rect": [ 400.0, 251.5, 460.0, 19.0 ],
                     "text": "*~ 0.5 — multiplies every sample by 0.5, cutting the amplitude in half."
                 }
             },
@@ -142,11 +153,12 @@
                 "box": {
                     "bgcolor": [ 0.1, 0.1, 0.12, 1.0 ],
                     "id": "obj-scope",
+                    "interval": 8.0,
                     "maxclass": "live.scope~",
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "bang" ],
-                    "patching_rect": [ 300.0, 160.0, 80.0, 40.0 ]
+                    "patching_rect": [ 250.0, 200.0, 138.0, 46.0 ]
                 }
             },
             {
@@ -156,7 +168,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 400.0, 310.0, 460.0, 19.0 ],
+                    "patching_rect": [ 400.0, 213.5, 460.0, 19.0 ],
                     "text": "live.scope~ — oscilloscope display. Shows the waveform so you can see what you hear."
                 }
             },
@@ -289,7 +301,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 30.0, 640.0, 580.0, 19.0 ],
+                    "patching_rect": [ 30.0, 640.0, 654.0, 19.0 ],
                     "text": "Audio Status: double-click dac~ to see the Audio Status panel. It shows sample rate, I/O vector size, and which audio driver is active.",
                     "textcolor": [ 0.4, 0.4, 0.8, 1.0 ]
                 }
@@ -310,38 +322,23 @@
         "lines": [
             {
                 "patchline": {
-                    "destination": [ "obj-amp", 0 ],
-                    "source": [ "obj-cycle", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-scope", 0 ],
-                    "source": [ "obj-cycle", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-gain", 0 ],
+                    "destination": [ "obj-1", 0 ],
+                    "order": 0,
                     "source": [ "obj-amp", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-gain", 1 ],
+                    "order": 1,
                     "source": [ "obj-amp", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-clipL", 0 ],
-                    "source": [ "obj-gain", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-clipR", 0 ],
-                    "source": [ "obj-gain", 1 ]
+                    "destination": [ "obj-gain", 0 ],
+                    "order": 2,
+                    "source": [ "obj-amp", 0 ]
                 }
             },
             {
@@ -355,7 +352,46 @@
                     "destination": [ "obj-dac", 1 ],
                     "source": [ "obj-clipR", 0 ]
                 }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-amp", 0 ],
+                    "order": 1,
+                    "source": [ "obj-cycle", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-scope", 0 ],
+                    "order": 0,
+                    "source": [ "obj-cycle", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-clipL", 0 ],
+                    "source": [ "obj-gain", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-clipR", 0 ],
+                    "source": [ "obj-gain", 1 ]
+                }
             }
-        ]
+        ],
+        "parameters": {
+            "obj-gain": [ "Build-01 Vol", "Vol", 0 ],
+            "parameterbanks": {
+                "0": {
+                    "index": 0,
+                    "name": "",
+                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
+                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+                }
+            },
+            "inherited_shortname": 1
+        },
+        "autosave": 0
     }
 }

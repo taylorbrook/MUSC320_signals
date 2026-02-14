@@ -10,8 +10,7 @@
         },
         "classnamespace": "box",
         "rect": [ 100.0, 100.0, 1000.0, 750.0 ],
-        "default_fontsize": 12.0,
-        "description": "04 \u2014 Noise and Amplitude: noise~ as a signal source, *~ as amplitude control (MUSC 320 Week 7)",
+        "description": "04 — Noise and Amplitude: noise~ as a signal source, *~ as amplitude control (MUSC 320 Week 7)",
         "boxes": [
             {
                 "box": {
@@ -22,7 +21,7 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [ 30.0, 10.0, 400.0, 24.0 ],
-                    "text": "04 \u2014 Noise and Amplitude"
+                    "text": "04 — Noise and Amplitude"
                 }
             },
             {
@@ -91,7 +90,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 350.0, 280.0, 580.0, 19.0 ],
+                    "patching_rect": [ 350.0, 280.0, 646.0, 19.0 ],
                     "text": "scope~ shows the chaos of noise vs the clean wave of cycle~ -- this is the visual difference between periodic and aperiodic signals.",
                     "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
                 }
@@ -151,7 +150,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "bang" ],
-                    "patching_rect": [ 160.0, 175.0, 150.0, 60.0 ]
+                    "patching_rect": [ 160.0, 175.0, 155.0, 60.0 ]
                 }
             },
             {
@@ -180,6 +179,7 @@
             },
             {
                 "box": {
+                    "floatoutput": 1,
                     "id": "obj-slider",
                     "maxclass": "slider",
                     "numinlets": 1,
@@ -187,9 +187,7 @@
                     "outlettype": [ "" ],
                     "parameter_enable": 0,
                     "patching_rect": [ 60.0, 280.0, 20.0, 100.0 ],
-                    "floatoutput": 1,
-                    "size": 1.0,
-                    "min": 0.0
+                    "size": 1.0
                 }
             },
             {
@@ -297,6 +295,7 @@
             {
                 "box": {
                     "id": "obj-gain",
+                    "lastchannelcount": 0,
                     "maxclass": "live.gain~",
                     "numinlets": 2,
                     "numoutlets": 5,
@@ -397,106 +396,142 @@
         "lines": [
             {
                 "patchline": {
-                    "source": [ "obj-noise", 0 ],
-                    "destination": [ "obj-scope-noise", 0 ]
+                    "destination": [ "obj-dac", 0 ],
+                    "midpoints": [ 69.5, 714.0, 69.5, 714.0 ],
+                    "source": [ "obj-clip-l", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-noise", 0 ],
-                    "destination": [ "obj-mult-noise", 0 ]
+                    "destination": [ "obj-dac", 1 ],
+                    "midpoints": [ 179.5, 723.0, 99.0, 723.0, 99.0, 717.0, 87.5, 717.0 ],
+                    "source": [ "obj-clip-r", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-slider", 0 ],
-                    "destination": [ "obj-sig", 0 ]
+                    "destination": [ "obj-mult-tone", 0 ],
+                    "midpoints": [ 559.5, 249.0, 336.0, 249.0, 336.0, 309.0, 546.0, 309.0, 546.0, 300.0, 559.5, 300.0 ],
+                    "order": 1,
+                    "source": [ "obj-cycle", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-sig", 0 ],
-                    "destination": [ "obj-mult-noise", 1 ]
+                    "destination": [ "obj-scope-cycle", 0 ],
+                    "midpoints": [ 559.5, 207.0, 636.0, 207.0, 636.0, 171.0, 659.5, 171.0 ],
+                    "order": 0,
+                    "source": [ "obj-cycle", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-mult-noise", 0 ],
-                    "destination": [ "obj-sum", 0 ]
+                    "destination": [ "obj-clip-l", 0 ],
+                    "midpoints": [ 69.5, 678.0, 69.5, 678.0 ],
+                    "source": [ "obj-gain", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-cycle", 0 ],
-                    "destination": [ "obj-scope-cycle", 0 ]
+                    "destination": [ "obj-clip-r", 0 ],
+                    "midpoints": [ 76.75, 684.0, 179.5, 684.0 ],
+                    "source": [ "obj-gain", 1 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-cycle", 0 ],
-                    "destination": [ "obj-mult-tone", 0 ]
+                    "destination": [ "obj-slider", 0 ],
+                    "midpoints": [ 209.5, 393.0, 102.0, 393.0, 102.0, 276.0, 69.5, 276.0 ],
+                    "source": [ "obj-init-msg", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-mult-tone", 0 ],
-                    "destination": [ "obj-sum", 1 ]
+                    "destination": [ "obj-trigger", 0 ],
+                    "midpoints": [ 209.5, 345.0, 209.5, 345.0 ],
+                    "source": [ "obj-loadbang", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-sum", 0 ],
-                    "destination": [ "obj-gain", 0 ]
+                    "destination": [ "obj-sum", 0 ],
+                    "midpoints": [ 69.5, 459.0, 69.5, 459.0 ],
+                    "source": [ "obj-mult-noise", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-sum", 0 ],
-                    "destination": [ "obj-gain", 1 ]
+                    "destination": [ "obj-sum", 1 ],
+                    "midpoints": [ 559.5, 486.0, 82.5, 486.0 ],
+                    "source": [ "obj-mult-tone", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-gain", 0 ],
-                    "destination": [ "obj-clip-l", 0 ]
+                    "destination": [ "obj-mult-noise", 0 ],
+                    "midpoints": [ 69.5, 267.0, 45.0, 267.0, 45.0, 432.0, 69.5, 432.0 ],
+                    "order": 1,
+                    "source": [ "obj-noise", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-gain", 1 ],
-                    "destination": [ "obj-clip-r", 0 ]
+                    "destination": [ "obj-scope-noise", 0 ],
+                    "midpoints": [ 69.5, 207.0, 147.0, 207.0, 147.0, 171.0, 169.5, 171.0 ],
+                    "order": 0,
+                    "source": [ "obj-noise", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-clip-l", 0 ],
-                    "destination": [ "obj-dac", 0 ]
+                    "destination": [ "obj-mult-noise", 1 ],
+                    "midpoints": [ 69.5, 429.0, 82.5, 429.0 ],
+                    "source": [ "obj-sig", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-clip-r", 0 ],
-                    "destination": [ "obj-dac", 1 ]
+                    "destination": [ "obj-sig", 0 ],
+                    "midpoints": [ 69.5, 381.0, 69.5, 381.0 ],
+                    "source": [ "obj-slider", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-loadbang", 0 ],
-                    "destination": [ "obj-trigger", 0 ]
+                    "destination": [ "obj-gain", 1 ],
+                    "midpoints": [ 69.5, 537.0, 98.5, 537.0 ],
+                    "order": 0,
+                    "source": [ "obj-sum", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-trigger", 0 ],
-                    "destination": [ "obj-init-msg", 0 ]
+                    "destination": [ "obj-gain", 0 ],
+                    "midpoints": [ 69.5, 525.0, 69.5, 525.0 ],
+                    "order": 1,
+                    "source": [ "obj-sum", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "source": [ "obj-init-msg", 0 ],
-                    "destination": [ "obj-slider", 0 ]
+                    "destination": [ "obj-init-msg", 0 ],
+                    "midpoints": [ 209.5, 369.0, 209.5, 369.0 ],
+                    "source": [ "obj-trigger", 0 ]
                 }
             }
-        ]
+        ],
+        "parameters": {
+            "obj-gain": [ "Build-04 Vol", "Vol", 0 ],
+            "parameterbanks": {
+                "0": {
+                    "index": 0,
+                    "name": "",
+                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
+                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+                }
+            },
+            "inherited_shortname": 1
+        },
+        "autosave": 0
     }
 }
