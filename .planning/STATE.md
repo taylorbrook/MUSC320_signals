@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-13)
 
 **Core value:** Students leave understanding that MSP signal objects (~) are a fundamentally different (and sonically powerful) way of working in Max -- and they have annotated patches they can study and experiment with on their own.
-**Current focus:** Phase 2: Build-Up Patch Series -- Complete. Ready for Phase 3.
+**Current focus:** Phase 3: Lecture Outline and Diagrams -- Plan 01 complete, Plan 02 next.
 
 ## Current Position
 
-Phase: 2 of 4 (Build-Up Patch Series) -- COMPLETE
-Plan: 3 of 3 in current phase (all plans complete)
-Status: Phase complete
-Last activity: 2026-02-14 -- Completed 02-03-PLAN.md (noise sculpture rebuild + full series verification)
+Phase: 3 of 4 (Lecture Outline and Diagrams)
+Plan: 1 of 2 in current phase
+Status: Executing
+Last activity: 2026-02-14 -- Completed 03-01-PLAN.md (timed lecture outline with patch cues and bridges)
 
-Progress: [######....] 60%
+Progress: [######....] 67%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 5
-- Average duration: 10min
-- Total execution time: 0.8 hours
+- Total plans completed: 6
+- Average duration: 9min
+- Total execution time: 0.9 hours
 
 **By Phase:**
 
@@ -29,9 +29,10 @@ Progress: [######....] 60%
 |-------|-------|-------|----------|
 | 01-noise-sculpture-demo | 2 | 31min | 16min |
 | 02-build-up-patch-series | 3 | 15min | 5min |
+| 03-lecture-outline-and-diagrams | 1 | 4min | 4min |
 
 **Recent Trend:**
-- Last 5 plans: 01-02 (25min), 02-01 (4min), 02-02 (6min), 02-03 (5min)
+- Last 5 plans: 02-01 (4min), 02-02 (6min), 02-03 (5min), 03-01 (4min)
 - Trend: accelerating
 
 *Updated after each plan completion*
@@ -65,6 +66,10 @@ Recent decisions affecting current work:
 - [02-03]: Patch 07 annotations lighter than earlier patches -- reference which patch taught each technique
 - [02-03]: Instructor changed Patch 01 from cycle~ 440 to cycle~ 220 during verification (lower starting tone)
 - [02-03]: All 7 build-up patches verified in Max 9 with instructor layout polish applied
+- [03-01]: TRY THIS pauses at Patch 03 (60s slider), Patch 04 (90s noise amplitude), Patch 05 (90s envelopes)
+- [03-01]: CHECKPOINTs at download confirm, Patch 03 comprehension, and Patch 06 pre-finale readiness
+- [03-01]: Pace check at 22:00 after Patch 03 -- halfway benchmark for instructor
+- [03-01]: Fallback cascade: Patch 07 first, Patch 06, comparison, nuclear skips 05-07
 
 ### Pending Todos
 
@@ -78,5 +83,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-14
-Stopped at: Completed 02-03-PLAN.md (noise sculpture rebuild + full series verification). Phase 2 complete. Ready for Phase 3.
+Stopped at: Completed 03-01-PLAN.md (timed lecture outline). Ready for 03-02-PLAN.md (diagrams and comparison patch).
 Resume file: None
