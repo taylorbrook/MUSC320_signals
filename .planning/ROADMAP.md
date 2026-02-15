@@ -60,11 +60,11 @@ Plans:
   2. The outline includes fallback pacing notes marking which content to skip or compress if the lecture runs long
   3. Every topic introduction in the outline includes a bridge-from-Max talking point connecting MSP concepts to something students already know
   4. Three whiteboard diagrams exist (digital audio waveform, signal flow, control-vs-signal comparison) as visual aids for concepts that patches alone cannot illustrate
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 03-01: TBD
-- [ ] 03-02: TBD
+- [ ] 03-01-PLAN.md -- Write timed 45-minute lecture outline with patch cues, bridges, fallbacks, and checkpoints
+- [ ] 03-02-PLAN.md -- Create visual aids: 2 SVG diagrams (waveform, signal flow) and 1 comparison Max patch (metro/phasor~/gen~)
 
 ### Phase 4: Student Handout and Annotation Polish
 **Goal**: Students leave with a single-page reference card they can use for independent study, and every patch in the kit has consistent, thorough annotations including bridge comments, experiment prompts, and troubleshooting tips
