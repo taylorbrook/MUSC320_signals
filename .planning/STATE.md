@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-13)
 
 **Core value:** Students leave understanding that MSP signal objects (~) are a fundamentally different (and sonically powerful) way of working in Max -- and they have annotated patches they can study and experiment with on their own.
-**Current focus:** Phase 3: Lecture Outline and Diagrams -- Plan 01 complete, Plan 02 next.
+**Current focus:** Phase 3: Lecture Outline and Diagrams -- COMPLETE. Ready for Phase 4.
 
 ## Current Position
 
-Phase: 3 of 4 (Lecture Outline and Diagrams)
-Plan: 1 of 2 in current phase
-Status: Executing
-Last activity: 2026-02-14 -- Completed 03-01-PLAN.md (timed lecture outline with patch cues and bridges)
+Phase: 3 of 4 (Lecture Outline and Diagrams) -- COMPLETE
+Plan: 2 of 2 in current phase (all plans complete)
+Status: Phase complete, awaiting verification
+Last activity: 2026-02-14 -- Completed 03-02-PLAN.md (visual aids: SVG diagrams + comparison patch, instructor verified)
 
-Progress: [######....] 67%
+Progress: [########..] 80%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 6
+- Total plans completed: 7
 - Average duration: 9min
-- Total execution time: 0.9 hours
+- Total execution time: 1.0 hours
 
 **By Phase:**
 
@@ -29,11 +29,11 @@ Progress: [######....] 67%
 |-------|-------|-------|----------|
 | 01-noise-sculpture-demo | 2 | 31min | 16min |
 | 02-build-up-patch-series | 3 | 15min | 5min |
-| 03-lecture-outline-and-diagrams | 1 | 4min | 4min |
+| 03-lecture-outline-and-diagrams | 2 | 12min | 6min |
 
 **Recent Trend:**
-- Last 5 plans: 02-01 (4min), 02-02 (6min), 02-03 (5min), 03-01 (4min)
-- Trend: accelerating
+- Last 5 plans: 02-02 (6min), 02-03 (5min), 03-01 (4min), 03-02 (8min)
+- Trend: stable ~6min/plan
 
 *Updated after each plan completion*
 
@@ -70,6 +70,12 @@ Recent decisions affecting current work:
 - [03-01]: CHECKPOINTs at download confirm, Patch 03 comprehension, and Patch 06 pre-finale readiness
 - [03-01]: Pace check at 22:00 after Patch 03 -- halfway benchmark for instructor
 - [03-01]: Fallback cascade: Patch 07 first, Patch 06, comparison, nuclear skips 05-07
+- [03-02]: Waveform SVG includes adc~/dac~ annotation per instructor
+- [03-02]: Signal flow titled "Signal Flow", Level 1 simplified to Source→Processing(DSP)→Output
+- [03-02]: Voice 3 shows AM (two cycle~ multiplied), not line~ envelope
+- [03-02]: Output chain left-to-right (no downward drop at dac~)
+- [03-02]: gen~ uses counter 24000 with in 1 for proper initialization
+- [03-02]: Comparison patch instructor-polished in Max 9
 
 ### Pending Todos
 
@@ -79,9 +85,10 @@ None yet.
 
 - .maxpat JSON hand-editing has no official spec; validate by round-tripping through Max 9 -- RESOLVED: patch verified in Max 9
 - Sonic quality verified by instructor in Max 9 -- RESOLVED
+- gen~ sub-patcher JSON structure -- RESOLVED: instructor verified in Max 9
 
 ## Session Continuity
 
 Last session: 2026-02-14
-Stopped at: Completed 03-01-PLAN.md (timed lecture outline). Ready for 03-02-PLAN.md (diagrams and comparison patch).
+Stopped at: Completed 03-02-PLAN.md (visual aids verified by instructor). Phase 3 complete. Ready for verification.
 Resume file: None
