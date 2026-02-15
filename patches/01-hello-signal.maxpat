@@ -9,9 +9,33 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 100.0, 100.0, 900.0, 700.0 ],
+        "rect": [ 100.0, 100.0, 900.0, 800.0 ],
         "description": "01 — Hello Signal: engaging signals with dac~, ezdac~, and your first tone (MUSC 320 Week 7)",
         "boxes": [
+            {
+                "box": {
+                    "id": "obj-region-source",
+                    "maxclass": "panel",
+                    "mode": 0,
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 185.0, 155.0, 230.0, 190.0 ],
+                    "bgcolor": [ 0.2, 0.3, 0.55, 0.1 ],
+                    "rounded": 12
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-region-output",
+                    "maxclass": "panel",
+                    "mode": 0,
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 85.0, 325.0, 300.0, 290.0 ],
+                    "bgcolor": [ 0.2, 0.45, 0.25, 0.1 ],
+                    "rounded": 12
+                }
+            },
             {
                 "box": {
                     "bgcolor": [ 0.1, 0.1, 0.12, 1.0 ],
@@ -102,7 +126,8 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [ 400.0, 160.0, 460.0, 19.0 ],
-                    "text": "cycle~ 440 — generates a cosine wave at 440 Hz (A below middle C)."
+                    "text": "cycle~ 220 — generates a cosine wave at 220 Hz (A below middle C).",
+                    "textcolor": [ 0.4, 0.4, 0.8, 1.0 ]
                 }
             },
             {
@@ -113,7 +138,8 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [ 400.0, 179.0, 460.0, 19.0 ],
-                    "text": "MSP processes this as a stream of 44,100 numbers per second."
+                    "text": "metro generates bangs at intervals — cycle~ generates a smooth wave, 44,100 samples/sec.",
+                    "textcolor": [ 0.4, 0.4, 0.8, 1.0 ]
                 }
             },
             {
@@ -134,8 +160,9 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 400.0, 251.5, 460.0, 19.0 ],
-                    "text": "*~ 0.5 — multiplies every sample by 0.5, cutting the amplitude in half."
+                    "patching_rect": [ 400.0, 240.0, 460.0, 19.0 ],
+                    "text": "*~ 0.5 — multiplies every sample by 0.5, cutting the amplitude in half.",
+                    "textcolor": [ 0.4, 0.4, 0.8, 1.0 ]
                 }
             },
             {
@@ -146,7 +173,8 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [ 400.0, 259.0, 460.0, 19.0 ],
-                    "text": "Without this, the tone would be at full volume."
+                    "text": "You used * to multiply numbers. *~ multiplies signals — same idea, audio rate.",
+                    "textcolor": [ 0.4, 0.4, 0.8, 1.0 ]
                 }
             },
             {
@@ -169,7 +197,8 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [ 400.0, 213.5, 460.0, 19.0 ],
-                    "text": "live.scope~ — oscilloscope display. Shows the waveform so you can see what you hear."
+                    "text": "live.scope~ — oscilloscope display. See the wave, not just hear it.",
+                    "textcolor": [ 0.4, 0.4, 0.8, 1.0 ]
                 }
             },
             {
@@ -206,7 +235,8 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [ 400.0, 380.0, 460.0, 19.0 ],
-                    "text": "live.gain~ — master volume control with metering. Set to -12 dB for safe listening."
+                    "text": "live.gain~ — a volume slider with a built-in meter. Set to -12 dB for safe listening.",
+                    "textcolor": [ 0.4, 0.4, 0.8, 1.0 ]
                 }
             },
             {
@@ -239,7 +269,8 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [ 400.0, 500.0, 460.0, 19.0 ],
-                    "text": "clip~ -0.9 0.9 — safety limiter. Prevents any signal from exceeding safe amplitude."
+                    "text": "clip~ -0.9 0.9 — safety net. Prevents dangerously loud signals from reaching your speakers.",
+                    "textcolor": [ 0.4, 0.4, 0.8, 1.0 ]
                 }
             },
             {
@@ -260,7 +291,8 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [ 400.0, 550.0, 460.0, 19.0 ],
-                    "text": "dac~ — digital-to-analog converter. Sends the signal to your speakers."
+                    "text": "dac~ — digital-to-analog converter. The final stop: signal becomes sound.",
+                    "textcolor": [ 0.4, 0.4, 0.8, 1.0 ]
                 }
             },
             {
@@ -291,7 +323,8 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [ 400.0, 610.0, 460.0, 19.0 ],
-                    "text": "ezdac~ — click this to start/stop audio processing. This is the MSP power switch."
+                    "text": "ezdac~ — the MSP power switch. Click to start/stop audio processing.",
+                    "textcolor": [ 0.4, 0.4, 0.8, 1.0 ]
                 }
             },
             {
@@ -316,6 +349,82 @@
                     "patching_rect": [ 30.0, 665.0, 580.0, 19.0 ],
                     "text": "adc~ is the input equivalent of dac~ — it brings microphone audio INTO Max. We won't use it today.",
                     "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
+                }
+            },
+            {
+                "box": {
+                    "fontsize": 11.0,
+                    "id": "obj-ann-param-freq",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 400.0, 198.0, 300.0, 19.0 ],
+                    "text": "220 = A below middle C (A3)",
+                    "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
+                }
+            },
+            {
+                "box": {
+                    "fontsize": 11.0,
+                    "id": "obj-ann-param-amp",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 400.0, 278.0, 300.0, 19.0 ],
+                    "text": "0.5 = half amplitude (-6 dB)",
+                    "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
+                }
+            },
+            {
+                "box": {
+                    "fontface": 1,
+                    "fontsize": 11.0,
+                    "id": "obj-experiment-01",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 30.0, 695.0, 520.0, 19.0 ],
+                    "text": "EXPERIMENT: Disconnect *~ from cycle~ and send cycle~ directly into live.gain~ — what happens to the waveform on the scope?",
+                    "textcolor": [ 0.3, 0.65, 0.3, 1.0 ],
+                    "bgcolor": [ 0.12, 0.2, 0.12, 1.0 ]
+                }
+            },
+            {
+                "box": {
+                    "fontface": 1,
+                    "fontsize": 11.0,
+                    "id": "obj-experiment-02",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 30.0, 718.0, 520.0, 19.0 ],
+                    "text": "EXPERIMENT: Change cycle~ from 220 to 20 — can you still hear it? Watch the scope.",
+                    "textcolor": [ 0.3, 0.65, 0.3, 1.0 ],
+                    "bgcolor": [ 0.12, 0.2, 0.12, 1.0 ]
+                }
+            },
+            {
+                "box": {
+                    "fontsize": 11.0,
+                    "id": "obj-troubleshoot-01",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 100.0, 600.0, 600.0, 19.0 ],
+                    "text": "IF YOU HEAR NOTHING: Is ezdac~ toggled on? Is live.gain~ turned up? Double-click ezdac~ to check Audio Status.",
+                    "textcolor": [ 0.85, 0.6, 0.2, 1.0 ]
+                }
+            },
+            {
+                "box": {
+                    "fontsize": 10.0,
+                    "id": "obj-color-legend",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 30.0, 745.0, 450.0, 18.0 ],
+                    "text": "COLOR REGIONS:  Blue = Source (oscillators, noise)  |  Orange = Processing (envelopes, operators)  |  Green = Output (gain, dac~)",
+                    "textcolor": [ 0.6, 0.6, 0.6, 1.0 ]
                 }
             }
         ],

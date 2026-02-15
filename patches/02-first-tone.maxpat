@@ -14,6 +14,30 @@
         "boxes": [
             {
                 "box": {
+                    "id": "obj-region-source",
+                    "maxclass": "panel",
+                    "mode": 0,
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 20.0, 100.0, 290.0, 210.0 ],
+                    "bgcolor": [ 0.2, 0.3, 0.55, 0.1 ],
+                    "rounded": 12
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-region-output",
+                    "maxclass": "panel",
+                    "mode": 0,
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 20.0, 325.0, 260.0, 270.0 ],
+                    "bgcolor": [ 0.2, 0.45, 0.25, 0.1 ],
+                    "rounded": 12
+                }
+            },
+            {
+                "box": {
                     "id": "obj-3",
                     "maxclass": "newobj",
                     "numinlets": 2,
@@ -132,7 +156,8 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [ 30.0, 249.0, 480.0, 19.0 ],
-                    "text": "Try changing 0.5 to 0.25 (quieter) or 1.0 (full amplitude)"
+                    "text": "0.5 = half amplitude (-6 dB). Try 0.25 (quieter) or 1.0 (full).",
+                    "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
                 }
             },
             {
@@ -380,6 +405,56 @@
                     "numoutlets": 0,
                     "patching_rect": [ 530.0, 275.0, 693.0, 19.0 ],
                     "text": "live.scope~ shows the waveform. Notice: 4 Hz has twice as many cycles on screen as 2 Hz, which is twice as much as 1"
+                }
+            },
+            {
+                "box": {
+                    "fontsize": 11.0,
+                    "id": "obj-ann-octave",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 530.0, 110.0, 700.0, 19.0 ],
+                    "text": "Each octave doubles the frequency: 220 -> 440 -> 880. The scope shows this visually — double the cycles on screen.",
+                    "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
+                }
+            },
+            {
+                "box": {
+                    "fontsize": 11.0,
+                    "id": "obj-troubleshoot-02",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 30.0, 608.0, 480.0, 19.0 ],
+                    "text": "See Patch 01 troubleshooting: ezdac~ on, live.gain~ up.",
+                    "textcolor": [ 0.85, 0.6, 0.2, 1.0 ]
+                }
+            },
+            {
+                "box": {
+                    "fontface": 1,
+                    "fontsize": 11.0,
+                    "id": "obj-experiment-01",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 530.0, 360.0, 700.0, 19.0 ],
+                    "text": "EXPERIMENT: Connect all three cycle~ objects (220, 440, 880) to dac~ through live.gain~ at once — what do you hear when frequencies are close together?",
+                    "textcolor": [ 0.3, 0.65, 0.3, 1.0 ],
+                    "bgcolor": [ 0.12, 0.2, 0.12, 1.0 ]
+                }
+            },
+            {
+                "box": {
+                    "fontsize": 10.0,
+                    "id": "obj-color-legend",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 30.0, 640.0, 450.0, 18.0 ],
+                    "text": "COLOR REGIONS:  Blue = Source (oscillators, noise)  |  Orange = Processing (envelopes, operators)  |  Green = Output (gain, dac~)",
+                    "textcolor": [ 0.6, 0.6, 0.6, 1.0 ]
                 }
             }
         ],
