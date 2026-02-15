@@ -14,7 +14,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Noise Sculpture Demo** - Create the finished demo patch that hooks student interest and anchors the entire kit
 - [x] **Phase 2: Build-Up Patch Series** - Deconstruct the demo into numbered concept-per-patch progression covering all 5 topics
-- [ ] **Phase 3: Lecture Outline and Diagrams** - Write the timed instructor script and visual aids grounded in actual patches
+- [x] **Phase 3: Lecture Outline and Diagrams** - Write the timed instructor script and visual aids grounded in actual patches
 - [ ] **Phase 4: Student Handout and Annotation Polish** - Produce the student reference card and apply systematic annotation pass across all patches
 
 ## Phase Details
@@ -63,8 +63,8 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 03-01-PLAN.md -- Write timed 45-minute lecture outline with patch cues, bridges, fallbacks, and checkpoints
-- [ ] 03-02-PLAN.md -- Create visual aids: 2 SVG diagrams (waveform, signal flow) and 1 comparison Max patch (metro/phasor~/gen~)
+- [x] 03-01-PLAN.md -- Write timed 45-minute lecture outline with patch cues, bridges, fallbacks, and checkpoints
+- [x] 03-02-PLAN.md -- Create visual aids: 2 SVG diagrams (waveform, signal flow) and 1 comparison Max patch (metro/phasor~/gen~)
 
 ### Phase 4: Student Handout and Annotation Polish
 **Goal**: Students leave with a single-page reference card they can use for independent study, and every patch in the kit has consistent, thorough annotations including bridge comments, experiment prompts, and troubleshooting tips
@@ -91,5 +91,5 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 |-------|---------------|--------|-----------|
 | 1. Noise Sculpture Demo | 2/2 | ✓ Complete | 2026-02-14 |
 | 2. Build-Up Patch Series | 3/3 | ✓ Complete | 2026-02-14 |
-| 3. Lecture Outline and Diagrams | 0/TBD | Not started | - |
+| 3. Lecture Outline and Diagrams | 2/2 | ✓ Complete | 2026-02-14 |
 | 4. Student Handout and Annotation Polish | 0/TBD | Not started | - |
