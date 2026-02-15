@@ -14,30 +14,6 @@
         "boxes": [
             {
                 "box": {
-                    "id": "obj-region-source",
-                    "maxclass": "panel",
-                    "mode": 0,
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 185.0, 155.0, 230.0, 190.0 ],
-                    "bgcolor": [ 0.2, 0.3, 0.55, 0.1 ],
-                    "rounded": 12
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-region-output",
-                    "maxclass": "panel",
-                    "mode": 0,
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 85.0, 325.0, 300.0, 290.0 ],
-                    "bgcolor": [ 0.2, 0.45, 0.25, 0.1 ],
-                    "rounded": 12
-                }
-            },
-            {
-                "box": {
                     "bgcolor": [ 0.1, 0.1, 0.12, 1.0 ],
                     "id": "obj-1",
                     "interval": 8.0,
@@ -137,7 +113,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 400.0, 179.0, 460.0, 19.0 ],
+                    "patching_rect": [ 400.0, 179.0, 462.0, 19.0 ],
                     "text": "metro generates bangs at intervals — cycle~ generates a smooth wave, 44,100 samples/sec.",
                     "textcolor": [ 0.4, 0.4, 0.8, 1.0 ]
                 }
@@ -241,28 +217,6 @@
             },
             {
                 "box": {
-                    "id": "obj-clipL",
-                    "maxclass": "newobj",
-                    "numinlets": 3,
-                    "numoutlets": 1,
-                    "outlettype": [ "signal" ],
-                    "patching_rect": [ 180.0, 500.0, 88.0, 22.0 ],
-                    "text": "clip~ -0.9 0.9"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-clipR",
-                    "maxclass": "newobj",
-                    "numinlets": 3,
-                    "numoutlets": 1,
-                    "outlettype": [ "signal" ],
-                    "patching_rect": [ 280.0, 500.0, 88.0, 22.0 ],
-                    "text": "clip~ -0.9 0.9"
-                }
-            },
-            {
-                "box": {
                     "fontsize": 11.0,
                     "id": "obj-ann-clip",
                     "maxclass": "comment",
@@ -271,16 +225,6 @@
                     "patching_rect": [ 400.0, 500.0, 460.0, 19.0 ],
                     "text": "clip~ -0.9 0.9 — safety net. Prevents dangerously loud signals from reaching your speakers.",
                     "textcolor": [ 0.4, 0.4, 0.8, 1.0 ]
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-dac",
-                    "maxclass": "newobj",
-                    "numinlets": 2,
-                    "numoutlets": 0,
-                    "patching_rect": [ 180.0, 560.0, 188.0, 22.0 ],
-                    "text": "dac~"
                 }
             },
             {
@@ -312,7 +256,7 @@
                     "maxclass": "ezdac~",
                     "numinlets": 2,
                     "numoutlets": 0,
-                    "patching_rect": [ 100.0, 545.0, 45.0, 45.0 ]
+                    "patching_rect": [ 180.0, 550.0, 45.0, 45.0 ]
                 }
             },
             {
@@ -377,20 +321,21 @@
             },
             {
                 "box": {
+                    "bgcolor": [ 0.12, 0.2, 0.12, 1.0 ],
                     "fontface": 1,
                     "fontsize": 11.0,
                     "id": "obj-experiment-01",
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 30.0, 695.0, 520.0, 19.0 ],
+                    "patching_rect": [ 30.0, 695.0, 686.0, 19.0 ],
                     "text": "EXPERIMENT: Disconnect *~ from cycle~ and send cycle~ directly into live.gain~ — what happens to the waveform on the scope?",
-                    "textcolor": [ 0.3, 0.65, 0.3, 1.0 ],
-                    "bgcolor": [ 0.12, 0.2, 0.12, 1.0 ]
+                    "textcolor": [ 0.3, 0.65, 0.3, 1.0 ]
                 }
             },
             {
                 "box": {
+                    "bgcolor": [ 0.12, 0.2, 0.12, 1.0 ],
                     "fontface": 1,
                     "fontsize": 11.0,
                     "id": "obj-experiment-02",
@@ -399,8 +344,7 @@
                     "numoutlets": 0,
                     "patching_rect": [ 30.0, 718.0, 520.0, 19.0 ],
                     "text": "EXPERIMENT: Change cycle~ from 220 to 20 — can you still hear it? Watch the scope.",
-                    "textcolor": [ 0.3, 0.65, 0.3, 1.0 ],
-                    "bgcolor": [ 0.12, 0.2, 0.12, 1.0 ]
+                    "textcolor": [ 0.3, 0.65, 0.3, 1.0 ]
                 }
             },
             {
@@ -422,9 +366,33 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 30.0, 745.0, 450.0, 18.0 ],
+                    "patching_rect": [ 30.0, 745.0, 597.0, 18.0 ],
                     "text": "COLOR REGIONS:  Blue = Source (oscillators, noise)  |  Orange = Processing (envelopes, operators)  |  Green = Output (gain, dac~)",
                     "textcolor": [ 0.6, 0.6, 0.6, 1.0 ]
+                }
+            },
+            {
+                "box": {
+                    "bgcolor": [ 0.2, 0.3, 0.55, 0.1 ],
+                    "id": "obj-region-source",
+                    "maxclass": "panel",
+                    "mode": 0,
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 185.0, 155.0, 230.0, 190.0 ],
+                    "rounded": 12
+                }
+            },
+            {
+                "box": {
+                    "bgcolor": [ 0.2, 0.45, 0.25, 0.1 ],
+                    "id": "obj-region-output",
+                    "maxclass": "panel",
+                    "mode": 0,
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 85.0, 325.0, 300.0, 290.0 ],
+                    "rounded": 12
                 }
             }
         ],
@@ -452,18 +420,6 @@
             },
             {
                 "patchline": {
-                    "destination": [ "obj-dac", 0 ],
-                    "source": [ "obj-clipL", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-dac", 1 ],
-                    "source": [ "obj-clipR", 0 ]
-                }
-            },
-            {
-                "patchline": {
                     "destination": [ "obj-amp", 0 ],
                     "order": 1,
                     "source": [ "obj-cycle", 0 ]
@@ -478,14 +434,14 @@
             },
             {
                 "patchline": {
-                    "destination": [ "obj-clipL", 0 ],
-                    "source": [ "obj-gain", 0 ]
+                    "destination": [ "obj-ezdac", 1 ],
+                    "source": [ "obj-gain", 1 ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-clipR", 0 ],
-                    "source": [ "obj-gain", 1 ]
+                    "destination": [ "obj-ezdac", 0 ],
+                    "source": [ "obj-gain", 0 ]
                 }
             }
         ],

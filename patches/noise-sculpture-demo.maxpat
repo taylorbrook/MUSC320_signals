@@ -20,69 +20,6 @@
         "boxes": [
             {
                 "box": {
-                    "bgcolor": [
-                        0.2,
-                        0.3,
-                        0.55,
-                        0.1
-                    ],
-                    "id": "obj-ann-panel-source",
-                    "maxclass": "panel",
-                    "mode": 0,
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        20.0,
-                        360.0,
-                        860.0,
-                        250.0
-                    ]
-                }
-            },
-            {
-                "box": {
-                    "bgcolor": [
-                        0.55,
-                        0.35,
-                        0.15,
-                        0.1
-                    ],
-                    "id": "obj-ann-panel-proc",
-                    "maxclass": "panel",
-                    "mode": 0,
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        20.0,
-                        180.0,
-                        860.0,
-                        180.0
-                    ]
-                }
-            },
-            {
-                "box": {
-                    "bgcolor": [
-                        0.2,
-                        0.45,
-                        0.25,
-                        0.1
-                    ],
-                    "id": "obj-ann-panel-output",
-                    "maxclass": "panel",
-                    "mode": 0,
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        220.0,
-                        800.0,
-                        210.0,
-                        380.0
-                    ]
-                }
-            },
-            {
-                "box": {
                     "fontsize": 10.0,
                     "id": "obj-ann-legend",
                     "maxclass": "comment",
@@ -3065,6 +3002,69 @@
                         512.0,
                         500.0,
                         196.0
+                    ]
+                }
+            },
+            {
+                "box": {
+                    "bgcolor": [
+                        0.2,
+                        0.3,
+                        0.55,
+                        0.1
+                    ],
+                    "id": "obj-ann-panel-source",
+                    "maxclass": "panel",
+                    "mode": 0,
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [
+                        20.0,
+                        360.0,
+                        860.0,
+                        250.0
+                    ]
+                }
+            },
+            {
+                "box": {
+                    "bgcolor": [
+                        0.55,
+                        0.35,
+                        0.15,
+                        0.1
+                    ],
+                    "id": "obj-ann-panel-proc",
+                    "maxclass": "panel",
+                    "mode": 0,
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [
+                        20.0,
+                        180.0,
+                        860.0,
+                        180.0
+                    ]
+                }
+            },
+            {
+                "box": {
+                    "bgcolor": [
+                        0.2,
+                        0.45,
+                        0.25,
+                        0.1
+                    ],
+                    "id": "obj-ann-panel-output",
+                    "maxclass": "panel",
+                    "mode": 0,
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [
+                        220.0,
+                        800.0,
+                        210.0,
+                        380.0
                     ]
                 }
             }
