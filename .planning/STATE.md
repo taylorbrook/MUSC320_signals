@@ -5,22 +5,22 @@
 See: .planning/PROJECT.md (updated 2026-02-13)
 
 **Core value:** Students leave understanding that MSP signal objects (~) are a fundamentally different (and sonically powerful) way of working in Max -- and they have annotated patches they can study and experiment with on their own.
-**Current focus:** Phase 3: Lecture Outline and Diagrams -- COMPLETE. Ready for Phase 4.
+**Current focus:** Phase 4: Student Handout and Annotation Polish -- Plan 01 complete.
 
 ## Current Position
 
-Phase: 3 of 4 (Lecture Outline and Diagrams) -- COMPLETE
-Plan: 2 of 2 in current phase (all plans complete)
-Status: Phase complete, awaiting verification
-Last activity: 2026-02-14 -- Completed 03-02-PLAN.md (visual aids: SVG diagrams + comparison patch, instructor verified)
+Phase: 4 of 4 (Student Handout and Annotation Polish)
+Plan: 1 of 3 in current phase (04-01 complete)
+Status: Executing phase
+Last activity: 2026-02-14 -- Completed 04-01-PLAN.md (student reference handout)
 
 Progress: [########..] 80%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 7
-- Average duration: 9min
+- Total plans completed: 8
+- Average duration: 8min
 - Total execution time: 1.0 hours
 
 **By Phase:**
@@ -30,10 +30,11 @@ Progress: [########..] 80%
 | 01-noise-sculpture-demo | 2 | 31min | 16min |
 | 02-build-up-patch-series | 3 | 15min | 5min |
 | 03-lecture-outline-and-diagrams | 2 | 12min | 6min |
+| 04-student-handout-and-annotation-polish | 1 | 1min | 1min |
 
 **Recent Trend:**
-- Last 5 plans: 02-02 (6min), 02-03 (5min), 03-01 (4min), 03-02 (8min)
-- Trend: stable ~6min/plan
+- Last 5 plans: 02-03 (5min), 03-01 (4min), 03-02 (8min), 04-01 (1min)
+- Trend: stable ~5min/plan
 
 *Updated after each plan completion*
 
@@ -76,6 +77,8 @@ Recent decisions affecting current work:
 - [03-02]: Output chain left-to-right (no downward drop at dac~)
 - [03-02]: gen~ uses counter 24000 with in 1 for proper initialization
 - [03-02]: Comparison patch instructor-polished in Max 9
+- [04-01]: Patch listing in table format (number, filename, description columns) for clearer hierarchy
+- [04-01]: line~ grouped under Signal Operators (not separate Envelopes section) -- keeps handout concise at 66 lines
 
 ### Pending Todos
 
@@ -90,5 +93,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-14
-Stopped at: Completed 03-02-PLAN.md (visual aids verified by instructor). Phase 3 complete. Ready for verification.
+Stopped at: Completed 04-01-PLAN.md (student reference handout). Phase 4 in progress -- Plans 02/03 remaining.
 Resume file: None
