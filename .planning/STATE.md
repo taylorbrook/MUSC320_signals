@@ -5,33 +5,33 @@
 See: .planning/PROJECT.md (updated 2026-02-13)
 
 **Core value:** Students leave understanding that MSP signal objects (~) are a fundamentally different (and sonically powerful) way of working in Max -- and they have annotated patches they can study and experiment with on their own.
-**Current focus:** Phase 2: Build-Up Patch Series -- In progress
+**Current focus:** Phase 2: Build-Up Patch Series -- Complete. Ready for Phase 3.
 
 ## Current Position
 
-Phase: 2 of 4 (Build-Up Patch Series)
-Plan: 2 of 3 in current phase
-Status: In progress
-Last activity: 2026-02-14 -- Completed 02-02-PLAN.md (patches 04-06)
+Phase: 2 of 4 (Build-Up Patch Series) -- COMPLETE
+Plan: 3 of 3 in current phase (all plans complete)
+Status: Phase complete
+Last activity: 2026-02-14 -- Completed 02-03-PLAN.md (noise sculpture rebuild + full series verification)
 
-Progress: [#####.....] 50%
+Progress: [######....] 60%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 4
-- Average duration: 11min
-- Total execution time: 0.7 hours
+- Total plans completed: 5
+- Average duration: 10min
+- Total execution time: 0.8 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01-noise-sculpture-demo | 2 | 31min | 16min |
-| 02-build-up-patch-series | 2 | 10min | 5min |
+| 02-build-up-patch-series | 3 | 15min | 5min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (6min), 01-02 (25min), 02-01 (4min), 02-02 (6min)
+- Last 5 plans: 01-02 (25min), 02-01 (4min), 02-02 (6min), 02-03 (5min)
 - Trend: accelerating
 
 *Updated after each plan completion*
@@ -61,6 +61,10 @@ Recent decisions affecting current work:
 - [02-02]: Patch 04 sums noise and cycle~ comparison tone via +~ before output chain (single live.gain~)
 - [02-02]: Patch 05 uses simple on/off envelope (fade in 500ms, fade out 100ms) -- focused teaching
 - [02-02]: Patch 06 master level reuses toggle -> sel -> line~ pattern from Patch 05 for reinforcement
+- [02-03]: Patch 07 has no Presentation Mode -- students compare raw patching view to demo's polished Presentation Mode
+- [02-03]: Patch 07 annotations lighter than earlier patches -- reference which patch taught each technique
+- [02-03]: Instructor changed Patch 01 from cycle~ 440 to cycle~ 220 during verification (lower starting tone)
+- [02-03]: All 7 build-up patches verified in Max 9 with instructor layout polish applied
 
 ### Pending Todos
 
@@ -74,5 +78,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-14
-Stopped at: Completed 02-02-PLAN.md (patches 04-06 of build-up series). Ready for 02-03-PLAN.md.
+Stopped at: Completed 02-03-PLAN.md (noise sculpture rebuild + full series verification). Phase 2 complete. Ready for Phase 3.
 Resume file: None
