@@ -55,12 +55,12 @@ Seeing signals.
 
 | # | Patch | What It Teaches |
 |---|-------|-----------------|
-| 1 | `01-hello-signal.maxpat` | Your first MSP sound: a test tone through a safe output chain |
-| 2 | `02-first-tone.maxpat` | Exploring frequency and amplitude with cycle~ |
-| 3 | `03-control-meets-signal.maxpat` | Bridging Max and MSP with sig~ and number~ |
-| 4 | `04-noise-and-amplitude.maxpat` | noise~ as a signal source, controlling amplitude with *~ |
-| 5 | `05-envelopes.maxpat` | Shaping sound over time with line~ and *~ |
-| 6 | `06-modulation-and-mixing.maxpat` | phasor~ automation, +~ mixing, multi-voice architecture |
-| 7 | `07-noise-sculpture-rebuild.maxpat` | Putting it all together: rebuilding the noise sculpture |
-| -- | `noise-sculpture-demo.maxpat` | The finished noise sculpture (what you heard first in class) |
-| -- | `three-level-comparison.maxpat` | Control rate vs signal rate vs sample rate (bonus) |
+| 1 | [01-hello-signal.maxpat](../patches/01-hello-signal.maxpat) | Your first MSP sound: a test tone through a safe output chain |
+| 2 | [02-first-tone.maxpat](../patches/02-first-tone.maxpat) | Exploring frequency and amplitude with cycle~ |
+| 3 | [03-control-meets-signal.maxpat](../patches/03-control-meets-signal.maxpat) | Bridging Max and MSP with sig~ and number~ |
+| 4 | [04-noise-and-amplitude.maxpat](../patches/04-noise-and-amplitude.maxpat) | noise~ as a signal source, controlling amplitude with *~ |
+| 5 | [05-envelopes.maxpat](../patches/05-envelopes.maxpat) | Shaping sound over time with line~ and *~ |
+| 6 | [06-modulation-and-mixing.maxpat](../patches/06-modulation-and-mixing.maxpat) | phasor~ automation, +~ mixing, multi-voice architecture |
+| 7 | [07-noise-sculpture-rebuild.maxpat](../patches/07-noise-sculpture-rebuild.maxpat) | Putting it all together: rebuilding the noise sculpture |
+| -- | [noise-sculpture-demo.maxpat](../patches/noise-sculpture-demo.maxpat) | The finished noise sculpture (what you heard first in class) |
+| -- | [three-level-comparison.maxpat](../patches/three-level-comparison.maxpat) | Control rate vs signal rate vs sample rate (bonus) |

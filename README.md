@@ -4,7 +4,7 @@ Welcome to the MSP module of MUSC 320. This repository contains everything you n
 
 ## Getting started
 
-You will need **Max 8 or 9** installed to open the patches.
+You will need **Max 9** installed to open the patches.
 
 ### Download the entire repo
 
@@ -13,7 +13,7 @@ Click the green **Code** button at the top of this page, then choose **Download 
 If you are comfortable with Git you can also clone:
 
 ```
-git clone <this-repo-url>
+git clone https://github.com/taylorbrook/MUSC320_signals.git
 ```
 
 ## Patches
@@ -39,7 +39,3 @@ Open these in order. Each patch builds on the previous one, leading up to a full
 
 - [Student quick-reference (PDF/Markdown)](docs/student-reference.md) -- One-page cheat sheet covering every MSP object used in the patches, with signal-flow diagrams
 
-## Diagrams
-
-- [Digital audio waveform](diagrams/digital-audio-waveform.svg) -- How continuous sound becomes discrete samples
-- [Signal flow](diagrams/signal-flow.svg) -- Source → Processing → Output chain
