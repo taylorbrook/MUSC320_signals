@@ -9,198 +9,420 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 100.0, 100.0, 1100.0, 850.0 ],
+        "rect": [
+            100,
+            100,
+            1100,
+            850
+        ],
         "description": "06 — Modulation and Mixing: phasor~ automation, +~ voice mixing, multi-voice architecture (MUSC 320 Week 7)",
         "boxes": [
             {
                 "box": {
+                    "id": "obj-region-source",
+                    "maxclass": "panel",
+                    "mode": 0,
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [
+                        20,
+                        140,
+                        520,
+                        310
+                    ],
+                    "bgcolor": [
+                        0.2,
+                        0.3,
+                        0.55,
+                        0.1
+                    ],
+                    "rounded": 12
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-region-processing",
+                    "maxclass": "panel",
+                    "mode": 0,
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [
+                        185,
+                        475,
+                        300,
+                        75
+                    ],
+                    "bgcolor": [
+                        0.55,
+                        0.35,
+                        0.15,
+                        0.1
+                    ],
+                    "rounded": 12
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-region-output",
+                    "maxclass": "panel",
+                    "mode": 0,
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [
+                        185,
+                        555,
+                        300,
+                        230
+                    ],
+                    "bgcolor": [
+                        0.2,
+                        0.45,
+                        0.25,
+                        0.1
+                    ],
+                    "rounded": 12
+                }
+            },
+            {
+                "box": {
                     "fontface": 1,
-                    "fontsize": 16.0,
+                    "fontsize": 16,
                     "id": "obj-title",
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 30.0, 10.0, 400.0, 24.0 ],
+                    "patching_rect": [
+                        30,
+                        10,
+                        400,
+                        24
+                    ],
                     "text": "06 — Modulation and Mixing"
                 }
             },
             {
                 "box": {
-                    "fontsize": 12.0,
+                    "fontsize": 12,
                     "id": "obj-subtitle",
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 30.0, 36.0, 350.0, 20.0 ],
+                    "patching_rect": [
+                        30,
+                        36,
+                        350,
+                        20
+                    ],
                     "text": "How do I make sound evolve continuously?"
                 }
             },
             {
                 "box": {
-                    "fontsize": 11.0,
+                    "fontsize": 11,
                     "id": "obj-c1",
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 30.0, 62.0, 680.0, 19.0 ],
-                    "text": "phasor~ 0.5 -- generates a repeating ramp from 0 to 1, completing 0.5 cycles per second (one ramp every 2 seconds)",
-                    "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
+                    "patching_rect": [
+                        30,
+                        62,
+                        680,
+                        19
+                    ],
+                    "text": "phasor~ 0.5 — metro fires bangs at intervals. phasor~ generates a smooth repeating ramp you can use as an LFO.",
+                    "textcolor": [
+                        0.4,
+                        0.4,
+                        0.8,
+                        1
+                    ]
                 }
             },
             {
                 "box": {
-                    "fontsize": 11.0,
+                    "fontsize": 11,
                     "id": "obj-c2",
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 30.0, 82.0, 740.0, 19.0 ],
+                    "patching_rect": [
+                        30,
+                        82,
+                        740,
+                        19
+                    ],
                     "text": "cycle~ 0 -- when cycle~ has 0 as argument, it reads frequency from the LEFT inlet. Here we use the RIGHT inlet (phase), driven by phasor~.",
-                    "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
+                    "textcolor": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        1
+                    ]
                 }
             },
             {
                 "box": {
-                    "fontsize": 11.0,
+                    "fontsize": 11,
                     "id": "obj-c3",
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 30.0, 102.0, 761.0, 19.0 ],
+                    "patching_rect": [
+                        30,
+                        102,
+                        761,
+                        19
+                    ],
                     "text": "phasor~ -> cycle~ phase = smooth cyclical modulation. Think of phasor~ as 'metro for signals' -- it repeats automatically without any control-domain timing.",
-                    "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
+                    "textcolor": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        1
+                    ]
                 }
             },
             {
                 "box": {
-                    "fontsize": 11.0,
+                    "fontsize": 11,
                     "id": "obj-c4",
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 30.0, 122.0, 700.0, 19.0 ],
+                    "patching_rect": [
+                        30,
+                        122,
+                        700,
+                        19
+                    ],
                     "text": "*~ 0.5 -> +~ 0.5 -- converts the -1..1 cycle~ output to a 0..1 range (unipolar). This is a standard MSP idiom.",
-                    "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
+                    "textcolor": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        1
+                    ]
                 }
             },
             {
                 "box": {
-                    "fontsize": 11.0,
+                    "fontsize": 11,
                     "id": "obj-c5",
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 560.0, 150.0, 500.0, 19.0 ],
+                    "patching_rect": [
+                        560,
+                        150,
+                        500,
+                        19
+                    ],
                     "text": "+~ adds signals just like + adds numbers. Here it mixes two voices into one output.",
-                    "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
+                    "textcolor": [
+                        0.4,
+                        0.4,
+                        0.8,
+                        1
+                    ]
                 }
             },
             {
                 "box": {
-                    "fontsize": 11.0,
+                    "fontsize": 11,
                     "id": "obj-c6",
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 560.0, 170.0, 530.0, 19.0 ],
+                    "patching_rect": [
+                        560,
+                        170,
+                        530,
+                        19
+                    ],
                     "text": "The 3 Hz difference between 220 and 223 creates a gentle beating effect -- two nearly identical frequencies",
-                    "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
+                    "textcolor": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        1
+                    ]
                 }
             },
             {
                 "box": {
-                    "fontsize": 11.0,
+                    "fontsize": 11,
                     "id": "obj-c6b",
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 560.0, 190.0, 500.0, 19.0 ],
+                    "patching_rect": [
+                        560,
+                        190,
+                        500,
+                        19
+                    ],
                     "text": "interfere, creating a pulsing volume.",
-                    "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
+                    "textcolor": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        1
+                    ]
                 }
             },
             {
                 "box": {
-                    "fontsize": 11.0,
+                    "fontsize": 11,
                     "id": "obj-c7",
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 560.0, 220.0, 500.0, 19.0 ],
+                    "patching_rect": [
+                        560,
+                        220,
+                        500,
+                        19
+                    ],
                     "text": "*~ 0.7 on the detuned partial -- slightly quieter than the fundamental for a natural sound.",
-                    "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
+                    "textcolor": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        1
+                    ]
                 }
             },
             {
                 "box": {
                     "fontface": 1,
-                    "fontsize": 11.0,
+                    "fontsize": 11,
                     "id": "obj-c8",
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 560.0, 250.0, 500.0, 19.0 ],
-                    "text": "TRY THIS: change phasor~ 0.5 to 2.0 for faster modulation, or 0.1 for glacial evolution.",
-                    "textcolor": [ 0.4, 0.6, 0.4, 1.0 ]
+                    "patching_rect": [
+                        560,
+                        250,
+                        500,
+                        19
+                    ],
+                    "text": "EXPERIMENT: Change phasor~ from 0.5 to 5.0 — hear how the modulation speeds up? Now try 0.01 for a very slow sweep.",
+                    "textcolor": [
+                        0.3,
+                        0.65,
+                        0.3,
+                        1
+                    ],
+                    "bgcolor": [
+                        0.12,
+                        0.2,
+                        0.12,
+                        1
+                    ]
                 }
             },
             {
                 "box": {
-                    "fontsize": 11.0,
+                    "fontsize": 11,
                     "id": "obj-c9",
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 560.0, 280.0, 500.0, 19.0 ],
+                    "patching_rect": [
+                        560,
+                        280,
+                        500,
+                        19
+                    ],
                     "text": "This patch combines everything from Patches 01-05: cycle~ for tone, *~ for amplitude,",
-                    "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
+                    "textcolor": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        1
+                    ]
                 }
             },
             {
                 "box": {
-                    "fontsize": 11.0,
+                    "fontsize": 11,
                     "id": "obj-c9b",
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 560.0, 300.0, 500.0, 19.0 ],
+                    "patching_rect": [
+                        560,
+                        300,
+                        500,
+                        19
+                    ],
                     "text": "line~ for fade in/out, and now phasor~ for continuous modulation and +~ for mixing.",
-                    "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
+                    "textcolor": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        1
+                    ]
                 }
             },
             {
                 "box": {
-                    "fontsize": 11.0,
+                    "fontsize": 11,
                     "id": "obj-c10",
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 560.0, 330.0, 500.0, 19.0 ],
+                    "patching_rect": [
+                        560,
+                        330,
+                        500,
+                        19
+                    ],
                     "text": "phasor~ demonstrates why signals are powerful: it generates 44,100 ramp values per second,",
-                    "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
+                    "textcolor": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        1
+                    ]
                 }
             },
             {
                 "box": {
-                    "fontsize": 11.0,
+                    "fontsize": 11,
                     "id": "obj-c10b",
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 560.0, 350.0, 500.0, 19.0 ],
+                    "patching_rect": [
+                        560,
+                        350,
+                        500,
+                        19
+                    ],
                     "text": "giving you sample-accurate control over modulation. No metro or scheduling needed.",
-                    "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
+                    "textcolor": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        1
+                    ]
                 }
             },
             {
                 "box": {
                     "fontface": 1,
-                    "fontsize": 12.0,
+                    "fontsize": 12,
                     "id": "obj-lbl-master",
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 400.0, 150.0, 130.0, 20.0 ],
+                    "patching_rect": [
+                        400,
+                        150,
+                        130,
+                        20
+                    ],
                     "text": "MASTER ON/OFF"
                 }
             },
@@ -210,9 +432,16 @@
                     "maxclass": "toggle",
                     "numinlets": 1,
                     "numoutlets": 1,
-                    "outlettype": [ "int" ],
+                    "outlettype": [
+                        "int"
+                    ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 430.0, 175.0, 30.0, 30.0 ]
+                    "patching_rect": [
+                        430,
+                        175,
+                        30,
+                        30
+                    ]
                 }
             },
             {
@@ -221,8 +450,17 @@
                     "maxclass": "newobj",
                     "numinlets": 3,
                     "numoutlets": 3,
-                    "outlettype": [ "bang", "bang", "" ],
-                    "patching_rect": [ 430.0, 215.0, 60.0, 22.0 ],
+                    "outlettype": [
+                        "bang",
+                        "bang",
+                        ""
+                    ],
+                    "patching_rect": [
+                        430,
+                        215,
+                        60,
+                        22
+                    ],
                     "text": "sel 0 1"
                 }
             },
@@ -232,8 +470,15 @@
                     "maxclass": "message",
                     "numinlets": 2,
                     "numoutlets": 1,
-                    "outlettype": [ "" ],
-                    "patching_rect": [ 430.0, 250.0, 42.0, 22.0 ],
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        430,
+                        250,
+                        42,
+                        22
+                    ],
                     "text": "0 100"
                 }
             },
@@ -243,8 +488,15 @@
                     "maxclass": "message",
                     "numinlets": 2,
                     "numoutlets": 1,
-                    "outlettype": [ "" ],
-                    "patching_rect": [ 480.0, 250.0, 57.0, 22.0 ],
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        480,
+                        250,
+                        57,
+                        22
+                    ],
                     "text": "0, 1. 500"
                 }
             },
@@ -254,33 +506,56 @@
                     "maxclass": "newobj",
                     "numinlets": 2,
                     "numoutlets": 2,
-                    "outlettype": [ "signal", "bang" ],
-                    "patching_rect": [ 430.0, 285.0, 37.0, 22.0 ],
+                    "outlettype": [
+                        "signal",
+                        "bang"
+                    ],
+                    "patching_rect": [
+                        430,
+                        285,
+                        37,
+                        22
+                    ],
                     "text": "line~"
                 }
             },
             {
                 "box": {
                     "fontface": 1,
-                    "fontsize": 12.0,
+                    "fontsize": 12,
                     "id": "obj-lbl-voiceA",
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 30.0, 150.0, 200.0, 20.0 ],
+                    "patching_rect": [
+                        30,
+                        150,
+                        200,
+                        20
+                    ],
                     "text": "Voice A: Tremolo"
                 }
             },
             {
                 "box": {
-                    "fontsize": 10.0,
+                    "fontsize": 10,
                     "id": "obj-lbl-lfo",
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 30.0, 172.0, 220.0, 18.0 ],
+                    "patching_rect": [
+                        30,
+                        172,
+                        220,
+                        18
+                    ],
                     "text": "LFO: phasor~ -> cycle~ phase -> unipolar",
-                    "textcolor": [ 0.6, 0.6, 0.6, 1.0 ]
+                    "textcolor": [
+                        0.6,
+                        0.6,
+                        0.6,
+                        1
+                    ]
                 }
             },
             {
@@ -289,8 +564,15 @@
                     "maxclass": "newobj",
                     "numinlets": 2,
                     "numoutlets": 1,
-                    "outlettype": [ "signal" ],
-                    "patching_rect": [ 30.0, 195.0, 72.0, 22.0 ],
+                    "outlettype": [
+                        "signal"
+                    ],
+                    "patching_rect": [
+                        30,
+                        195,
+                        72,
+                        22
+                    ],
                     "text": "phasor~ 0.5"
                 }
             },
@@ -300,8 +582,15 @@
                     "maxclass": "newobj",
                     "numinlets": 2,
                     "numoutlets": 1,
-                    "outlettype": [ "signal" ],
-                    "patching_rect": [ 30.0, 225.0, 53.0, 22.0 ],
+                    "outlettype": [
+                        "signal"
+                    ],
+                    "patching_rect": [
+                        30,
+                        225,
+                        53,
+                        22
+                    ],
                     "text": "cycle~ 0"
                 }
             },
@@ -311,8 +600,15 @@
                     "maxclass": "newobj",
                     "numinlets": 2,
                     "numoutlets": 1,
-                    "outlettype": [ "signal" ],
-                    "patching_rect": [ 30.0, 255.0, 40.0, 22.0 ],
+                    "outlettype": [
+                        "signal"
+                    ],
+                    "patching_rect": [
+                        30,
+                        255,
+                        40,
+                        22
+                    ],
                     "text": "*~ 0.5"
                 }
             },
@@ -322,8 +618,15 @@
                     "maxclass": "newobj",
                     "numinlets": 2,
                     "numoutlets": 1,
-                    "outlettype": [ "signal" ],
-                    "patching_rect": [ 30.0, 285.0, 43.0, 22.0 ],
+                    "outlettype": [
+                        "signal"
+                    ],
+                    "patching_rect": [
+                        30,
+                        285,
+                        43,
+                        22
+                    ],
                     "text": "+~ 0.5"
                 }
             },
@@ -333,8 +636,15 @@
                     "maxclass": "newobj",
                     "numinlets": 2,
                     "numoutlets": 1,
-                    "outlettype": [ "signal" ],
-                    "patching_rect": [ 130.0, 255.0, 66.0, 22.0 ],
+                    "outlettype": [
+                        "signal"
+                    ],
+                    "patching_rect": [
+                        130,
+                        255,
+                        66,
+                        22
+                    ],
                     "text": "cycle~ 330"
                 }
             },
@@ -344,79 +654,145 @@
                     "maxclass": "newobj",
                     "numinlets": 2,
                     "numoutlets": 1,
-                    "outlettype": [ "signal" ],
-                    "patching_rect": [ 130.0, 320.0, 32.0, 22.0 ],
+                    "outlettype": [
+                        "signal"
+                    ],
+                    "patching_rect": [
+                        130,
+                        320,
+                        32,
+                        22
+                    ],
                     "text": "*~"
                 }
             },
             {
                 "box": {
-                    "bgcolor": [ 0.1, 0.1, 0.12, 1.0 ],
+                    "bgcolor": [
+                        0.1,
+                        0.1,
+                        0.12,
+                        1
+                    ],
                     "id": "obj-scope-lfo",
                     "maxclass": "live.scope~",
                     "numinlets": 2,
                     "numoutlets": 1,
-                    "outlettype": [ "bang" ],
-                    "patching_rect": [ 30.0, 385.0, 130.0, 50.0 ]
+                    "outlettype": [
+                        "bang"
+                    ],
+                    "patching_rect": [
+                        30,
+                        385,
+                        130,
+                        50
+                    ]
                 }
             },
             {
                 "box": {
-                    "fontsize": 10.0,
+                    "fontsize": 10,
                     "id": "obj-lbl-scope-lfo",
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 30.0, 437.0, 130.0, 18.0 ],
+                    "patching_rect": [
+                        30,
+                        437,
+                        130,
+                        18
+                    ],
                     "text": "LFO (0 to 1 cycling)",
-                    "textcolor": [ 0.6, 0.6, 0.6, 1.0 ]
+                    "textcolor": [
+                        0.6,
+                        0.6,
+                        0.6,
+                        1
+                    ]
                 }
             },
             {
                 "box": {
-                    "bgcolor": [ 0.1, 0.1, 0.12, 1.0 ],
+                    "bgcolor": [
+                        0.1,
+                        0.1,
+                        0.12,
+                        1
+                    ],
                     "id": "obj-scope-voiceA",
                     "maxclass": "live.scope~",
                     "numinlets": 2,
                     "numoutlets": 1,
-                    "outlettype": [ "bang" ],
-                    "patching_rect": [ 175.0, 385.0, 130.0, 50.0 ]
+                    "outlettype": [
+                        "bang"
+                    ],
+                    "patching_rect": [
+                        175,
+                        385,
+                        130,
+                        50
+                    ]
                 }
             },
             {
                 "box": {
-                    "fontsize": 10.0,
+                    "fontsize": 10,
                     "id": "obj-lbl-scope-voiceA",
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 175.0, 437.0, 130.0, 18.0 ],
+                    "patching_rect": [
+                        175,
+                        437,
+                        130,
+                        18
+                    ],
                     "text": "Voice A (tremolo)",
-                    "textcolor": [ 0.6, 0.6, 0.6, 1.0 ]
+                    "textcolor": [
+                        0.6,
+                        0.6,
+                        0.6,
+                        1
+                    ]
                 }
             },
             {
                 "box": {
                     "fontface": 1,
-                    "fontsize": 12.0,
+                    "fontsize": 12,
                     "id": "obj-lbl-voiceB",
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 300.0, 150.0, 200.0, 20.0 ],
+                    "patching_rect": [
+                        300,
+                        150,
+                        200,
+                        20
+                    ],
                     "text": "Voice B: Drone"
                 }
             },
             {
                 "box": {
-                    "fontsize": 10.0,
+                    "fontsize": 10,
                     "id": "obj-lbl-beat",
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 300.0, 172.0, 220.0, 18.0 ],
+                    "patching_rect": [
+                        300,
+                        172,
+                        220,
+                        18
+                    ],
                     "text": "Two detuned oscillators = beating",
-                    "textcolor": [ 0.6, 0.6, 0.6, 1.0 ]
+                    "textcolor": [
+                        0.6,
+                        0.6,
+                        0.6,
+                        1
+                    ]
                 }
             },
             {
@@ -425,8 +801,15 @@
                     "maxclass": "newobj",
                     "numinlets": 2,
                     "numoutlets": 1,
-                    "outlettype": [ "signal" ],
-                    "patching_rect": [ 300.0, 195.0, 66.0, 22.0 ],
+                    "outlettype": [
+                        "signal"
+                    ],
+                    "patching_rect": [
+                        300,
+                        195,
+                        66,
+                        22
+                    ],
                     "text": "cycle~ 220"
                 }
             },
@@ -436,8 +819,15 @@
                     "maxclass": "newobj",
                     "numinlets": 2,
                     "numoutlets": 1,
-                    "outlettype": [ "signal" ],
-                    "patching_rect": [ 300.0, 225.0, 66.0, 22.0 ],
+                    "outlettype": [
+                        "signal"
+                    ],
+                    "patching_rect": [
+                        300,
+                        225,
+                        66,
+                        22
+                    ],
                     "text": "cycle~ 223"
                 }
             },
@@ -447,8 +837,15 @@
                     "maxclass": "newobj",
                     "numinlets": 2,
                     "numoutlets": 1,
-                    "outlettype": [ "signal" ],
-                    "patching_rect": [ 300.0, 255.0, 40.0, 22.0 ],
+                    "outlettype": [
+                        "signal"
+                    ],
+                    "patching_rect": [
+                        300,
+                        255,
+                        40,
+                        22
+                    ],
                     "text": "*~ 0.7"
                 }
             },
@@ -458,43 +855,77 @@
                     "maxclass": "newobj",
                     "numinlets": 2,
                     "numoutlets": 1,
-                    "outlettype": [ "signal" ],
-                    "patching_rect": [ 300.0, 320.0, 32.0, 22.0 ],
+                    "outlettype": [
+                        "signal"
+                    ],
+                    "patching_rect": [
+                        300,
+                        320,
+                        32,
+                        22
+                    ],
                     "text": "+~"
                 }
             },
             {
                 "box": {
-                    "bgcolor": [ 0.1, 0.1, 0.12, 1.0 ],
+                    "bgcolor": [
+                        0.1,
+                        0.1,
+                        0.12,
+                        1
+                    ],
                     "id": "obj-scope-voiceB",
                     "maxclass": "live.scope~",
                     "numinlets": 2,
                     "numoutlets": 1,
-                    "outlettype": [ "bang" ],
-                    "patching_rect": [ 320.0, 385.0, 130.0, 50.0 ]
+                    "outlettype": [
+                        "bang"
+                    ],
+                    "patching_rect": [
+                        320,
+                        385,
+                        130,
+                        50
+                    ]
                 }
             },
             {
                 "box": {
-                    "fontsize": 10.0,
+                    "fontsize": 10,
                     "id": "obj-lbl-scope-voiceB",
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 320.0, 437.0, 130.0, 18.0 ],
+                    "patching_rect": [
+                        320,
+                        437,
+                        130,
+                        18
+                    ],
                     "text": "Voice B (beating drone)",
-                    "textcolor": [ 0.6, 0.6, 0.6, 1.0 ]
+                    "textcolor": [
+                        0.6,
+                        0.6,
+                        0.6,
+                        1
+                    ]
                 }
             },
             {
                 "box": {
                     "fontface": 1,
-                    "fontsize": 12.0,
+                    "fontsize": 12,
                     "id": "obj-lbl-mix",
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 254.0, 491.0, 200.0, 20.0 ],
+                    "patching_rect": [
+                        254,
+                        491,
+                        200,
+                        20
+                    ],
                     "text": "Mix Bus"
                 }
             },
@@ -504,8 +935,15 @@
                     "maxclass": "newobj",
                     "numinlets": 2,
                     "numoutlets": 1,
-                    "outlettype": [ "signal" ],
-                    "patching_rect": [ 200.0, 490.0, 32.0, 22.0 ],
+                    "outlettype": [
+                        "signal"
+                    ],
+                    "patching_rect": [
+                        200,
+                        490,
+                        32,
+                        22
+                    ],
                     "text": "+~"
                 }
             },
@@ -515,8 +953,15 @@
                     "maxclass": "newobj",
                     "numinlets": 2,
                     "numoutlets": 1,
-                    "outlettype": [ "signal" ],
-                    "patching_rect": [ 200.0, 530.0, 32.0, 22.0 ],
+                    "outlettype": [
+                        "signal"
+                    ],
+                    "patching_rect": [
+                        200,
+                        530,
+                        32,
+                        22
+                    ],
                     "text": "*~"
                 }
             },
@@ -527,16 +972,29 @@
                     "maxclass": "live.gain~",
                     "numinlets": 2,
                     "numoutlets": 5,
-                    "outlettype": [ "signal", "signal", "", "float", "list" ],
+                    "outlettype": [
+                        "signal",
+                        "signal",
+                        "",
+                        "float",
+                        "list"
+                    ],
                     "parameter_enable": 1,
-                    "patching_rect": [ 200.0, 570.0, 48.0, 136.0 ],
+                    "patching_rect": [
+                        200,
+                        570,
+                        48,
+                        136
+                    ],
                     "saved_attribute_attributes": {
                         "valueof": {
-                            "parameter_initial": [ -12.0 ],
+                            "parameter_initial": [
+                                -12
+                            ],
                             "parameter_initial_enable": 1,
                             "parameter_longname": "Build-06 Vol",
-                            "parameter_mmax": 6.0,
-                            "parameter_mmin": -70.0,
+                            "parameter_mmax": 6,
+                            "parameter_mmin": -70,
                             "parameter_modmode": 0,
                             "parameter_shortname": "Vol",
                             "parameter_type": 0,
@@ -552,8 +1010,15 @@
                     "maxclass": "newobj",
                     "numinlets": 3,
                     "numoutlets": 1,
-                    "outlettype": [ "signal" ],
-                    "patching_rect": [ 200.0, 720.0, 88.0, 22.0 ],
+                    "outlettype": [
+                        "signal"
+                    ],
+                    "patching_rect": [
+                        200,
+                        720,
+                        88,
+                        22
+                    ],
                     "text": "clip~ -0.9 0.9"
                 }
             },
@@ -563,8 +1028,15 @@
                     "maxclass": "newobj",
                     "numinlets": 3,
                     "numoutlets": 1,
-                    "outlettype": [ "signal" ],
-                    "patching_rect": [ 310.0, 720.0, 88.0, 22.0 ],
+                    "outlettype": [
+                        "signal"
+                    ],
+                    "patching_rect": [
+                        310,
+                        720,
+                        88,
+                        22
+                    ],
                     "text": "clip~ -0.9 0.9"
                 }
             },
@@ -574,7 +1046,12 @@
                     "maxclass": "newobj",
                     "numinlets": 2,
                     "numoutlets": 0,
-                    "patching_rect": [ 200.0, 760.0, 37.0, 22.0 ],
+                    "patching_rect": [
+                        200,
+                        760,
+                        37,
+                        22
+                    ],
                     "text": "dac~"
                 }
             },
@@ -584,184 +1061,462 @@
                     "maxclass": "ezdac~",
                     "numinlets": 2,
                     "numoutlets": 0,
-                    "patching_rect": [ 420.0, 720.0, 45.0, 45.0 ]
+                    "patching_rect": [
+                        420,
+                        720,
+                        45,
+                        45
+                    ]
+                }
+            },
+            {
+                "box": {
+                    "fontface": 1,
+                    "fontsize": 11,
+                    "id": "obj-experiment-02",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [
+                        560,
+                        270,
+                        500,
+                        19
+                    ],
+                    "text": "EXPERIMENT: Disconnect one voice from the +~ mixer — which voice is it? Can you tell by the sound?",
+                    "textcolor": [
+                        0.3,
+                        0.65,
+                        0.3,
+                        1
+                    ],
+                    "bgcolor": [
+                        0.12,
+                        0.2,
+                        0.12,
+                        1
+                    ]
+                }
+            },
+            {
+                "box": {
+                    "fontsize": 11,
+                    "id": "obj-troubleshoot-06",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [
+                        420,
+                        780,
+                        500,
+                        19
+                    ],
+                    "text": "No sound? Check: ezdac~ on, live.gain~ up, master toggle on (yellow).",
+                    "textcolor": [
+                        0.85,
+                        0.6,
+                        0.2,
+                        1
+                    ]
+                }
+            },
+            {
+                "box": {
+                    "fontsize": 11,
+                    "id": "obj-ann-param-lfo",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [
+                        110,
+                        195,
+                        310,
+                        19
+                    ],
+                    "text": "0.5 Hz = one cycle every 2 seconds (slow LFO)",
+                    "textcolor": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        1
+                    ]
+                }
+            },
+            {
+                "box": {
+                    "fontsize": 10,
+                    "id": "obj-color-legend",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [
+                        30,
+                        800,
+                        450,
+                        18
+                    ],
+                    "text": "COLOR REGIONS:  Blue = Source (oscillators, noise)  |  Orange = Processing (envelopes, operators)  |  Green = Output (gain, dac~)",
+                    "textcolor": [
+                        0.6,
+                        0.6,
+                        0.6,
+                        1
+                    ]
                 }
             }
         ],
         "lines": [
             {
                 "patchline": {
-                    "destination": [ "obj-scope-voiceA", 0 ],
+                    "destination": [
+                        "obj-scope-voiceA",
+                        0
+                    ],
                     "order": 1,
-                    "source": [ "obj-am", 0 ]
+                    "source": [
+                        "obj-am",
+                        0
+                    ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-voice-mix", 0 ],
+                    "destination": [
+                        "obj-voice-mix",
+                        0
+                    ],
                     "order": 0,
-                    "source": [ "obj-am", 0 ]
+                    "source": [
+                        "obj-am",
+                        0
+                    ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-dac", 0 ],
-                    "source": [ "obj-clip-l", 0 ]
+                    "destination": [
+                        "obj-dac",
+                        0
+                    ],
+                    "source": [
+                        "obj-clip-l",
+                        0
+                    ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-dac", 1 ],
-                    "source": [ "obj-clip-r", 0 ]
+                    "destination": [
+                        "obj-dac",
+                        1
+                    ],
+                    "source": [
+                        "obj-clip-r",
+                        0
+                    ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-drone-scale", 0 ],
-                    "source": [ "obj-drone-det", 0 ]
+                    "destination": [
+                        "obj-drone-scale",
+                        0
+                    ],
+                    "source": [
+                        "obj-drone-det",
+                        0
+                    ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-drone-sum", 0 ],
-                    "source": [ "obj-drone-fund", 0 ]
+                    "destination": [
+                        "obj-drone-sum",
+                        0
+                    ],
+                    "source": [
+                        "obj-drone-fund",
+                        0
+                    ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-drone-sum", 1 ],
-                    "source": [ "obj-drone-scale", 0 ]
+                    "destination": [
+                        "obj-drone-sum",
+                        1
+                    ],
+                    "source": [
+                        "obj-drone-scale",
+                        0
+                    ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-scope-voiceB", 0 ],
+                    "destination": [
+                        "obj-scope-voiceB",
+                        0
+                    ],
                     "order": 0,
-                    "source": [ "obj-drone-sum", 0 ]
+                    "source": [
+                        "obj-drone-sum",
+                        0
+                    ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-voice-mix", 1 ],
+                    "destination": [
+                        "obj-voice-mix",
+                        1
+                    ],
                     "order": 1,
-                    "source": [ "obj-drone-sum", 0 ]
+                    "source": [
+                        "obj-drone-sum",
+                        0
+                    ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-clip-l", 0 ],
-                    "source": [ "obj-gain", 0 ]
+                    "destination": [
+                        "obj-clip-l",
+                        0
+                    ],
+                    "source": [
+                        "obj-gain",
+                        0
+                    ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-clip-r", 0 ],
-                    "source": [ "obj-gain", 1 ]
+                    "destination": [
+                        "obj-clip-r",
+                        0
+                    ],
+                    "source": [
+                        "obj-gain",
+                        1
+                    ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-lfo-scale", 0 ],
-                    "source": [ "obj-lfo-cycle", 0 ]
+                    "destination": [
+                        "obj-lfo-scale",
+                        0
+                    ],
+                    "source": [
+                        "obj-lfo-cycle",
+                        0
+                    ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-am", 1 ],
+                    "destination": [
+                        "obj-am",
+                        1
+                    ],
                     "order": 0,
-                    "source": [ "obj-lfo-offset", 0 ]
+                    "source": [
+                        "obj-lfo-offset",
+                        0
+                    ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-scope-lfo", 0 ],
+                    "destination": [
+                        "obj-scope-lfo",
+                        0
+                    ],
                     "order": 1,
-                    "source": [ "obj-lfo-offset", 0 ]
+                    "source": [
+                        "obj-lfo-offset",
+                        0
+                    ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-lfo-offset", 0 ],
-                    "source": [ "obj-lfo-scale", 0 ]
+                    "destination": [
+                        "obj-lfo-offset",
+                        0
+                    ],
+                    "source": [
+                        "obj-lfo-scale",
+                        0
+                    ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-master-mult", 1 ],
-                    "source": [ "obj-master-line", 0 ]
+                    "destination": [
+                        "obj-master-mult",
+                        1
+                    ],
+                    "source": [
+                        "obj-master-line",
+                        0
+                    ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-gain", 1 ],
+                    "destination": [
+                        "obj-gain",
+                        1
+                    ],
                     "order": 0,
-                    "source": [ "obj-master-mult", 0 ]
+                    "source": [
+                        "obj-master-mult",
+                        0
+                    ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-gain", 0 ],
+                    "destination": [
+                        "obj-gain",
+                        0
+                    ],
                     "order": 1,
-                    "source": [ "obj-master-mult", 0 ]
+                    "source": [
+                        "obj-master-mult",
+                        0
+                    ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-master-line", 0 ],
-                    "source": [ "obj-master-off", 0 ]
+                    "destination": [
+                        "obj-master-line",
+                        0
+                    ],
+                    "source": [
+                        "obj-master-off",
+                        0
+                    ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-master-line", 0 ],
-                    "source": [ "obj-master-on", 0 ]
+                    "destination": [
+                        "obj-master-line",
+                        0
+                    ],
+                    "source": [
+                        "obj-master-on",
+                        0
+                    ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-master-off", 0 ],
-                    "source": [ "obj-master-sel", 0 ]
+                    "destination": [
+                        "obj-master-off",
+                        0
+                    ],
+                    "source": [
+                        "obj-master-sel",
+                        0
+                    ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-master-on", 0 ],
-                    "source": [ "obj-master-sel", 1 ]
+                    "destination": [
+                        "obj-master-on",
+                        0
+                    ],
+                    "source": [
+                        "obj-master-sel",
+                        1
+                    ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-master-sel", 0 ],
-                    "source": [ "obj-master-toggle", 0 ]
+                    "destination": [
+                        "obj-master-sel",
+                        0
+                    ],
+                    "source": [
+                        "obj-master-toggle",
+                        0
+                    ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-lfo-cycle", 1 ],
-                    "source": [ "obj-phasor", 0 ]
+                    "destination": [
+                        "obj-lfo-cycle",
+                        1
+                    ],
+                    "source": [
+                        "obj-phasor",
+                        0
+                    ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-am", 0 ],
-                    "source": [ "obj-tone-A", 0 ]
+                    "destination": [
+                        "obj-am",
+                        0
+                    ],
+                    "source": [
+                        "obj-tone-A",
+                        0
+                    ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-master-mult", 0 ],
-                    "source": [ "obj-voice-mix", 0 ]
+                    "destination": [
+                        "obj-master-mult",
+                        0
+                    ],
+                    "source": [
+                        "obj-voice-mix",
+                        0
+                    ]
                 }
             }
         ],
         "parameters": {
-            "obj-gain": [ "Build-06 Vol", "Vol", 0 ],
+            "obj-gain": [
+                "Build-06 Vol",
+                "Vol",
+                0
+            ],
             "parameterbanks": {
                 "0": {
                     "index": 0,
                     "name": "",
-                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
-                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+                    "parameters": [
+                        "-",
+                        "-",
+                        "-",
+                        "-",
+                        "-",
+                        "-",
+                        "-",
+                        "-"
+                    ],
+                    "buttons": [
+                        "-",
+                        "-",
+                        "-",
+                        "-",
+                        "-",
+                        "-",
+                        "-",
+                        "-"
+                    ]
                 }
             },
             "inherited_shortname": 1
