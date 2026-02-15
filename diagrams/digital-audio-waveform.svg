@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420">
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#222">
+    Digital Audio: Continuous Wave to Discrete Samples
+  </text>
+
+  <!-- Y-axis -->
+  <line x1="70" y1="55" x2="70" y2="285" stroke="#999" stroke-width="1"/>
+  <polygon points="70,53 66,63 74,63" fill="#999"/>
+  <text x="26" y="125" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#666" transform="rotate(-90 26,125)">amplitude</text>
+
+  <!-- X-axis -->
+  <line x1="65" y1="170" x2="745" y2="170" stroke="#999" stroke-width="1"/>
+  <polygon points="747,170 737,166 737,174" fill="#999"/>
+  <text x="752" y="175" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#666">time</text>
+
+  <!-- Continuous sine wave (analog signal) - blue, slightly transparent -->
+  <path d="M 80.0,170.0 L 82.0,165.6 L 84.0,161.2 L 86.0,156.8 L 88.0,152.4 L 90.0,148.1 L 92.0,143.9 L 94.0,139.7 L 96.0,135.6 L 98.0,131.5 L 100.0,127.6 L 102.0,123.7 L 104.0,120.0 L 106.0,116.4 L 108.0,112.9 L 110.0,109.6 L 112.0,106.4 L 114.0,103.3 L 116.0,100.4 L 118.0,97.7 L 120.0,95.2 L 122.0,92.8 L 124.0,90.6 L 126.0,88.6 L 128.0,86.9 L 130.0,85.3 L 132.0,83.9 L 134.0,82.7 L 136.0,81.7 L 138.0,81.0 L 140.0,80.4 L 142.0,80.1 L 144.0,80.0 L 146.0,80.1 L 148.0,80.4 L 150.0,81.0 L 152.0,81.7 L 154.0,82.7 L 156.0,83.9 L 158.0,85.3 L 160.0,86.9 L 162.0,88.6 L 164.0,90.6 L 166.0,92.8 L 168.0,95.2 L 170.0,97.7 L 172.0,100.4 L 174.0,103.3 L 176.0,106.4 L 178.0,109.6 L 180.0,112.9 L 182.0,116.4 L 184.0,120.0 L 186.0,123.7 L 188.0,127.6 L 190.0,131.5 L 192.0,135.6 L 194.0,139.7 L 196.0,143.9 L 198.0,148.1 L 200.0,152.4 L 202.0,156.8 L 204.0,161.2 L 206.0,165.6 L 208.0,170.0 L 210.0,174.4 L 212.0,178.8 L 214.0,183.2 L 216.0,187.6 L 218.0,191.9 L 220.0,196.1 L 222.0,200.3 L 224.0,204.4 L 226.0,208.5 L 228.0,212.4 L 230.0,216.3 L 232.0,220.0 L 234.0,223.6 L 236.0,227.1 L 238.0,230.4 L 240.0,233.6 L 242.0,236.7 L 244.0,239.6 L 246.0,242.3 L 248.0,244.8 L 250.0,247.2 L 252.0,249.4 L 254.0,251.4 L 256.0,253.1 L 258.0,254.7 L 260.0,256.1 L 262.0,257.3 L 264.0,258.3 L 266.0,259.0 L 268.0,259.6 L 270.0,259.9 L 272.0,260.0 L 274.0,259.9 L 276.0,259.6 L 278.0,259.0 L 280.0,258.3 L 282.0,257.3 L 284.0,256.1 L 286.0,254.7 L 288.0,253.1 L 290.0,251.4 L 292.0,249.4 L 294.0,247.2 L 296.0,244.8 L 298.0,242.3 L 300.0,239.6 L 302.0,236.7 L 304.0,233.6 L 306.0,230.4 L 308.0,227.1 L 310.0,223.6 L 312.0,220.0 L 314.0,216.3 L 316.0,212.4 L 318.0,208.5 L 320.0,204.4 L 322.0,200.3 L 324.0,196.1 L 326.0,191.9 L 328.0,187.6 L 330.0,183.2 L 332.0,178.8 L 334.0,174.4 L 336.0,170.0 L 338.0,165.6 L 340.0,161.2 L 342.0,156.8 L 344.0,152.4 L 346.0,148.1 L 348.0,143.9 L 350.0,139.7 L 352.0,135.6 L 354.0,131.5 L 356.0,127.6 L 358.0,123.7 L 360.0,120.0 L 362.0,116.4 L 364.0,112.9 L 366.0,109.6 L 368.0,106.4 L 370.0,103.3 L 372.0,100.4 L 374.0,97.7 L 376.0,95.2 L 378.0,92.8 L 380.0,90.6 L 382.0,88.6 L 384.0,86.9 L 386.0,85.3 L 388.0,83.9 L 390.0,82.7 L 392.0,81.7 L 394.0,81.0 L 396.0,80.4 L 398.0,80.1 L 400.0,80.0 L 402.0,80.1 L 404.0,80.4 L 406.0,81.0 L 408.0,81.7 L 410.0,82.7 L 412.0,83.9 L 414.0,85.3 L 416.0,86.9 L 418.0,88.6 L 420.0,90.6 L 422.0,92.8 L 424.0,95.2 L 426.0,97.7 L 428.0,100.4 L 430.0,103.3 L 432.0,106.4 L 434.0,109.6 L 436.0,112.9 L 438.0,116.4 L 440.0,120.0 L 442.0,123.7 L 444.0,127.6 L 446.0,131.5 L 448.0,135.6 L 450.0,139.7 L 452.0,143.9 L 454.0,148.1 L 456.0,152.4 L 458.0,156.8 L 460.0,161.2 L 462.0,165.6 L 464.0,170.0 L 466.0,174.4 L 468.0,178.8 L 470.0,183.2 L 472.0,187.6 L 474.0,191.9 L 476.0,196.1 L 478.0,200.3 L 480.0,204.4 L 482.0,208.5 L 484.0,212.4 L 486.0,216.3 L 488.0,220.0 L 490.0,223.6 L 492.0,227.1 L 494.0,230.4 L 496.0,233.6 L 498.0,236.7 L 500.0,239.6 L 502.0,242.3 L 504.0,244.8 L 506.0,247.2 L 508.0,249.4 L 510.0,251.4 L 512.0,253.1 L 514.0,254.7 L 516.0,256.1 L 518.0,257.3 L 520.0,258.3 L 522.0,259.0 L 524.0,259.6 L 526.0,259.9 L 528.0,260.0 L 530.0,259.9 L 532.0,259.6 L 534.0,259.0 L 536.0,258.3 L 538.0,257.3 L 540.0,256.1 L 542.0,254.7 L 544.0,253.1 L 546.0,251.4 L 548.0,249.4 L 550.0,247.2 L 552.0,244.8 L 554.0,242.3 L 556.0,239.6 L 558.0,236.7 L 560.0,233.6 L 562.0,230.4 L 564.0,227.1 L 566.0,223.6 L 568.0,220.0 L 570.0,216.3 L 572.0,212.4 L 574.0,208.5 L 576.0,204.4 L 578.0,200.3 L 580.0,196.1 L 582.0,191.9 L 584.0,187.6 L 586.0,183.2 L 588.0,178.8 L 590.0,174.4 L 592.0,170.0 L 594.0,165.6 L 596.0,161.2 L 598.0,156.8 L 600.0,152.4 L 602.0,148.1 L 604.0,143.9 L 606.0,139.7 L 608.0,135.6 L 610.0,131.5 L 612.0,127.6 L 614.0,123.7 L 616.0,120.0 L 618.0,116.4 L 620.0,112.9 L 622.0,109.6 L 624.0,106.4 L 626.0,103.3 L 628.0,100.4 L 630.0,97.7 L 632.0,95.2 L 634.0,92.8 L 636.0,90.6 L 638.0,88.6 L 640.0,86.9 L 642.0,85.3 L 644.0,83.9 L 646.0,82.7 L 648.0,81.7 L 650.0,81.0 L 652.0,80.4 L 654.0,80.1 L 656.0,80.0 L 658.0,80.1 L 660.0,80.4 L 662.0,81.0 L 664.0,81.7 L 666.0,82.7 L 668.0,83.9 L 670.0,85.3 L 672.0,86.9 L 674.0,88.6 L 676.0,90.6 L 678.0,92.8 L 680.0,95.2 L 682.0,97.7 L 684.0,100.4 L 686.0,103.3 L 688.0,106.4 L 690.0,109.6 L 692.0,112.9 L 694.0,116.4 L 696.0,120.0 L 698.0,123.7 L 700.0,127.6 L 702.0,131.5 L 704.0,135.6 L 706.0,139.7 L 708.0,143.9 L 710.0,148.1 L 712.0,152.4 L 714.0,156.8 L 716.0,161.2 L 718.0,165.6 L 720.0,170.0"
+        fill="none" stroke="#4A90D9" stroke-width="2.5" opacity="0.6"/>
+
+  <!-- Discrete sample points with dashed stems -->
+  <circle cx="80.0" cy="170.0" r="5" fill="#E74C3C"/>
+  <line x1="106.7" y1="115.2" x2="106.7" y2="170" stroke="#E74C3C" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+  <circle cx="106.7" cy="115.2" r="5" fill="#E74C3C"/>
+  <line x1="133.3" y1="83.1" x2="133.3" y2="170" stroke="#E74C3C" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+  <circle cx="133.3" cy="83.1" r="5" fill="#E74C3C"/>
+  <line x1="160.0" y1="86.9" x2="160.0" y2="170" stroke="#E74C3C" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+  <circle cx="160.0" cy="86.9" r="5" fill="#E74C3C"/>
+  <line x1="186.7" y1="125.0" x2="186.7" y2="170" stroke="#E74C3C" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+  <circle cx="186.7" cy="125.0" r="5" fill="#E74C3C"/>
+  <line x1="213.3" y1="170" x2="213.3" y2="181.7" stroke="#E74C3C" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+  <circle cx="213.3" cy="181.7" r="5" fill="#E74C3C"/>
+  <line x1="240.0" y1="170" x2="240.0" y2="233.6" stroke="#E74C3C" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+  <circle cx="240.0" cy="233.6" r="5" fill="#E74C3C"/>
+  <line x1="266.7" y1="170" x2="266.7" y2="259.2" stroke="#E74C3C" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+  <circle cx="266.7" cy="259.2" r="5" fill="#E74C3C"/>
+  <line x1="293.3" y1="170" x2="293.3" y2="247.9" stroke="#E74C3C" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+  <circle cx="293.3" cy="247.9" r="5" fill="#E74C3C"/>
+  <line x1="320.0" y1="170" x2="320.0" y2="204.4" stroke="#E74C3C" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+  <circle cx="320.0" cy="204.4" r="5" fill="#E74C3C"/>
+  <line x1="346.7" y1="146.7" x2="346.7" y2="170" stroke="#E74C3C" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+  <circle cx="346.7" cy="146.7" r="5" fill="#E74C3C"/>
+  <line x1="373.3" y1="98.6" x2="373.3" y2="170" stroke="#E74C3C" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+  <circle cx="373.3" cy="98.6" r="5" fill="#E74C3C"/>
+  <line x1="400.0" y1="80.0" x2="400.0" y2="170" stroke="#E74C3C" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+  <circle cx="400.0" cy="80.0" r="5" fill="#E74C3C"/>
+  <line x1="426.7" y1="98.6" x2="426.7" y2="170" stroke="#E74C3C" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+  <circle cx="426.7" cy="98.6" r="5" fill="#E74C3C"/>
+  <line x1="453.3" y1="146.7" x2="453.3" y2="170" stroke="#E74C3C" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+  <circle cx="453.3" cy="146.7" r="5" fill="#E74C3C"/>
+  <line x1="480.0" y1="170" x2="480.0" y2="204.4" stroke="#E74C3C" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+  <circle cx="480.0" cy="204.4" r="5" fill="#E74C3C"/>
+  <line x1="506.7" y1="170" x2="506.7" y2="247.9" stroke="#E74C3C" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+  <circle cx="506.7" cy="247.9" r="5" fill="#E74C3C"/>
+  <line x1="533.3" y1="170" x2="533.3" y2="259.2" stroke="#E74C3C" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+  <circle cx="533.3" cy="259.2" r="5" fill="#E74C3C"/>
+  <line x1="560.0" y1="170" x2="560.0" y2="233.6" stroke="#E74C3C" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+  <circle cx="560.0" cy="233.6" r="5" fill="#E74C3C"/>
+  <line x1="586.7" y1="170" x2="586.7" y2="181.7" stroke="#E74C3C" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+  <circle cx="586.7" cy="181.7" r="5" fill="#E74C3C"/>
+  <line x1="613.3" y1="125.0" x2="613.3" y2="170" stroke="#E74C3C" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+  <circle cx="613.3" cy="125.0" r="5" fill="#E74C3C"/>
+  <line x1="640.0" y1="86.9" x2="640.0" y2="170" stroke="#E74C3C" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+  <circle cx="640.0" cy="86.9" r="5" fill="#E74C3C"/>
+  <line x1="666.7" y1="83.1" x2="666.7" y2="170" stroke="#E74C3C" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+  <circle cx="666.7" cy="83.1" r="5" fill="#E74C3C"/>
+  <line x1="693.3" y1="115.2" x2="693.3" y2="170" stroke="#E74C3C" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+  <circle cx="693.3" cy="115.2" r="5" fill="#E74C3C"/>
+  <circle cx="720.0" cy="170.0" r="5" fill="#E74C3C"/>
+
+  <!-- Annotation: sampling rate -->
+  <text x="400" y="318" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="17" font-weight="bold" fill="#333">
+    44,100 samples per second
+  </text>
+
+  <!-- Legend box -->
+  <line x1="140" y1="358" x2="180" y2="358" stroke="#4A90D9" stroke-width="2.5" opacity="0.6"/>
+  <text x="190" y="363" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#555">Continuous wave (what sound really is)</text>
+
+  <circle cx="152" cy="390" r="5" fill="#E74C3C"/>
+  <line x1="152" y1="390" x2="152" y2="405" stroke="#E74C3C" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+  <text x="190" y="400" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#555">Sample points (what the computer stores)</text>
+</svg>
