@@ -76,11 +76,12 @@ Plans:
   3. Bridge comments in patches connect MSP objects to known Max equivalents (e.g., "line~ is the signal version of line")
   4. Build-up patches include "Try this" experiment prompts and error-state troubleshooting comments ("If you hear nothing, check...")
   5. Patch regions are color-coded to visually group functional sections (oscillator, envelope, output) and parameter values are annotated with musical meaning ("440 = A above middle C")
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 04-01: TBD
-- [ ] 04-02: TBD
+- [ ] 04-01-PLAN.md -- Create student reference handout (Markdown, organized by concept sections, with SVG diagrams)
+- [ ] 04-02-PLAN.md -- Annotation pass on build-up patches 01-07 (color regions, experiments, bridges, troubleshooting)
+- [ ] 04-03-PLAN.md -- Annotation pass on demo + comparison patches and instructor verification of all 9 patches
 
 ## Progress
 
@@ -92,4 +93,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 | 1. Noise Sculpture Demo | 2/2 | ✓ Complete | 2026-02-14 |
 | 2. Build-Up Patch Series | 3/3 | ✓ Complete | 2026-02-14 |
 | 3. Lecture Outline and Diagrams | 2/2 | ✓ Complete | 2026-02-14 |
-| 4. Student Handout and Annotation Polish | 0/TBD | Not started | - |
+| 4. Student Handout and Annotation Polish | 0/3 | Not started | - |
