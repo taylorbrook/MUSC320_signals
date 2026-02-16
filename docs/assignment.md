@@ -25,19 +25,13 @@ Your patch must use every signal object listed below at least once. Check them o
 - [ ] `sig~` -- number-to-signal conversion
 - [ ] `line~` -- smooth audio-rate ramps
 
-**Output and Safety** (required in every patch):
+**Output and Safety:**
 
-- [ ] `ezdac~` -- audio toggle
 - [ ] `live.gain~` -- volume control
-- [ ] `clip~` -- safety limiter
 
-**Monitoring** (use at least one):
+### Layers
 
-- [ ] `live.scope~` and/or `number~`
-
-### Two Layers Minimum
-
-Your patch must have at least **two distinct layers** (also called voices). A layer is an independent signal path with its own source, its own processing, and its own amplitude control. The layers are mixed together via `+~` into a shared output chain (`live.gain~` -> `clip~` -> `ezdac~`).
+Your patch must have at least **two distinct layers** (also called voices). A layer is an independent signal path with its own source, its own processing, and its own amplitude control.
 
 Look at Patch 06 and Patch 07 from class for examples of multi-layer architecture. In Patch 06, Voice A is a cycle~ with phasor~ tremolo and Voice B is a detuned drone -- two separate signal paths summed with `+~`. Your sculpture should follow the same principle: independent voices combined into one output.
 
@@ -49,7 +43,7 @@ These are optional starting points, not requirements. Try whatever sounds intere
 - **Beating:** Run two `cycle~` objects at nearly the same frequency (e.g., 220 and 223 Hz). The slight detuning creates a slow, pulsing beat.
 - **Shaped noise:** Feed `noise~` through `*~` driven by a `line~` envelope so the noise fades in and out rather than playing continuously.
 - **Modulation depth:** Multiply your `phasor~` LFO by a small number (e.g., `*~ 0.3`) before using it as a modulator. This controls how extreme the effect is.
-- **Layered textures:** Combine a tonal layer (cycle~) with a noise layer (noise~) at different amplitudes for a richer sound.
+
 
 ## Submission
 
@@ -57,4 +51,4 @@ These are optional starting points, not requirements. Try whatever sounds intere
 
 ## Reference
 
-Your go-to resource for object syntax, signal flow patterns, and patch walkthroughs is the [MSP Quick Reference](student-reference.md). Keep it open while you work.
+As you build your patch, explore the helpfiles for each object -- option-click (Mac) or alt-click (Windows) any object in Max to open its helpfile. The helpfiles include working examples you can learn from.
