@@ -14,6 +14,18 @@
         "boxes": [
             {
                 "box": {
+                    "format": 6,
+                    "id": "obj-2",
+                    "maxclass": "flonum",
+                    "numinlets": 1,
+                    "numoutlets": 2,
+                    "outlettype": [ "", "bang" ],
+                    "parameter_enable": 0,
+                    "patching_rect": [ 133.33333206176758, 301.36054134368896, 50.0, 22.0 ]
+                }
+            },
+            {
+                "box": {
                     "fontface": 1,
                     "fontsize": 16.0,
                     "id": "obj-title",
@@ -39,23 +51,12 @@
                 "box": {
                     "fontsize": 11.0,
                     "id": "obj-ann-topc02",
+                    "linecount": 2,
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 30.0, 78.0, 580.0, 19.0 ],
-                    "text": "In Max, the number box updates only when you change the slider. In MSP, sig~ continuously",
-                    "textcolor": [ 0.4, 0.4, 0.8, 1.0 ]
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 11.0,
-                    "id": "obj-ann-topc02b",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 30.0, 97.0, 580.0, 19.0 ],
-                    "text": "outputs the value at 44,100 samples per second — that's what the ~ means.",
+                    "patching_rect": [ 30.0, 78.0, 580.0, 31.0 ],
+                    "text": "In Max, the number box updates only when you change the slider. In MSP, sig~ continuously outputs the value at the sample rate, usually 48,000 or 44,100 samples per second — that's what the ~ signifies.",
                     "textcolor": [ 0.4, 0.4, 0.8, 1.0 ]
                 }
             },
@@ -67,7 +68,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 80.0, 135.0, 200.0, 20.0 ],
+                    "patching_rect": [ 99.99999904632568, 265.0, 129.9319715499878, 20.0 ],
                     "text": "CONTROL DOMAIN"
                 }
             },
@@ -79,7 +80,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 430.0, 135.0, 200.0, 20.0 ],
+                    "patching_rect": [ 359.7826018333435, 264.4565165042877, 116.0, 20.0 ],
                     "text": "SIGNAL DOMAIN"
                 }
             },
@@ -105,29 +106,19 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [ 310.0, 200.0, 100.0, 19.0 ],
-                    "text": "Frequency (Hz)"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-number",
-                    "maxclass": "number",
-                    "numinlets": 1,
-                    "numoutlets": 2,
-                    "outlettype": [ "", "bang" ],
-                    "parameter_enable": 0,
-                    "patching_rect": [ 130.0, 310.0, 56.0, 22.0 ]
+                    "text": "Slider"
                 }
             },
             {
                 "box": {
                     "fontsize": 11.0,
                     "id": "obj-ann-number",
+                    "linecount": 2,
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 50.0, 340.0, 284.0, 19.0 ],
-                    "text": "The number box updates only when you move the slider."
+                    "patching_rect": [ 83.67346858978271, 336.0, 168.0272092819214, 31.0 ],
+                    "text": "The float number box updates only when you move the slider."
                 }
             },
             {
@@ -137,7 +128,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "signal" ],
-                    "patching_rect": [ 480.0, 310.0, 31.0, 22.0 ],
+                    "patching_rect": [ 359.7826018333435, 309.7826027870178, 31.0, 22.0 ],
                     "text": "sig~"
                 }
             },
@@ -148,19 +139,8 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 530.0, 310.0, 430.0, 19.0 ],
+                    "patching_rect": [ 397.8260793685913, 311.2826027870178, 430.0, 19.0 ],
                     "text": "sig~ — converts a single Max number into a continuous audio-rate signal."
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 11.0,
-                    "id": "obj-ann-sig2",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 530.0, 329.0, 430.0, 19.0 ],
-                    "text": "This is the bridge between Max and MSP."
                 }
             },
             {
@@ -174,7 +154,7 @@
                     "numinlets": 2,
                     "numoutlets": 2,
                     "outlettype": [ "signal", "float" ],
-                    "patching_rect": [ 480.0, 355.0, 56.0, 22.0 ],
+                    "patching_rect": [ 359.7826018333435, 358.6956453323364, 65.98639392852783, 22.0 ],
                     "sig": 0.0
                 }
             },
@@ -182,57 +162,12 @@
                 "box": {
                     "fontsize": 11.0,
                     "id": "obj-ann-numtilde",
+                    "linecount": 2,
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 530.0, 355.0, 430.0, 19.0 ],
-                    "text": "number~ (mode 2) — displays the current value of a signal. Updates about 4 times"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 11.0,
-                    "id": "obj-ann-numtilde2",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 530.0, 374.0, 430.0, 19.0 ],
-                    "text": "per second (not at audio rate — that would be too fast to read)."
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 11.0,
-                    "id": "obj-ann-why-sig",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 430.0, 400.0, 530.0, 19.0 ],
-                    "text": "Why sig~ instead of connecting the slider directly? Signal inlets need a signal input.",
-                    "textcolor": [ 0.4, 0.4, 0.8, 1.0 ]
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 11.0,
-                    "id": "obj-ann-why-sig2",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 430.0, 419.0, 530.0, 19.0 ],
-                    "text": "sig~ provides that continuous stream.",
-                    "textcolor": [ 0.4, 0.4, 0.8, 1.0 ]
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 11.0,
-                    "id": "obj-ann-hear",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ -5.0, 445.0, 500.0, 19.0 ],
-                    "text": "This slider controls frequency in Hz. Move it and hear the pitch change in real time."
+                    "patching_rect": [ 434.78260040283203, 353.260862827301, 349.5798110961914, 31.0 ],
+                    "text": "number~ — displays the current value of a signal. Updates about 4 times per second (not at audio rate — that would be too fast to read)."
                 }
             },
             {
@@ -242,7 +177,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "signal" ],
-                    "patching_rect": [ 280.0, 470.0, 45.0, 22.0 ],
+                    "patching_rect": [ 77.8985505104065, 463.0434694290161, 45.0, 22.0 ],
                     "text": "cycle~"
                 }
             },
@@ -253,20 +188,8 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "signal" ],
-                    "patching_rect": [ 280.0, 510.0, 40.0, 22.0 ],
+                    "patching_rect": [ 77.8985505104065, 503.2608599662781, 40.0, 22.0 ],
                     "text": "*~ 0.5"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 11.0,
-                    "id": "obj-ann-ref",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 340.0, 510.0, 350.0, 19.0 ],
-                    "text": "cycle~, *~, output chain — see Patches 01-02 for details",
-                    "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
                 }
             },
             {
@@ -277,18 +200,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "bang" ],
-                    "patching_rect": [ 400.0, 460.0, 80.0, 40.0 ]
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 11.0,
-                    "id": "obj-ann-scope",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 500.0, 470.0, 461.0, 19.0 ],
-                    "text": "Watch: move the slider and see the waveform change. Higher pitch = more cycles on screen."
+                    "patching_rect": [ 133.69564962387085, 454.3478174209595, 754.3478116989136, 81.521737575531 ]
                 }
             },
             {
@@ -300,7 +212,7 @@
                     "numoutlets": 5,
                     "outlettype": [ "signal", "signal", "", "float", "list" ],
                     "parameter_enable": 1,
-                    "patching_rect": [ 280.0, 545.0, 48.0, 100.0 ],
+                    "patching_rect": [ 97.46376752853394, 574.9999890327454, 48.0, 100.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_initial": [ -12 ],
@@ -323,7 +235,7 @@
                     "maxclass": "ezdac~",
                     "numinlets": 2,
                     "numoutlets": 0,
-                    "patching_rect": [ 280.0, 675.0, 45.0, 45.0 ]
+                    "patching_rect": [ 97.46376752853394, 705.434769153595, 45.0, 45.0 ]
                 }
             },
             {
@@ -351,35 +263,11 @@
             {
                 "box": {
                     "fontsize": 11.0,
-                    "id": "obj-bridge-sig",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 530.0, 295.0, 446.0, 19.0 ],
-                    "text": "sig~ is the bridge between Max and MSP — it converts a number into a continuous signal.",
-                    "textcolor": [ 0.4, 0.4, 0.8, 1.0 ]
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 11.0,
-                    "id": "obj-bridge-numtilde",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 530.0, 342.0, 472.0, 19.0 ],
-                    "text": "number~ — like a number box but for signals. It samples the audio stream to show you a value.",
-                    "textcolor": [ 0.4, 0.4, 0.8, 1.0 ]
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 11.0,
                     "id": "obj-ann-param-freq",
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 260.0, 155.0, 250.0, 19.0 ],
+                    "patching_rect": [ 83.67346858978271, 156.5, 134.32653141021729, 19.0 ],
                     "text": "185 = F# below middle C",
                     "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
                 }
@@ -392,46 +280,8 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [ 310.0, 220.0, 200.0, 19.0 ],
-                    "text": "Range: 80-400 Hz",
+                    "text": "Range: 80-400 (set using inspector)",
                     "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
-                }
-            },
-            {
-                "box": {
-                    "bgcolor": [ 0.12, 0.2, 0.12, 1.0 ],
-                    "fontface": 1,
-                    "fontsize": 11.0,
-                    "id": "obj-experiment-01",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 30.0, 740.0, 747.0, 19.0 ],
-                    "text": "EXPERIMENT: Drag the slider while watching number~ — now disconnect sig~ and type a number directly into cycle~ inlet. What is different?",
-                    "textcolor": [ 0.3, 0.65, 0.3, 1.0 ]
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 11.0,
-                    "id": "obj-troubleshoot-03",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 497.0, 445.0, 530.0, 19.0 ],
-                    "text": "NO SOUND FROM SLIDER? sig~ must be connected — without it, the number never becomes a signal.",
-                    "textcolor": [ 0.85, 0.6, 0.2, 1.0 ]
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 10.0,
-                    "id": "obj-color-legend",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 30.0, 765.0, 597.0, 18.0 ],
-                    "text": "COLOR REGIONS:  Blue = Source (oscillators, noise)  |  Orange = Processing (envelopes, operators)  |  Green = Output (gain, dac~)",
-                    "textcolor": [ 0.6, 0.6, 0.6, 1.0 ]
                 }
             },
             {
@@ -442,7 +292,7 @@
                     "mode": 0,
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 265.0, 455.0, 230.0, 60.0 ],
+                    "patching_rect": [ 64.13043355941772, 447.826078414917, 834.7825927734375, 97.8260850906372 ],
                     "rounded": 12
                 }
             },
@@ -454,7 +304,7 @@
                     "mode": 0,
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 65.0, 120.0, 540.0, 310.0 ],
+                    "patching_rect": [ 65.2173900604248, 119.56521511077881, 833.6956362724304, 309.7826027870178 ],
                     "rounded": 12
                 }
             },
@@ -466,7 +316,7 @@
                     "mode": 0,
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 246.0, 530.0, 117.0, 201.0 ],
+                    "patching_rect": [ 63.76811599731445, 559.7825980186462, 117.0, 201.0 ],
                     "rounded": 12
                 }
             }
@@ -475,7 +325,7 @@
             {
                 "patchline": {
                     "destination": [ "obj-gain", 1 ],
-                    "midpoints": [ 289.5, 540.0, 318.5, 540.0 ],
+                    "midpoints": [ 87.3985505104065, 561.0, 135.96376752853394, 561.0 ],
                     "order": 0,
                     "source": [ "obj-amp", 0 ]
                 }
@@ -483,7 +333,7 @@
             {
                 "patchline": {
                     "destination": [ "obj-gain", 0 ],
-                    "midpoints": [ 289.5, 534.0, 289.5, 534.0 ],
+                    "midpoints": [ 87.3985505104065, 561.0, 106.96376752853394, 561.0 ],
                     "order": 1,
                     "source": [ "obj-amp", 0 ]
                 }
@@ -491,7 +341,7 @@
             {
                 "patchline": {
                     "destination": [ "obj-amp", 0 ],
-                    "midpoints": [ 289.5, 495.0, 289.5, 495.0 ],
+                    "midpoints": [ 87.3985505104065, 486.0, 87.3985505104065, 486.0 ],
                     "order": 1,
                     "source": [ "obj-cycle", 0 ]
                 }
@@ -499,7 +349,7 @@
             {
                 "patchline": {
                     "destination": [ "obj-scope", 0 ],
-                    "midpoints": [ 289.5, 495.0, 387.0, 495.0, 387.0, 465.0, 409.5, 465.0 ],
+                    "midpoints": [ 87.3985505104065, 486.0, 129.0, 486.0, 129.0, 450.0, 143.19564962387085, 450.0 ],
                     "order": 0,
                     "source": [ "obj-cycle", 0 ]
                 }
@@ -507,14 +357,14 @@
             {
                 "patchline": {
                     "destination": [ "obj-ezdac", 1 ],
-                    "midpoints": [ 296.75, 660.0, 315.5, 660.0 ],
+                    "midpoints": [ 114.21376752853394, 690.0, 132.96376752853394, 690.0 ],
                     "source": [ "obj-gain", 1 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-ezdac", 0 ],
-                    "midpoints": [ 289.5, 648.0, 289.5, 648.0 ],
+                    "midpoints": [ 106.96376752853394, 675.0, 106.96376752853394, 675.0 ],
                     "source": [ "obj-gain", 0 ]
                 }
             },
@@ -528,14 +378,14 @@
             {
                 "patchline": {
                     "destination": [ "obj-slider", 0 ],
-                    "midpoints": [ 229.5, 180.0, 66.0, 180.0, 66.0, 126.0, 291.0, 126.0, 291.0, 156.0, 289.5, 156.0 ],
+                    "midpoints": [ 229.5, 189.0, 267.0, 189.0, 267.0, 156.0, 289.5, 156.0 ],
                     "source": [ "obj-msg-init", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-cycle", 0 ],
-                    "midpoints": [ 489.5, 342.0, 345.0, 342.0, 345.0, 432.0, 15.0, 432.0, 15.0, 474.0, 276.0, 474.0, 276.0, 465.0, 289.5, 465.0 ],
+                    "midpoints": [ 369.2826018333435, 345.0, 261.0, 345.0, 261.0, 441.0, 87.3985505104065, 441.0 ],
                     "order": 1,
                     "source": [ "obj-sig", 0 ]
                 }
@@ -543,15 +393,15 @@
             {
                 "patchline": {
                     "destination": [ "obj-numtilde", 0 ],
-                    "midpoints": [ 489.5, 333.0, 489.5, 333.0 ],
+                    "midpoints": [ 369.2826018333435, 333.0, 369.2826018333435, 333.0 ],
                     "order": 0,
                     "source": [ "obj-sig", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-number", 0 ],
-                    "midpoints": [ 289.5, 297.0, 139.5, 297.0 ],
+                    "destination": [ "obj-2", 0 ],
+                    "midpoints": [ 289.5, 297.0, 142.83333206176758, 297.0 ],
                     "order": 1,
                     "source": [ "obj-slider", 0 ]
                 }
@@ -559,7 +409,7 @@
             {
                 "patchline": {
                     "destination": [ "obj-sig", 0 ],
-                    "midpoints": [ 289.5, 297.0, 489.5, 297.0 ],
+                    "midpoints": [ 289.5, 294.0, 369.2826018333435, 294.0 ],
                     "order": 0,
                     "source": [ "obj-slider", 0 ]
                 }

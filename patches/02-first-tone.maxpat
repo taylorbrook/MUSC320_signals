@@ -9,9 +9,48 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 100.0, 100.0, 1430.0, 797.0 ],
+        "rect": [ 100.0, 100.0, 1140.0, 797.0 ],
         "description": "02 — First Tone: cycle~ frequency and amplitude, *~ scaling (MUSC 320 Week 7)",
         "boxes": [
+            {
+                "box": {
+                    "bgcolor": [ 0.12, 0.2, 0.12, 1.0 ],
+                    "fontface": 1,
+                    "fontsize": 11.0,
+                    "id": "obj-c8",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 576.1904851198196, 479.36508679389954, 440.47619730234146, 19.0 ],
+                    "text": "EXPERIMENT: build this diagram and use clip~ to simulate the clipping safely",
+                    "textcolor": [ 0.3, 0.65, 0.3, 1.0 ]
+                }
+            },
+            {
+                "box": {
+                    "autofit": 1,
+                    "forceaspect": 1,
+                    "id": "obj-7",
+                    "maxclass": "fpic",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "jit_matrix" ],
+                    "patching_rect": [ 130.15873217582703, 375.39683121442795, 437.3015940785408, 226.70635271966455 ],
+                    "pic": "diagrams/clipping.svg"
+                }
+            },
+            {
+                "box": {
+                    "bgcolor": [ 0.2, 0.3, 0.55, 0.1 ],
+                    "id": "obj-2",
+                    "maxclass": "panel",
+                    "mode": 0,
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 403.0, 74.5, 716.0, 291.0 ],
+                    "rounded": 12
+                }
+            },
             {
                 "box": {
                     "bgcolor": [ 0.1, 0.1, 0.12, 1.0 ],
@@ -30,7 +69,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "signal" ],
-                    "patching_rect": [ 530.0, 306.0, 66.0, 22.0 ],
+                    "patching_rect": [ 411.0, 301.5, 66.0, 22.0 ],
                     "text": "cycle~ 220"
                 }
             },
@@ -41,7 +80,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "signal" ],
-                    "patching_rect": [ 774.0, 306.0, 66.0, 22.0 ],
+                    "patching_rect": [ 655.0, 301.5, 66.0, 22.0 ],
                     "text": "cycle~ 440"
                 }
             },
@@ -52,7 +91,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "signal" ],
-                    "patching_rect": [ 1023.0, 306.0, 66.0, 22.0 ],
+                    "patching_rect": [ 904.0, 301.5, 66.0, 22.0 ],
                     "text": "cycle~ 880"
                 }
             },
@@ -64,7 +103,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 30.0, 40.000001192092896, 300.0, 24.0 ],
+                    "patching_rect": [ 20.0, 29.0, 300.0, 24.0 ],
                     "text": "02 — First Tone"
                 }
             },
@@ -205,7 +244,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 530.0, 85.0, 250.0, 20.0 ],
+                    "patching_rect": [ 411.0, 80.5, 250.0, 20.0 ],
                     "text": "FREQUENCY COMPARISON"
                 }
             },
@@ -216,7 +255,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "signal" ],
-                    "patching_rect": [ 530.0, 140.0, 53.0, 22.0 ],
+                    "patching_rect": [ 411.0, 135.5, 53.0, 22.0 ],
                     "text": "cycle~ 1"
                 }
             },
@@ -227,7 +266,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 530.0, 333.0, 148.0, 18.0 ],
+                    "patching_rect": [ 411.0, 328.5, 148.0, 18.0 ],
                     "text": "220 Hz — one octave below A4"
                 }
             },
@@ -239,7 +278,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "bang" ],
-                    "patching_rect": [ 530.0, 170.0, 200.0, 91.0 ]
+                    "patching_rect": [ 411.0, 165.5, 200.0, 91.0 ]
                 }
             },
             {
@@ -249,7 +288,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "signal" ],
-                    "patching_rect": [ 774.0, 140.0, 53.0, 22.0 ],
+                    "patching_rect": [ 655.0, 135.5, 53.0, 22.0 ],
                     "text": "cycle~ 2"
                 }
             },
@@ -260,7 +299,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 774.0, 333.0, 134.0, 18.0 ],
+                    "patching_rect": [ 655.0, 328.5, 134.0, 18.0 ],
                     "text": "440 Hz — A4 (concert pitch)"
                 }
             },
@@ -272,7 +311,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "bang" ],
-                    "patching_rect": [ 774.0, 170.0, 200.0, 91.0 ]
+                    "patching_rect": [ 655.0, 165.5, 200.0, 91.0 ]
                 }
             },
             {
@@ -282,7 +321,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "signal" ],
-                    "patching_rect": [ 1023.0, 140.0, 53.0, 22.0 ],
+                    "patching_rect": [ 904.0, 135.5, 53.0, 22.0 ],
                     "text": "cycle~ 4"
                 }
             },
@@ -293,7 +332,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 1023.0, 333.0, 149.0, 18.0 ],
+                    "patching_rect": [ 904.0, 328.5, 149.0, 18.0 ],
                     "text": "880 Hz — one octave above A4"
                 }
             },
@@ -305,7 +344,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "bang" ],
-                    "patching_rect": [ 1023.0, 170.0, 200.0, 91.0 ]
+                    "patching_rect": [ 904.0, 165.5, 200.0, 91.0 ]
                 }
             },
             {
@@ -315,7 +354,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 530.0, 275.0, 693.0, 19.0 ],
+                    "patching_rect": [ 411.0, 270.5, 693.0, 19.0 ],
                     "text": "live.scope~ shows the waveform. Notice: 4 Hz has twice as many cycles on screen as 2 Hz, which is twice as much as 1"
                 }
             },
@@ -326,7 +365,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 530.0, 110.0, 700.0, 19.0 ],
+                    "patching_rect": [ 411.0, 105.5, 700.0, 19.0 ],
                     "text": "Each octave doubles the frequency: 220 -> 440 -> 880. The scope shows this visually — double the cycles on screen.",
                     "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
                 }
@@ -339,7 +378,7 @@
                     "mode": 0,
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 20.000000596046448, 100.00000298023224, 368.6666776537895, 273.3333415389061 ],
+                    "patching_rect": [ 20.000000596046448, 67.0, 368.99999940395355, 306.0 ],
                     "rounded": 12
                 }
             },
@@ -384,21 +423,21 @@
             {
                 "patchline": {
                     "destination": [ "obj-scope-220", 0 ],
-                    "midpoints": [ 539.5, 165.0, 539.5, 165.0 ],
+                    "midpoints": [ 420.5, 160.5, 420.5, 160.5 ],
                     "source": [ "obj-cycle-220", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-scope-440", 0 ],
-                    "midpoints": [ 783.5, 165.0, 783.5, 165.0 ],
+                    "midpoints": [ 664.5, 160.5, 664.5, 160.5 ],
                     "source": [ "obj-cycle-440", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-scope-880", 0 ],
-                    "midpoints": [ 1032.5, 165.0, 1032.5, 165.0 ],
+                    "midpoints": [ 913.5, 160.5, 913.5, 160.5 ],
                     "source": [ "obj-cycle-880", 0 ]
                 }
             },

@@ -14,12 +14,60 @@
         "boxes": [
             {
                 "box": {
+                    "fontface": 1,
+                    "fontsize": 12.0,
+                    "id": "obj-12",
+                    "linecount": 2,
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 449.0, 565.0, 172.0, 33.0 ],
+                    "presentation_linecount": 3,
+                    "text": "bonus: check out the help files for these objects:"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-8",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [ "signal" ],
+                    "patching_rect": [ 449.0, 637.0, 58.0, 22.0 ],
+                    "text": "onepole~"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-7",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "signal" ],
+                    "patching_rect": [ 449.0, 605.0, 38.0, 22.0 ],
+                    "text": "pink~"
+                }
+            },
+            {
+                "box": {
+                    "fontsize": 11.0,
+                    "id": "obj-1",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 211.0, 499.0, 482.0, 19.0 ],
+                    "text": "+~ telling the live.gain object to go to -12db on launch so it's not too loud when I open the patch",
+                    "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
+                }
+            },
+            {
+                "box": {
                     "id": "obj-2",
                     "maxclass": "newobj",
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 138.0, 530.0, 81.0, 22.0 ],
+                    "patching_rect": [ 128.0, 497.0, 81.0, 22.0 ],
                     "text": "loadmess -12"
                 }
             },
@@ -61,71 +109,11 @@
             {
                 "box": {
                     "fontsize": 11.0,
-                    "id": "obj-c2",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 30.0, 82.0, 680.0, 19.0 ],
-                    "text": "WITHOUT *~ controlling its amplitude, noise~ at full blast would be painfully loud. Always scale noise before it reaches the speakers.",
-                    "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 11.0,
-                    "id": "obj-c3",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 30.0, 102.0, 700.0, 19.0 ],
-                    "text": "*~ as an amplitude gate: when the right inlet is 0, no sound passes. When it's 1.0, full volume. Anything between = proportional loudness.",
-                    "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 11.0,
-                    "id": "obj-c4",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 30.0, 122.0, 700.0, 19.0 ],
-                    "text": "slider -> sig~ -> *~ right inlet: same pattern as Patch 03, but now controlling noise amplitude instead of cycle~ frequency.",
-                    "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 11.0,
-                    "id": "obj-c5",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 350.0, 280.0, 646.0, 19.0 ],
-                    "text": "scope~ shows the chaos of noise vs the clean wave of cycle~ -- this is the visual difference between periodic and aperiodic signals.",
-                    "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 11.0,
-                    "id": "obj-c6",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 350.0, 580.0, 500.0, 19.0 ],
-                    "text": "Reference: cycle~, *~, sig~, output chain -- see Patches 01-03 for details",
-                    "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 11.0,
                     "id": "obj-c7",
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 350.0, 510.0, 500.0, 19.0 ],
+                    "patching_rect": [ 92.0, 452.0, 500.0, 19.0 ],
                     "text": "+~ adds two signals together. We'll explore this more in Patch 06.",
                     "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
                 }
@@ -138,7 +126,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 60.0, 150.0, 200.0, 20.0 ],
+                    "patching_rect": [ 51.0, 100.0, 200.0, 20.0 ],
                     "text": "NOISE (aperiodic signal)"
                 }
             },
@@ -149,31 +137,8 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "signal" ],
-                    "patching_rect": [ 60.0, 175.0, 45.0, 22.0 ],
+                    "patching_rect": [ 51.0, 125.0, 45.0, 22.0 ],
                     "text": "noise~"
-                }
-            },
-            {
-                "box": {
-                    "bgcolor": [ 0.1, 0.1, 0.12, 1.0 ],
-                    "id": "obj-scope-noise",
-                    "maxclass": "live.scope~",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [ "bang" ],
-                    "patching_rect": [ 160.0, 175.0, 155.0, 60.0 ]
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 10.0,
-                    "id": "obj-lbl-scope-noise",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 160.0, 237.0, 150.0, 18.0 ],
-                    "text": "noise~ output (chaotic)",
-                    "textcolor": [ 0.6, 0.6, 0.6, 1.0 ]
                 }
             },
             {
@@ -183,7 +148,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 120.0, 260.0, 200.0, 19.0 ],
+                    "patching_rect": [ 101.0, 179.0, 200.0, 19.0 ],
                     "text": "Noise Amplitude (0 to 1)",
                     "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
                 }
@@ -197,7 +162,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 60.0, 280.0, 20.0, 100.0 ],
+                    "patching_rect": [ 51.0, 230.0, 20.0, 100.0 ],
                     "size": 1.0
                 }
             },
@@ -208,7 +173,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "signal" ],
-                    "patching_rect": [ 60.0, 395.0, 31.0, 22.0 ],
+                    "patching_rect": [ 51.0, 345.0, 31.0, 22.0 ],
                     "text": "sig~"
                 }
             },
@@ -219,7 +184,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "signal" ],
-                    "patching_rect": [ 59.5, 442.0, 32.0, 22.0 ],
+                    "patching_rect": [ 51.0, 392.0, 32.0, 22.0 ],
                     "text": "*~"
                 }
             },
@@ -231,7 +196,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 550.0, 150.0, 200.0, 20.0 ],
+                    "patching_rect": [ 635.0, 100.0, 155.0, 20.0 ],
                     "text": "TONE (periodic signal)"
                 }
             },
@@ -242,43 +207,8 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "signal" ],
-                    "patching_rect": [ 550.0, 175.0, 66.0, 22.0 ],
+                    "patching_rect": [ 635.0, 125.0, 66.0, 22.0 ],
                     "text": "cycle~ 330"
-                }
-            },
-            {
-                "box": {
-                    "bgcolor": [ 0.1, 0.1, 0.12, 1.0 ],
-                    "id": "obj-scope-cycle",
-                    "maxclass": "live.scope~",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [ "bang" ],
-                    "patching_rect": [ 650.0, 175.0, 150.0, 60.0 ]
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 10.0,
-                    "id": "obj-lbl-scope-cycle",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 650.0, 237.0, 150.0, 18.0 ],
-                    "text": "cycle~ 330 output (periodic)",
-                    "textcolor": [ 0.6, 0.6, 0.6, 1.0 ]
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 11.0,
-                    "id": "obj-c-compare",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 550.0, 262.0, 400.0, 19.0 ],
-                    "text": "Compare: noise is random at every sample. cycle~ repeats the same pattern.",
-                    "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
                 }
             },
             {
@@ -288,7 +218,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "signal" ],
-                    "patching_rect": [ 550.0, 300.0, 40.0, 22.0 ],
+                    "patching_rect": [ 635.0, 164.0, 40.0, 22.0 ],
                     "text": "*~ 0.5"
                 }
             },
@@ -299,7 +229,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "signal" ],
-                    "patching_rect": [ 60.0, 500.0, 32.0, 22.0 ],
+                    "patching_rect": [ 51.0, 450.0, 32.0, 22.0 ],
                     "text": "+~"
                 }
             },
@@ -312,7 +242,7 @@
                     "numoutlets": 5,
                     "outlettype": [ "signal", "signal", "", "float", "list" ],
                     "parameter_enable": 1,
-                    "patching_rect": [ 60.0, 540.0, 48.0, 136.0 ],
+                    "patching_rect": [ 51.0, 490.0, 48.0, 136.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_initial": [ -12 ],
@@ -335,7 +265,7 @@
                     "maxclass": "ezdac~",
                     "numinlets": 2,
                     "numoutlets": 0,
-                    "patching_rect": [ 53.5, 699.0, 45.0, 45.0 ]
+                    "patching_rect": [ 45.0, 649.0, 45.0, 45.0 ]
                 }
             },
             {
@@ -345,7 +275,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "bang" ],
-                    "patching_rect": [ 200.0, 320.0, 60.0, 22.0 ],
+                    "patching_rect": [ 191.0, 270.0, 60.0, 22.0 ],
                     "text": "loadbang"
                 }
             },
@@ -356,7 +286,7 @@
                     "numinlets": 1,
                     "numoutlets": 2,
                     "outlettype": [ "bang", "bang" ],
-                    "patching_rect": [ 200.0, 345.0, 40.0, 22.0 ],
+                    "patching_rect": [ 191.0, 295.0, 40.0, 22.0 ],
                     "text": "t b b"
                 }
             },
@@ -367,7 +297,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 200.0, 370.0, 29.5, 22.0 ],
+                    "patching_rect": [ 191.0, 320.0, 29.5, 22.0 ],
                     "text": "0.3"
                 }
             },
@@ -378,20 +308,8 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 120.0, 175.0, 520.0, 19.0 ],
-                    "text": "random gives one random number per bang — noise~ gives one every sample (44,100 per second).",
-                    "textcolor": [ 0.4, 0.4, 0.8, 1.0 ]
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 11.0,
-                    "id": "obj-bridge-plus",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 350.0, 530.0, 500.0, 19.0 ],
-                    "text": "+~ adds two signals — you added numbers with +, now +~ adds signals. Full intro in Patch 06.",
+                    "patching_rect": [ 101.0, 128.0, 520.0, 19.0 ],
+                    "text": "random gives one random number per bang — noise~ gives one every sample (48,000 or 44,100 per second).",
                     "textcolor": [ 0.4, 0.4, 0.8, 1.0 ]
                 }
             },
@@ -402,37 +320,9 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 120.0, 395.0, 250.0, 19.0 ],
+                    "patching_rect": [ 111.0, 345.0, 250.0, 19.0 ],
                     "text": "0.3 = 30% amplitude (safe starting level)",
                     "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
-                }
-            },
-            {
-                "box": {
-                    "bgcolor": [ 0.12, 0.2, 0.12, 1.0 ],
-                    "fontface": 1,
-                    "fontsize": 11.0,
-                    "id": "obj-experiment-01",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 30.0, 760.0, 603.0, 19.0 ],
-                    "text": "EXPERIMENT: Set the amplitude slider to 0, then slowly bring it up. At what point does the noise become audible?",
-                    "textcolor": [ 0.3, 0.65, 0.3, 1.0 ]
-                }
-            },
-            {
-                "box": {
-                    "bgcolor": [ 0.12, 0.2, 0.12, 1.0 ],
-                    "fontface": 1,
-                    "fontsize": 11.0,
-                    "id": "obj-experiment-02",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 30.0, 783.0, 580.0, 19.0 ],
-                    "text": "EXPERIMENT: Disconnect noise~ from *~ and connect cycle~ instead — you just built Patch 01 again!",
-                    "textcolor": [ 0.3, 0.65, 0.3, 1.0 ]
                 }
             },
             {
@@ -442,21 +332,9 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 120.0, 200.0, 520.0, 19.0 ],
+                    "patching_rect": [ 101.0, 153.0, 520.0, 19.0 ],
                     "text": "WARNING: noise~ at full amplitude is loud! Always start with the amplitude slider low.",
                     "textcolor": [ 0.85, 0.6, 0.2, 1.0 ]
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 10.0,
-                    "id": "obj-color-legend",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 30.0, 810.0, 597.0, 18.0 ],
-                    "text": "COLOR REGIONS:  Blue = Source (oscillators, noise)  |  Orange = Processing (envelopes, operators)  |  Green = Output (gain, dac~)",
-                    "textcolor": [ 0.6, 0.6, 0.6, 1.0 ]
                 }
             },
             {
@@ -467,7 +345,7 @@
                     "mode": 0,
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 40.0, 140.0, 770.0, 120.0 ],
+                    "patching_rect": [ 31.0, 90.0, 590.0, 119.0 ],
                     "rounded": 12
                 }
             },
@@ -479,7 +357,7 @@
                     "mode": 0,
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 40.0, 270.0, 310.0, 210.0 ],
+                    "patching_rect": [ 31.0, 220.0, 330.0, 209.0 ],
                     "rounded": 12
                 }
             },
@@ -491,7 +369,19 @@
                     "mode": 0,
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 40.0, 530.0, 89.0, 225.0 ],
+                    "patching_rect": [ 31.0, 480.0, 89.0, 225.0 ],
+                    "rounded": 12
+                }
+            },
+            {
+                "box": {
+                    "bgcolor": [ 0.2, 0.3, 0.55, 0.1 ],
+                    "id": "obj-6",
+                    "maxclass": "panel",
+                    "mode": 0,
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 629.0, 90.0, 174.0, 119.0 ],
                     "rounded": 12
                 }
             }
@@ -500,102 +390,84 @@
             {
                 "patchline": {
                     "destination": [ "obj-gain", 0 ],
-                    "midpoints": [ 147.5, 555.0, 120.0, 555.0, 120.0, 537.0, 69.5, 537.0 ],
+                    "midpoints": [ 137.5, 520.0, 111.0, 520.0, 111.0, 487.0, 60.5, 487.0 ],
                     "source": [ "obj-2", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-mult-tone", 0 ],
-                    "midpoints": [ 559.5, 249.0, 546.0, 249.0, 546.0, 294.0, 559.5, 294.0 ],
-                    "order": 1,
-                    "source": [ "obj-cycle", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-scope-cycle", 0 ],
-                    "midpoints": [ 559.5, 231.0, 645.0, 231.0, 645.0, 171.0, 659.5, 171.0 ],
-                    "order": 0,
+                    "midpoints": [ 644.5, 148.0, 644.5, 148.0 ],
                     "source": [ "obj-cycle", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-ezdac", 1 ],
-                    "midpoints": [ 76.75, 693.0, 89.0, 693.0 ],
+                    "midpoints": [ 67.75, 643.0, 80.5, 643.0 ],
                     "source": [ "obj-gain", 1 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-ezdac", 0 ],
-                    "midpoints": [ 69.5, 678.0, 63.0, 678.0 ],
+                    "midpoints": [ 60.5, 628.0, 54.5, 628.0 ],
                     "source": [ "obj-gain", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-slider", 0 ],
-                    "midpoints": [ 209.5, 393.0, 195.0, 393.0, 195.0, 381.0, 90.0, 381.0, 90.0, 276.0, 69.5, 276.0 ],
+                    "midpoints": [ 200.5, 343.0, 186.0, 343.0, 186.0, 331.0, 81.0, 331.0, 81.0, 226.0, 60.5, 226.0 ],
                     "source": [ "obj-init-msg", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-trigger", 0 ],
-                    "midpoints": [ 209.5, 345.0, 209.5, 345.0 ],
+                    "midpoints": [ 200.5, 295.0, 200.5, 295.0 ],
                     "source": [ "obj-loadbang", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-sum", 0 ],
-                    "midpoints": [ 69.0, 465.0, 69.5, 465.0 ],
+                    "midpoints": [ 60.5, 415.0, 60.5, 415.0 ],
                     "source": [ "obj-mult-noise", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-sum", 1 ],
-                    "midpoints": [ 559.5, 495.0, 82.5, 495.0 ],
+                    "midpoints": [ 644.5, 481.0, 120.0, 481.0, 120.0, 472.0, 84.0, 472.0, 84.0, 445.0, 73.5, 445.0 ],
                     "source": [ "obj-mult-tone", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-mult-noise", 0 ],
-                    "midpoints": [ 69.5, 267.0, 45.0, 267.0, 45.0, 429.0, 69.0, 429.0 ],
-                    "order": 1,
-                    "source": [ "obj-noise", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-scope-noise", 0 ],
-                    "midpoints": [ 69.5, 198.0, 117.0, 198.0, 117.0, 171.0, 169.5, 171.0 ],
-                    "order": 0,
+                    "midpoints": [ 60.5, 217.0, 36.0, 217.0, 36.0, 379.0, 60.5, 379.0 ],
                     "source": [ "obj-noise", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-mult-noise", 1 ],
-                    "midpoints": [ 69.5, 429.0, 82.0, 429.0 ],
+                    "midpoints": [ 60.5, 379.0, 73.5, 379.0 ],
                     "source": [ "obj-sig", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-sig", 0 ],
-                    "midpoints": [ 69.5, 381.0, 69.5, 381.0 ],
+                    "midpoints": [ 60.5, 331.0, 60.5, 331.0 ],
                     "source": [ "obj-slider", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-gain", 1 ],
-                    "midpoints": [ 69.5, 537.0, 98.5, 537.0 ],
+                    "midpoints": [ 60.5, 487.0, 89.5, 487.0 ],
                     "order": 0,
                     "source": [ "obj-sum", 0 ]
                 }
@@ -603,7 +475,7 @@
             {
                 "patchline": {
                     "destination": [ "obj-gain", 0 ],
-                    "midpoints": [ 69.5, 525.0, 69.5, 525.0 ],
+                    "midpoints": [ 60.5, 475.0, 60.5, 475.0 ],
                     "order": 1,
                     "source": [ "obj-sum", 0 ]
                 }
@@ -611,21 +483,13 @@
             {
                 "patchline": {
                     "destination": [ "obj-init-msg", 0 ],
-                    "midpoints": [ 209.5, 369.0, 209.5, 369.0 ],
+                    "midpoints": [ 200.5, 319.0, 200.5, 319.0 ],
                     "source": [ "obj-trigger", 0 ]
                 }
             }
         ],
         "parameters": {
             "obj-gain": [ "Build-04 Vol", "Vol", 0 ],
-            "parameterbanks": {
-                "0": {
-                    "index": 0,
-                    "name": "",
-                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
-                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
-                }
-            },
             "inherited_shortname": 1
         },
         "autosave": 0

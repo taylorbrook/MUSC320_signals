@@ -48,11 +48,11 @@ Open these in order. Each patch builds on the previous one, leading up to a full
 
 ## What Is a Signal?
 
-MSP objects process **signals** -- continuous streams of numbers, 44,100 per second. Every MSP object has a **tilde (~)** in its name. When you see ~, think "audio rate."
+MSP objects process **signals** -- continuous streams of numbers, 48,000 or 44,100 per second. Every MSP object has a **tilde (~)** in its name. When you see ~, think "audio rate."
 
 ![Digital audio: continuous sound becomes discrete samples](diagrams/digital-audio-waveform.svg)
 
-**Signals vs. messages:** A Max message (bang, int, float) arrives when triggered. A signal flows continuously -- 44,100 values every second, whether you ask for them or not.
+**Signals vs. messages:** A Max message (bang, int, float) arrives when triggered. A signal flows continuously -- 48,000 or 44,100 values every second, whether you ask for them or not.
 
 ## MSP Object Reference
 
@@ -92,3 +92,11 @@ Seeing signals.
 
 - `live.scope~` -- oscilloscope display. Shows waveform shape in real time.
 - `number~` -- displays signal value at control rate. Mode 2 = display only (no output).
+
+### Bonus
+
+Objects worth exploring on your own -- option-click any object in Max to open its help file.
+
+- `pink~` -- pink noise generator. Like noise~ but with less high-frequency energy, producing a warmer, more natural noise.
+- `onepole~` -- simple one-pole low-pass filter. Smooths a signal by rolling off high frequencies. Useful for shaping noise or smoothing control signals.
+- `adsr~` -- attack-decay-sustain-release envelope generator. A more flexible alternative to building envelopes with line~ -- one object handles the full ADSR shape.

@@ -9,9 +9,21 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 100.0, 100.0, 1100.0, 850.0 ],
+        "rect": [ 369.0, 136.0, 1100.0, 850.0 ],
         "description": "06 — Modulation and Mixing: phasor~ automation, +~ voice mixing, multi-voice architecture (MUSC 320 Week 7)",
         "boxes": [
+            {
+                "box": {
+                    "bgcolor": [ 0.2, 0.3, 0.55, 0.1 ],
+                    "id": "obj-2",
+                    "maxclass": "panel",
+                    "mode": 0,
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 594.20290350914, 128.98550832271576, 192.0, 200.0 ],
+                    "rounded": 12
+                }
+            },
             {
                 "box": {
                     "fontsize": 10.0,
@@ -20,8 +32,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 500.0, 284.0, 106.0, 29.0 ],
-                    "presentation_linecount": 2,
+                    "patching_rect": [ 664.492759168148, 271.01449501514435, 106.0, 29.0 ],
                     "text": "fades in and out by multiplying the signal",
                     "textcolor": [ 0.6, 0.6, 0.6, 1.0 ]
                 }
@@ -34,7 +45,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 30.0, 10.0, 400.0, 24.0 ],
+                    "patching_rect": [ 29.710145175457, 12.318840682506561, 248.55072671175003, 24.0 ],
                     "text": "06 — Modulation and Mixing"
                 }
             },
@@ -45,30 +56,19 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 30.0, 36.0, 350.0, 20.0 ],
-                    "text": "How do I make sound evolve continuously?"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 11.0,
-                    "id": "obj-c1",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 30.0, 62.0, 680.0, 19.0 ],
-                    "text": "phasor~ 0.5 — metro fires bangs at intervals. phasor~ generates a smooth repeating ramp you can use as an LFO.",
-                    "textcolor": [ 0.4, 0.4, 0.8, 1.0 ]
+                    "patching_rect": [ 29.710145175457, 38.40579742193222, 248.55072671175003, 20.0 ],
+                    "text": "control signals and combining sources"
                 }
             },
             {
                 "box": {
                     "fontsize": 11.0,
                     "id": "obj-c2",
+                    "linecount": 3,
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 30.0, 82.0, 740.0, 19.0 ],
+                    "patching_rect": [ 87.68116015195847, 166.6666680574417, 257.24637895822525, 43.0 ],
                     "text": "cycle~ 0 -- when cycle~ has 0 as argument, it reads frequency from the LEFT inlet. Here we use the RIGHT inlet (phase), driven by phasor~.",
                     "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
                 }
@@ -76,24 +76,13 @@
             {
                 "box": {
                     "fontsize": 11.0,
-                    "id": "obj-c3",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 30.0, 102.0, 761.0, 19.0 ],
-                    "text": "phasor~ -> cycle~ phase = smooth cyclical modulation. Think of phasor~ as 'metro for signals' -- it repeats automatically without any control-domain timing.",
-                    "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 11.0,
                     "id": "obj-c4",
+                    "linecount": 4,
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 30.0, 122.0, 700.0, 19.0 ],
-                    "text": "*~ 0.5 -> +~ 0.5 -- converts the -1..1 cycle~ output to a 0..1 range (unipolar). This is a standard MSP idiom.",
+                    "patching_rect": [ 78.26087021827698, 230.43478453159332, 200.00000166893005, 56.0 ],
+                    "text": "*~ 0.5 -> +~ 0.5 -- converts the -1..1 cycle~ output to a 0..1 range (unipolar). This is a common and useful MSP pattern.",
                     "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
                 }
             },
@@ -104,7 +93,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 643.0, 150.5, 500.0, 19.0 ],
+                    "patching_rect": [ 71.0144933462143, 458.69565600156784, 500.0, 19.0 ],
                     "text": "+~ adds signals just like + adds numbers. Here it mixes two voices into one output.",
                     "textcolor": [ 0.4, 0.4, 0.8, 1.0 ]
                 }
@@ -113,35 +102,12 @@
                 "box": {
                     "fontsize": 11.0,
                     "id": "obj-c6",
+                    "linecount": 5,
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 643.0, 170.5, 530.0, 19.0 ],
-                    "text": "The 3 Hz difference between 220 and 223 creates a gentle beating effect -- two nearly identical frequencies",
-                    "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 11.0,
-                    "id": "obj-c6b",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 643.0, 190.5, 500.0, 19.0 ],
-                    "text": "interfere, creating a pulsing volume.",
-                    "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 11.0,
-                    "id": "obj-c7",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 643.0, 220.5, 500.0, 19.0 ],
-                    "text": "*~ 0.7 on the detuned partial -- slightly quieter than the fundamental for a natural sound.",
+                    "patching_rect": [ 404.3478294610977, 230.43478453159332, 178.0, 68.0 ],
+                    "text": "Voice B: The 3 Hz difference between 220 and 223 creates a gentle beating effect -- two nearly identical frequencies interfere, creating a pulsing volume.",
                     "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
                 }
             },
@@ -151,60 +117,13 @@
                     "fontface": 1,
                     "fontsize": 11.0,
                     "id": "obj-c8",
+                    "linecount": 3,
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 643.0, 250.5, 649.0, 19.0 ],
+                    "patching_rect": [ 326.811596930027, 530.4347870349884, 274.0, 43.0 ],
                     "text": "EXPERIMENT: Change phasor~ from 0.5 to 5.0 — hear how the modulation speeds up? Now try 0.01 for a very slow sweep.",
                     "textcolor": [ 0.3, 0.65, 0.3, 1.0 ]
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 11.0,
-                    "id": "obj-c9",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 643.0, 295.5, 500.0, 19.0 ],
-                    "text": "This patch combines everything from Patches 01-05: cycle~ for tone, *~ for amplitude,",
-                    "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 11.0,
-                    "id": "obj-c9b",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 643.0, 315.5, 500.0, 19.0 ],
-                    "text": "line~ for fade in/out, and now phasor~ for continuous modulation and +~ for mixing.",
-                    "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 11.0,
-                    "id": "obj-c10",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 643.0, 345.5, 500.0, 19.0 ],
-                    "text": "phasor~ demonstrates why signals are powerful: it generates 44,100 ramp values per second,",
-                    "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 11.0,
-                    "id": "obj-c10b",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 643.0, 365.5, 500.0, 19.0 ],
-                    "text": "giving you sample-accurate control over modulation. No metro or scheduling needed.",
-                    "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
                 }
             },
             {
@@ -215,7 +134,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 461.0, 150.0, 130.0, 20.0 ],
+                    "patching_rect": [ 625.3623240590096, 136.9565228819847, 130.0, 20.0 ],
                     "text": "MASTER ON/OFF"
                 }
             },
@@ -227,7 +146,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "int" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 461.0, 172.0, 30.0, 30.0 ]
+                    "patching_rect": [ 625.3623240590096, 158.69565349817276, 30.0, 30.0 ]
                 }
             },
             {
@@ -237,7 +156,7 @@
                     "numinlets": 3,
                     "numoutlets": 3,
                     "outlettype": [ "bang", "bang", "" ],
-                    "patching_rect": [ 461.0, 217.5, 60.0, 22.0 ],
+                    "patching_rect": [ 625.3623240590096, 205.07246547937393, 60.0, 22.0 ],
                     "text": "sel 0 1"
                 }
             },
@@ -248,7 +167,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 461.0, 252.5, 42.0, 22.0 ],
+                    "patching_rect": [ 625.3623240590096, 239.8550744652748, 42.0, 22.0 ],
                     "text": "0 100"
                 }
             },
@@ -259,7 +178,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 511.0, 252.5, 57.0, 22.0 ],
+                    "patching_rect": [ 675.3623244762421, 239.8550744652748, 57.0, 22.0 ],
                     "text": "0, 1. 500"
                 }
             },
@@ -270,7 +189,7 @@
                     "numinlets": 2,
                     "numoutlets": 2,
                     "outlettype": [ "signal", "bang" ],
-                    "patching_rect": [ 461.0, 287.5, 37.0, 22.0 ],
+                    "patching_rect": [ 625.3623240590096, 274.6376834511757, 37.0, 22.0 ],
                     "text": "line~"
                 }
             },
@@ -282,7 +201,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 30.0, 150.0, 200.0, 20.0 ],
+                    "patching_rect": [ 29.710145175457, 77.53623253107071, 200.0, 20.0 ],
                     "text": "Voice A: Tremolo"
                 }
             },
@@ -293,7 +212,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 30.0, 172.0, 220.0, 18.0 ],
+                    "patching_rect": [ 29.710145175457, 99.27536314725876, 220.0, 18.0 ],
                     "text": "LFO: phasor~ -> cycle~ phase -> unipolar",
                     "textcolor": [ 0.6, 0.6, 0.6, 1.0 ]
                 }
@@ -305,7 +224,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "signal" ],
-                    "patching_rect": [ 30.0, 195.0, 72.0, 22.0 ],
+                    "patching_rect": [ 29.710145175457, 122.46376913785934, 72.0, 22.0 ],
                     "text": "phasor~ 0.5"
                 }
             },
@@ -316,7 +235,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "signal" ],
-                    "patching_rect": [ 30.0, 225.0, 53.0, 22.0 ],
+                    "patching_rect": [ 32.608695924282074, 166.6666680574417, 53.0, 22.0 ],
                     "text": "cycle~ 0"
                 }
             },
@@ -327,7 +246,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "signal" ],
-                    "patching_rect": [ 30.0, 255.0, 40.0, 22.0 ],
+                    "patching_rect": [ 29.710145175457, 230.43478453159332, 40.0, 22.0 ],
                     "text": "*~ 0.5"
                 }
             },
@@ -338,7 +257,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "signal" ],
-                    "patching_rect": [ 30.0, 285.0, 43.0, 22.0 ],
+                    "patching_rect": [ 29.710145175457, 260.1449297070503, 43.0, 22.0 ],
                     "text": "+~ 0.5"
                 }
             },
@@ -349,7 +268,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "signal" ],
-                    "patching_rect": [ 172.0, 284.0, 66.0, 22.0 ],
+                    "patching_rect": [ 175.36232030391693, 295.65217638015747, 66.0, 22.0 ],
                     "text": "cycle~ 330"
                 }
             },
@@ -360,7 +279,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "signal" ],
-                    "patching_rect": [ 175.0, 320.0, 32.0, 22.0 ],
+                    "patching_rect": [ 175.36232030391693, 327.5362346172333, 32.0, 22.0 ],
                     "text": "*~"
                 }
             },
@@ -372,7 +291,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "bang" ],
-                    "patching_rect": [ 30.0, 385.0, 130.0, 50.0 ]
+                    "patching_rect": [ 29.710145175457, 360.14493054151535, 130.0, 50.0 ]
                 }
             },
             {
@@ -382,7 +301,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 30.0, 437.0, 130.0, 18.0 ],
+                    "patching_rect": [ 29.710145175457, 412.31884402036667, 130.0, 18.0 ],
                     "text": "LFO (0 to 1 cycling)",
                     "textcolor": [ 0.6, 0.6, 0.6, 1.0 ]
                 }
@@ -395,7 +314,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "bang" ],
-                    "patching_rect": [ 175.0, 385.0, 130.0, 50.0 ]
+                    "patching_rect": [ 175.36232030391693, 360.14493054151535, 130.0, 50.0 ]
                 }
             },
             {
@@ -405,7 +324,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 175.0, 437.0, 130.0, 18.0 ],
+                    "patching_rect": [ 175.36232030391693, 412.31884402036667, 130.0, 18.0 ],
                     "text": "Voice A (tremolo)",
                     "textcolor": [ 0.6, 0.6, 0.6, 1.0 ]
                 }
@@ -418,7 +337,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 300.0, 150.0, 200.0, 20.0 ],
+                    "patching_rect": [ 360.14493054151535, 77.53623253107071, 200.0, 20.0 ],
                     "text": "Voice B: Drone"
                 }
             },
@@ -429,7 +348,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 300.0, 172.0, 159.0, 18.0 ],
+                    "patching_rect": [ 360.14493054151535, 99.27536314725876, 159.0, 18.0 ],
                     "text": "Two detuned oscillators = beating",
                     "textcolor": [ 0.6, 0.6, 0.6, 1.0 ]
                 }
@@ -441,7 +360,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "signal" ],
-                    "patching_rect": [ 300.0, 195.0, 66.0, 22.0 ],
+                    "patching_rect": [ 360.14493054151535, 170.28985649347305, 66.0, 22.0 ],
                     "text": "cycle~ 220"
                 }
             },
@@ -452,7 +371,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "signal" ],
-                    "patching_rect": [ 300.0, 225.0, 66.0, 22.0 ],
+                    "patching_rect": [ 360.14493054151535, 200.72463935613632, 66.0, 22.0 ],
                     "text": "cycle~ 223"
                 }
             },
@@ -463,7 +382,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "signal" ],
-                    "patching_rect": [ 300.0, 255.0, 40.0, 22.0 ],
+                    "patching_rect": [ 360.14493054151535, 230.43478453159332, 40.0, 22.0 ],
                     "text": "*~ 0.7"
                 }
             },
@@ -474,7 +393,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "signal" ],
-                    "patching_rect": [ 300.0, 320.0, 32.0, 22.0 ],
+                    "patching_rect": [ 360.14493054151535, 295.65217638015747, 32.0, 22.0 ],
                     "text": "+~"
                 }
             },
@@ -486,7 +405,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "bang" ],
-                    "patching_rect": [ 320.0, 385.0, 130.0, 50.0 ]
+                    "patching_rect": [ 418.8405832052231, 360.14493054151535, 130.0, 50.0 ]
                 }
             },
             {
@@ -496,21 +415,9 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 320.0, 437.0, 130.0, 18.0 ],
+                    "patching_rect": [ 418.8405832052231, 412.31884402036667, 130.0, 18.0 ],
                     "text": "Voice B (beating drone)",
                     "textcolor": [ 0.6, 0.6, 0.6, 1.0 ]
-                }
-            },
-            {
-                "box": {
-                    "fontface": 1,
-                    "fontsize": 12.0,
-                    "id": "obj-lbl-mix",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 254.0, 491.0, 200.0, 20.0 ],
-                    "text": "Mix Bus"
                 }
             },
             {
@@ -520,7 +427,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "signal" ],
-                    "patching_rect": [ 200.0, 490.0, 32.0, 22.0 ],
+                    "patching_rect": [ 23.913043677806854, 457.2463806271553, 32.0, 22.0 ],
                     "text": "+~"
                 }
             },
@@ -531,7 +438,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "signal" ],
-                    "patching_rect": [ 200.0, 530.0, 32.0, 22.0 ],
+                    "patching_rect": [ 42.75362354516983, 489.8550765514374, 32.0, 22.0 ],
                     "text": "*~"
                 }
             },
@@ -544,7 +451,7 @@
                     "numoutlets": 5,
                     "outlettype": [ "signal", "signal", "", "float", "list" ],
                     "parameter_enable": 1,
-                    "patching_rect": [ 200.0, 570.0, 48.0, 136.0 ],
+                    "patching_rect": [ 34.78260898590088, 545.65217846632, 48.0, 136.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_initial": [ -12 ],
@@ -569,7 +476,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 254.0, 653.0, 214.0, 43.0 ],
+                    "patching_rect": [ 89.130435526371, 628.2608748078346, 214.0, 43.0 ],
                     "text": "clip~ limits signal to -0.9/0.9 — safety net preventing dangerously loud output when mixing signals",
                     "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
                 }
@@ -581,7 +488,7 @@
                     "numinlets": 3,
                     "numoutlets": 1,
                     "outlettype": [ "signal" ],
-                    "patching_rect": [ 200.0, 720.0, 88.0, 22.0 ],
+                    "patching_rect": [ 34.78260898590088, 695.6521797180176, 88.0, 22.0 ],
                     "text": "clip~ -0.9 0.9"
                 }
             },
@@ -592,7 +499,7 @@
                     "numinlets": 3,
                     "numoutlets": 1,
                     "outlettype": [ "signal" ],
-                    "patching_rect": [ 310.0, 720.0, 88.0, 22.0 ],
+                    "patching_rect": [ 144.92753744125366, 695.6521797180176, 88.0, 22.0 ],
                     "text": "clip~ -0.9 0.9"
                 }
             },
@@ -602,7 +509,7 @@
                     "maxclass": "newobj",
                     "numinlets": 2,
                     "numoutlets": 0,
-                    "patching_rect": [ 200.0, 760.0, 37.0, 22.0 ],
+                    "patching_rect": [ 34.78260898590088, 735.5072525143623, 37.0, 22.0 ],
                     "text": "dac~"
                 }
             },
@@ -612,57 +519,20 @@
                     "maxclass": "ezdac~",
                     "numinlets": 2,
                     "numoutlets": 0,
-                    "patching_rect": [ 420.0, 720.0, 45.0, 45.0 ]
-                }
-            },
-            {
-                "box": {
-                    "bgcolor": [ 0.12, 0.2, 0.12, 1.0 ],
-                    "fontface": 1,
-                    "fontsize": 11.0,
-                    "id": "obj-experiment-02",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 643.0, 270.5, 546.0, 19.0 ],
-                    "text": "EXPERIMENT: Disconnect one voice from the +~ mixer — which voice is it? Can you tell by the sound?",
-                    "textcolor": [ 0.3, 0.65, 0.3, 1.0 ]
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 11.0,
-                    "id": "obj-troubleshoot-06",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 420.0, 780.0, 500.0, 19.0 ],
-                    "text": "No sound? Check: ezdac~ on, live.gain~ up, master toggle on (yellow).",
-                    "textcolor": [ 0.85, 0.6, 0.2, 1.0 ]
+                    "patching_rect": [ 255.07246589660645, 695.6521797180176, 45.0, 45.0 ]
                 }
             },
             {
                 "box": {
                     "fontsize": 11.0,
                     "id": "obj-ann-param-lfo",
+                    "linecount": 2,
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 110.0, 195.0, 310.0, 19.0 ],
+                    "patching_rect": [ 109.42029076814651, 122.46376913785934, 139.85507154464722, 31.0 ],
                     "text": "0.5 Hz = one cycle every 2 seconds (slow LFO)",
                     "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 10.0,
-                    "id": "obj-color-legend",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 30.0, 800.0, 597.0, 18.0 ],
-                    "text": "COLOR REGIONS:  Blue = Source (oscillators, noise)  |  Orange = Processing (envelopes, operators)  |  Green = Output (gain, dac~)",
-                    "textcolor": [ 0.6, 0.6, 0.6, 1.0 ]
                 }
             },
             {
@@ -673,7 +543,7 @@
                     "mode": 0,
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 20.0, 140.0, 581.0, 309.0 ],
+                    "patching_rect": [ 20.289855241775513, 65.94202953577042, 324.5719068646431, 372.4637712240219 ],
                     "rounded": 12
                 }
             },
@@ -685,7 +555,7 @@
                     "mode": 0,
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 185.0, 475.0, 300.0, 75.0 ],
+                    "patching_rect": [ 20.289855241775513, 442.02898919582367, 550.7692356109619, 76.6153392791748 ],
                     "rounded": 12
                 }
             },
@@ -697,7 +567,19 @@
                     "mode": 0,
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 185.0, 555.0, 300.0, 230.0 ],
+                    "patching_rect": [ 20.289855241775513, 530.4347870349884, 300.0, 230.0 ],
+                    "rounded": 12
+                }
+            },
+            {
+                "box": {
+                    "bgcolor": [ 0.2, 0.3, 0.55, 0.1 ],
+                    "id": "obj-4",
+                    "maxclass": "panel",
+                    "mode": 0,
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 348.55072754621506, 65.94202953577042, 242.02898752689362, 372.4637712240219 ],
                     "rounded": 12
                 }
             }
@@ -706,58 +588,58 @@
             {
                 "patchline": {
                     "destination": [ "obj-scope-voiceA", 0 ],
-                    "midpoints": [ 184.5, 345.0, 184.5, 345.0 ],
-                    "order": 1,
-                    "source": [ "obj-am", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-voice-mix", 0 ],
-                    "midpoints": [ 184.5, 372.0, 171.0, 372.0, 171.0, 477.0, 209.5, 477.0 ],
+                    "midpoints": [ 184.86232030391693, 350.3623186349869, 184.86232030391693, 350.3623186349869 ],
                     "order": 0,
                     "source": [ "obj-am", 0 ]
                 }
             },
             {
                 "patchline": {
+                    "destination": [ "obj-voice-mix", 0 ],
+                    "midpoints": [ 184.86232030391693, 350.3623186349869, 171.0, 350.3623186349869, 171.0, 443.3623186349869, 33.413043677806854, 443.3623186349869 ],
+                    "order": 1,
+                    "source": [ "obj-am", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-dac", 0 ],
-                    "midpoints": [ 209.5, 744.0, 209.5, 744.0 ],
+                    "midpoints": [ 44.28260898590088, 719.3623186349869, 44.28260898590088, 719.3623186349869 ],
                     "source": [ "obj-clip-l", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-dac", 1 ],
-                    "midpoints": [ 319.5, 756.0, 227.5, 756.0 ],
+                    "midpoints": [ 154.42753744125366, 731.3623186349869, 62.28260898590088, 731.3623186349869 ],
                     "source": [ "obj-clip-r", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-drone-scale", 0 ],
-                    "midpoints": [ 309.5, 249.0, 309.5, 249.0 ],
+                    "midpoints": [ 369.64493054151535, 224.36231863498688, 369.64493054151535, 224.36231863498688 ],
                     "source": [ "obj-drone-det", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-drone-sum", 0 ],
-                    "midpoints": [ 309.5, 219.0, 285.0, 219.0, 285.0, 306.0, 309.5, 306.0 ],
+                    "midpoints": [ 369.64493054151535, 194.36231863498688, 353.62771746329963, 194.36231863498688, 353.62771746329963, 281.3623186349869, 369.64493054151535, 281.3623186349869 ],
                     "source": [ "obj-drone-fund", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-drone-sum", 1 ],
-                    "midpoints": [ 309.5, 306.0, 322.5, 306.0 ],
+                    "midpoints": [ 369.64493054151535, 281.3623186349869, 382.64493054151535, 281.3623186349869 ],
                     "source": [ "obj-drone-scale", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-scope-voiceB", 0 ],
-                    "midpoints": [ 309.5, 372.0, 329.5, 372.0 ],
+                    "midpoints": [ 369.64493054151535, 344.3623186349869, 428.3405832052231, 344.3623186349869 ],
                     "order": 0,
                     "source": [ "obj-drone-sum", 0 ]
                 }
@@ -765,7 +647,7 @@
             {
                 "patchline": {
                     "destination": [ "obj-voice-mix", 1 ],
-                    "midpoints": [ 309.5, 477.0, 222.5, 477.0 ],
+                    "midpoints": [ 369.64493054151535, 443.3623186349869, 46.413043677806854, 443.3623186349869 ],
                     "order": 1,
                     "source": [ "obj-drone-sum", 0 ]
                 }
@@ -773,28 +655,28 @@
             {
                 "patchline": {
                     "destination": [ "obj-clip-l", 0 ],
-                    "midpoints": [ 209.5, 708.0, 209.5, 708.0 ],
+                    "midpoints": [ 44.28260898590088, 683.3623186349869, 44.28260898590088, 683.3623186349869 ],
                     "source": [ "obj-gain", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-clip-r", 0 ],
-                    "midpoints": [ 216.75, 714.0, 319.5, 714.0 ],
+                    "midpoints": [ 51.53260898590088, 689.3623186349869, 154.42753744125366, 689.3623186349869 ],
                     "source": [ "obj-gain", 1 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-lfo-scale", 0 ],
-                    "midpoints": [ 39.5, 249.0, 39.5, 249.0 ],
+                    "midpoints": [ 42.108695924282074, 227.36231863498688, 39.210145175457, 227.36231863498688 ],
                     "source": [ "obj-lfo-cycle", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-am", 1 ],
-                    "midpoints": [ 39.5, 318.0, 171.0, 318.0, 171.0, 315.0, 197.5, 315.0 ],
+                    "midpoints": [ 39.210145175457, 323.3623186349869, 197.86232030391693, 323.3623186349869 ],
                     "order": 0,
                     "source": [ "obj-lfo-offset", 0 ]
                 }
@@ -802,7 +684,7 @@
             {
                 "patchline": {
                     "destination": [ "obj-scope-lfo", 0 ],
-                    "midpoints": [ 39.5, 309.0, 39.5, 309.0 ],
+                    "midpoints": [ 39.210145175457, 284.3623186349869, 39.210145175457, 284.3623186349869 ],
                     "order": 1,
                     "source": [ "obj-lfo-offset", 0 ]
                 }
@@ -810,21 +692,21 @@
             {
                 "patchline": {
                     "destination": [ "obj-lfo-offset", 0 ],
-                    "midpoints": [ 39.5, 279.0, 39.5, 279.0 ],
+                    "midpoints": [ 39.210145175457, 254.36231863498688, 39.210145175457, 254.36231863498688 ],
                     "source": [ "obj-lfo-scale", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-master-mult", 1 ],
-                    "midpoints": [ 470.5, 372.0, 171.0, 372.0, 171.0, 552.0, 222.5, 552.0 ],
+                    "midpoints": [ 634.8623240590096, 443.73766739922576, 65.25362354516983, 443.73766739922576 ],
                     "source": [ "obj-master-line", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-gain", 1 ],
-                    "midpoints": [ 209.5, 564.0, 238.5, 564.0 ],
+                    "midpoints": [ 52.25362354516983, 530.3623186349869, 73.28260898590088, 530.3623186349869 ],
                     "order": 0,
                     "source": [ "obj-master-mult", 0 ]
                 }
@@ -832,7 +714,7 @@
             {
                 "patchline": {
                     "destination": [ "obj-gain", 0 ],
-                    "midpoints": [ 209.5, 555.0, 209.5, 555.0 ],
+                    "midpoints": [ 52.25362354516983, 542.3623186349869, 44.28260898590088, 542.3623186349869 ],
                     "order": 1,
                     "source": [ "obj-master-mult", 0 ]
                 }
@@ -840,70 +722,62 @@
             {
                 "patchline": {
                     "destination": [ "obj-master-line", 0 ],
-                    "midpoints": [ 470.5, 275.5, 470.5, 275.5 ],
+                    "midpoints": [ 634.8623240590096, 263.3623186349869, 634.8623240590096, 263.3623186349869 ],
                     "source": [ "obj-master-off", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-master-line", 0 ],
-                    "midpoints": [ 520.5, 284.5, 470.5, 284.5 ],
+                    "midpoints": [ 684.8623244762421, 263.3623186349869, 636.0, 263.3623186349869, 636.0, 269.3623186349869, 634.8623240590096, 269.3623186349869 ],
                     "source": [ "obj-master-on", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-master-off", 0 ],
-                    "midpoints": [ 470.5, 242.5, 470.5, 242.5 ],
+                    "midpoints": [ 634.8623240590096, 227.36231863498688, 634.8623240590096, 227.36231863498688 ],
                     "source": [ "obj-master-sel", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-master-on", 0 ],
-                    "midpoints": [ 491.0, 248.5, 520.5, 248.5 ],
+                    "midpoints": [ 655.3623240590096, 233.36231863498688, 684.8623244762421, 233.36231863498688 ],
                     "source": [ "obj-master-sel", 1 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-master-sel", 0 ],
-                    "midpoints": [ 470.5, 207.0, 470.5, 207.0 ],
+                    "midpoints": [ 634.8623240590096, 191.36231863498688, 634.8623240590096, 191.36231863498688 ],
                     "source": [ "obj-master-toggle", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-lfo-cycle", 1 ],
-                    "midpoints": [ 39.5, 219.0, 73.5, 219.0 ],
+                    "midpoints": [ 39.210145175457, 158.36231863498688, 76.10869592428207, 158.36231863498688 ],
                     "source": [ "obj-phasor", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-am", 0 ],
-                    "midpoints": [ 181.5, 315.0, 184.5, 315.0 ],
+                    "midpoints": [ 184.86232030391693, 320.3623186349869, 184.86232030391693, 320.3623186349869 ],
                     "source": [ "obj-tone-A", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-master-mult", 0 ],
-                    "midpoints": [ 209.5, 513.0, 209.5, 513.0 ],
+                    "midpoints": [ 33.413043677806854, 483.13552971719764, 52.25362354516983, 483.13552971719764 ],
                     "source": [ "obj-voice-mix", 0 ]
                 }
             }
         ],
         "parameters": {
             "obj-gain": [ "Build-06 Vol", "Vol", 0 ],
-            "parameterbanks": {
-                "0": {
-                    "index": 0,
-                    "name": "",
-                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
-                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
-                }
-            },
             "inherited_shortname": 1
         },
         "autosave": 0
