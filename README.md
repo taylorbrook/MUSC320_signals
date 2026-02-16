@@ -35,6 +35,10 @@ Open these in order. Each patch builds on the previous one, leading up to a full
 - [noise-sculpture-demo.maxpat](patches/noise-sculpture-demo.maxpat) -- The finished performance instrument demonstrated in lecture
 - [three-level-comparison.maxpat](patches/three-level-comparison.maxpat) -- Side-by-side comparison of message rate vs. signal rate vs. sample-level processing
 
+## Assignment
+
+- [Create a Sound Sculpture](docs/assignment.md) -- Build your own sound sculpture using the MSP objects from class
+
 ## Reference handout
 
 - [Student quick-reference (PDF/Markdown)](docs/student-reference.md) -- One-page cheat sheet covering every MSP object used in the patches, with signal-flow diagrams

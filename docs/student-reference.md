@@ -51,6 +51,10 @@ Seeing signals.
 - **The output chain:** your signal -> live.gain~ -> clip~ -> dac~ (always use this pattern).
 - **DSP must be on:** Toggle ezdac~ or check Audio Status before expecting sound.
 
+## Assignment
+
+[Create a Sound Sculpture](assignment.md) -- Build your own sound sculpture using the MSP objects from this reference.
+
 ## Your Patches
 
 | # | Patch | What It Teaches |
