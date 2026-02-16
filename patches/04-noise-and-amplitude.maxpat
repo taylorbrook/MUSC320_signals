@@ -14,6 +14,17 @@
         "boxes": [
             {
                 "box": {
+                    "id": "obj-2",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 138.0, 530.0, 81.0, 22.0 ],
+                    "text": "loadmess -12"
+                }
+            },
+            {
+                "box": {
                     "fontface": 1,
                     "fontsize": 16.0,
                     "id": "obj-title",
@@ -208,7 +219,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "signal" ],
-                    "patching_rect": [ 60.0, 435.0, 32.0, 22.0 ],
+                    "patching_rect": [ 59.5, 442.0, 32.0, 22.0 ],
                     "text": "*~"
                 }
             },
@@ -488,8 +499,15 @@
         "lines": [
             {
                 "patchline": {
+                    "destination": [ "obj-gain", 0 ],
+                    "midpoints": [ 147.5, 555.0, 120.0, 555.0, 120.0, 537.0, 69.5, 537.0 ],
+                    "source": [ "obj-2", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-mult-tone", 0 ],
-                    "midpoints": [ 559.5, 249.0, 336.0, 249.0, 336.0, 309.0, 546.0, 309.0, 546.0, 300.0, 559.5, 300.0 ],
+                    "midpoints": [ 559.5, 249.0, 546.0, 249.0, 546.0, 294.0, 559.5, 294.0 ],
                     "order": 1,
                     "source": [ "obj-cycle", 0 ]
                 }
@@ -497,7 +515,7 @@
             {
                 "patchline": {
                     "destination": [ "obj-scope-cycle", 0 ],
-                    "midpoints": [ 559.5, 207.0, 636.0, 207.0, 636.0, 171.0, 659.5, 171.0 ],
+                    "midpoints": [ 559.5, 231.0, 645.0, 231.0, 645.0, 171.0, 659.5, 171.0 ],
                     "order": 0,
                     "source": [ "obj-cycle", 0 ]
                 }
@@ -505,19 +523,21 @@
             {
                 "patchline": {
                     "destination": [ "obj-ezdac", 1 ],
+                    "midpoints": [ 76.75, 693.0, 89.0, 693.0 ],
                     "source": [ "obj-gain", 1 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-ezdac", 0 ],
+                    "midpoints": [ 69.5, 678.0, 63.0, 678.0 ],
                     "source": [ "obj-gain", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-slider", 0 ],
-                    "midpoints": [ 209.5, 393.0, 102.0, 393.0, 102.0, 276.0, 69.5, 276.0 ],
+                    "midpoints": [ 209.5, 393.0, 195.0, 393.0, 195.0, 381.0, 90.0, 381.0, 90.0, 276.0, 69.5, 276.0 ],
                     "source": [ "obj-init-msg", 0 ]
                 }
             },
@@ -531,21 +551,21 @@
             {
                 "patchline": {
                     "destination": [ "obj-sum", 0 ],
-                    "midpoints": [ 69.5, 459.0, 69.5, 459.0 ],
+                    "midpoints": [ 69.0, 465.0, 69.5, 465.0 ],
                     "source": [ "obj-mult-noise", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-sum", 1 ],
-                    "midpoints": [ 559.5, 486.0, 82.5, 486.0 ],
+                    "midpoints": [ 559.5, 495.0, 82.5, 495.0 ],
                     "source": [ "obj-mult-tone", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-mult-noise", 0 ],
-                    "midpoints": [ 69.5, 267.0, 45.0, 267.0, 45.0, 432.0, 69.5, 432.0 ],
+                    "midpoints": [ 69.5, 267.0, 45.0, 267.0, 45.0, 429.0, 69.0, 429.0 ],
                     "order": 1,
                     "source": [ "obj-noise", 0 ]
                 }
@@ -553,7 +573,7 @@
             {
                 "patchline": {
                     "destination": [ "obj-scope-noise", 0 ],
-                    "midpoints": [ 69.5, 207.0, 147.0, 207.0, 147.0, 171.0, 169.5, 171.0 ],
+                    "midpoints": [ 69.5, 198.0, 117.0, 198.0, 117.0, 171.0, 169.5, 171.0 ],
                     "order": 0,
                     "source": [ "obj-noise", 0 ]
                 }
@@ -561,7 +581,7 @@
             {
                 "patchline": {
                     "destination": [ "obj-mult-noise", 1 ],
-                    "midpoints": [ 69.5, 429.0, 82.5, 429.0 ],
+                    "midpoints": [ 69.5, 429.0, 82.0, 429.0 ],
                     "source": [ "obj-sig", 0 ]
                 }
             },
@@ -598,6 +618,14 @@
         ],
         "parameters": {
             "obj-gain": [ "Build-04 Vol", "Vol", 0 ],
+            "parameterbanks": {
+                "0": {
+                    "index": 0,
+                    "name": "",
+                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
+                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+                }
+            },
             "inherited_shortname": 1
         },
         "autosave": 0

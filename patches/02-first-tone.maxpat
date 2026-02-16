@@ -14,6 +14,17 @@
         "boxes": [
             {
                 "box": {
+                    "bgcolor": [ 0.1, 0.1, 0.12, 1.0 ],
+                    "id": "obj-1",
+                    "maxclass": "live.scope~",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [ "bang" ],
+                    "patching_rect": [ 112.00000333786011, 203.33333939313889, 208.00000619888306, 60.666668474674225 ]
+                }
+            },
+            {
+                "box": {
                     "id": "obj-3",
                     "maxclass": "newobj",
                     "numinlets": 2,
@@ -53,19 +64,8 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 30.0, 20.0, 300.0, 24.0 ],
+                    "patching_rect": [ 30.0, 40.000001192092896, 300.0, 24.0 ],
                     "text": "02 — First Tone"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 12.0,
-                    "id": "obj-subtitle",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 30.0, 48.0, 400.0, 20.0 ],
-                    "text": "What makes that tone? Can I change it?"
                 }
             },
             {
@@ -76,7 +76,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 30.0, 85.0, 200.0, 20.0 ],
+                    "patching_rect": [ 30.0, 73.10923933982849, 200.0, 20.0 ],
                     "text": "MAIN SIGNAL CHAIN"
                 }
             },
@@ -87,7 +87,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "signal" ],
-                    "patching_rect": [ 100.0, 120.0, 72.0, 22.0 ],
+                    "patching_rect": [ 30.0, 124.0, 72.0, 22.0 ],
                     "text": "cycle~ 440"
                 }
             },
@@ -95,11 +95,12 @@
                 "box": {
                     "fontsize": 11.0,
                     "id": "obj-ann-cycle",
+                    "linecount": 2,
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 30.0, 155.0, 485.0, 19.0 ],
-                    "text": "cycle~ — cosine wave oscillator. The number after it is the frequency in Hertz (cycles per second)."
+                    "patching_rect": [ 30.00000089406967, 163.333338201046, 358.6666773557663, 31.0 ],
+                    "text": "cycle~ — sinusoidal wave oscillator. The number after it (the first (and only) argument) is the frequency in Hertz (cycles per second)."
                 }
             },
             {
@@ -109,7 +110,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "signal" ],
-                    "patching_rect": [ 100.0, 200.0, 40.0, 22.0 ],
+                    "patching_rect": [ 30.00000089406967, 222.666673630476, 40.0, 22.0 ],
                     "text": "*~ 0.5"
                 }
             },
@@ -117,11 +118,12 @@
                 "box": {
                     "fontsize": 11.0,
                     "id": "obj-ann-amp",
+                    "linecount": 2,
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 30.0, 230.0, 480.0, 19.0 ],
-                    "text": "*~ 0.5 — amplitude scaling. Multiply every sample by 0.5 to cut the volume in half."
+                    "patching_rect": [ 30.00000089406967, 269.0, 358.6666773557663, 31.0 ],
+                    "text": "*~ 0.5 — amplitude scaling. This object multiplies every sample by the argument (.5 in this case)."
                 }
             },
             {
@@ -131,7 +133,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 30.0, 249.0, 480.0, 19.0 ],
+                    "patching_rect": [ 30.00000089406967, 307.00000113248825, 358.6666773557663, 19.0 ],
                     "text": "0.5 = half amplitude (-6 dB). Try 0.25 (quieter) or 1.0 (full).",
                     "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
                 }
@@ -139,35 +141,13 @@
             {
                 "box": {
                     "fontsize": 11.0,
-                    "id": "obj-ann-amp3",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 30.0, 268.0, 480.0, 19.0 ],
-                    "text": "*~ is a signal multiplier. It scales every sample. 0.5 = half amplitude, 0.25 = quarter amplitude."
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 11.0,
                     "id": "obj-ann-safety",
+                    "linecount": 2,
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 30.0, 290.0, 480.0, 19.0 ],
-                    "text": "Why not just turn it up to 1.0? In MSP, managing amplitude is critical. Full-amplitude",
-                    "textcolor": [ 0.4, 0.4, 0.8, 1.0 ]
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 11.0,
-                    "id": "obj-ann-safety2",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 30.0, 309.0, 480.0, 19.0 ],
-                    "text": "signals from multiple sources can clip (distort). Always scale down.",
+                    "patching_rect": [ 30.00000089406967, 329.6666684746742, 358.6666773557663, 31.0 ],
+                    "text": "Why not just turn it up to 1.0? In MSP, managing amplitude is critical. Full-amplitude signals from multiple sources can clip (distort). ",
                     "textcolor": [ 0.4, 0.4, 0.8, 1.0 ]
                 }
             },
@@ -179,7 +159,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "bang" ],
-                    "patching_rect": [ 200.0, 115.0, 80.0, 40.0 ]
+                    "patching_rect": [ 116.0000034570694, 115.33333677053452, 204.00000607967377, 46.666663229465485 ]
                 }
             },
             {
@@ -191,7 +171,7 @@
                     "numoutlets": 5,
                     "outlettype": [ "signal", "signal", "", "float", "list" ],
                     "parameter_enable": 1,
-                    "patching_rect": [ 100.0, 340.0, 48.0, 136.0 ],
+                    "patching_rect": [ 46.66666805744171, 382.66667807102203, 48.0, 136.0 ],
                     "saved_attribute_attributes": {
                         "valueof": {
                             "parameter_initial": [ -12.0 ],
@@ -214,19 +194,7 @@
                     "maxclass": "ezdac~",
                     "numinlets": 2,
                     "numoutlets": 0,
-                    "patching_rect": [ 100.0, 506.0, 45.0, 45.0 ]
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 11.0,
-                    "id": "obj-ann-output",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 30.0, 585.0, 480.0, 19.0 ],
-                    "text": "ezdac~, dac~, live.gain~, clip~ — see Patch 01 for details",
-                    "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
+                    "patching_rect": [ 46.66666805744171, 548.6666830182076, 45.0, 45.0 ]
                 }
             },
             {
@@ -365,51 +333,13 @@
             },
             {
                 "box": {
-                    "fontsize": 11.0,
-                    "id": "obj-troubleshoot-02",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 30.0, 608.0, 480.0, 19.0 ],
-                    "text": "See Patch 01 troubleshooting: ezdac~ on, live.gain~ up.",
-                    "textcolor": [ 0.85, 0.6, 0.2, 1.0 ]
-                }
-            },
-            {
-                "box": {
-                    "bgcolor": [ 0.12, 0.2, 0.12, 1.0 ],
-                    "fontface": 1,
-                    "fontsize": 11.0,
-                    "id": "obj-experiment-01",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 530.0, 360.0, 821.0, 19.0 ],
-                    "text": "EXPERIMENT: Connect all three cycle~ objects (220, 440, 880) to dac~ through live.gain~ at once — what do you hear when frequencies are close together?",
-                    "textcolor": [ 0.3, 0.65, 0.3, 1.0 ]
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 10.0,
-                    "id": "obj-color-legend",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 30.0, 640.0, 597.0, 18.0 ],
-                    "text": "COLOR REGIONS:  Blue = Source (oscillators, noise)  |  Orange = Processing (envelopes, operators)  |  Green = Output (gain, dac~)",
-                    "textcolor": [ 0.6, 0.6, 0.6, 1.0 ]
-                }
-            },
-            {
-                "box": {
                     "bgcolor": [ 0.2, 0.3, 0.55, 0.1 ],
                     "id": "obj-region-source",
                     "maxclass": "panel",
                     "mode": 0,
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 20.0, 100.0, 290.0, 210.0 ],
+                    "patching_rect": [ 20.000000596046448, 100.00000298023224, 368.6666776537895, 273.3333415389061 ],
                     "rounded": 12
                 }
             },
@@ -421,7 +351,7 @@
                     "mode": 0,
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 20.0, 325.0, 260.0, 270.0 ],
+                    "patching_rect": [ 20.000000596046448, 375.33334451913834, 102.66666972637177, 227.33334010839462 ],
                     "rounded": 12
                 }
             }
@@ -429,39 +359,53 @@
         "lines": [
             {
                 "patchline": {
-                    "destination": [ "obj-gain", 1 ],
+                    "destination": [ "obj-1", 0 ],
+                    "midpoints": [ 39.50000089406967, 255.0, 99.0, 255.0, 99.0, 198.0, 121.50000333786011, 198.0 ],
                     "order": 0,
                     "source": [ "obj-amp-main", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-gain", 0 ],
+                    "destination": [ "obj-gain", 1 ],
+                    "midpoints": [ 39.50000089406967, 255.0, 15.0, 255.0, 15.0, 378.0, 85.16666805744171, 378.0 ],
                     "order": 1,
                     "source": [ "obj-amp-main", 0 ]
                 }
             },
             {
                 "patchline": {
+                    "destination": [ "obj-gain", 0 ],
+                    "midpoints": [ 39.50000089406967, 255.0, 15.0, 255.0, 15.0, 378.0, 56.16666805744171, 378.0 ],
+                    "order": 2,
+                    "source": [ "obj-amp-main", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-scope-220", 0 ],
+                    "midpoints": [ 539.5, 165.0, 539.5, 165.0 ],
                     "source": [ "obj-cycle-220", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-scope-440", 0 ],
+                    "midpoints": [ 783.5, 165.0, 783.5, 165.0 ],
                     "source": [ "obj-cycle-440", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-scope-880", 0 ],
+                    "midpoints": [ 1032.5, 165.0, 1032.5, 165.0 ],
                     "source": [ "obj-cycle-880", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-amp-main", 0 ],
+                    "midpoints": [ 39.5, 147.0, 15.0, 147.0, 15.0, 207.0, 39.50000089406967, 207.0 ],
                     "order": 1,
                     "source": [ "obj-cycle-main", 0 ]
                 }
@@ -469,6 +413,7 @@
             {
                 "patchline": {
                     "destination": [ "obj-scope-main", 0 ],
+                    "midpoints": [ 39.5, 147.0, 27.0, 147.0, 27.0, 111.0, 125.5000034570694, 111.0 ],
                     "order": 0,
                     "source": [ "obj-cycle-main", 0 ]
                 }
@@ -476,18 +421,28 @@
             {
                 "patchline": {
                     "destination": [ "obj-ezdac", 1 ],
+                    "midpoints": [ 63.41666805744171, 534.0, 82.16666805744171, 534.0 ],
                     "source": [ "obj-gain", 1 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-ezdac", 0 ],
+                    "midpoints": [ 56.16666805744171, 519.0, 56.16666805744171, 519.0 ],
                     "source": [ "obj-gain", 0 ]
                 }
             }
         ],
         "parameters": {
             "obj-gain": [ "Build-02 Vol", "Vol", 0 ],
+            "parameterbanks": {
+                "0": {
+                    "index": 0,
+                    "name": "",
+                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
+                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+                }
+            },
             "inherited_shortname": 1
         },
         "autosave": 0

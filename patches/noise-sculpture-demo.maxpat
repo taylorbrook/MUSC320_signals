@@ -1071,7 +1071,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 185.0, 445.0, 115.0, 29.0 ],
+                    "patching_rect": [ 185.0, 445.0, 118.0, 29.0 ],
                     "text": "LFO: cycle~ -> *~ 0.5 -> +~ 0.5 (unipolar 0..1)",
                     "textcolor": [ 0.5, 0.5, 0.5, 1.0 ]
                 }
@@ -2596,14 +2596,6 @@
         ],
         "parameters": {
             "obj-84": [ "Master Volume", "Vol", 0 ],
-            "parameterbanks": {
-                "0": {
-                    "index": 0,
-                    "name": "",
-                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
-                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
-                }
-            },
             "inherited_shortname": 1
         },
         "autosave": 0
