@@ -77,6 +77,8 @@ Objects that transform signals.
 - `sig~` -- converts a Max number to a continuous signal. The bridge between Max and MSP.
 - `line~` -- generates smooth ramps at audio rate. Message format: `target time` (e.g., `1. 500` ramps to 1.0 over 500 ms). ("line~ is the signal version of line -- smooth ramps at audio rate instead of message rate")
 
+![ADSR envelope: attack, decay, sustain, release](diagrams/adsr-envelope.svg)
+
 ![Adding and multiplying signals](diagrams/adding-and-multiplying-signals.svg)
 
 ### Output and Safety
@@ -87,6 +89,8 @@ Getting signal to speakers safely.
 - `ezdac~` -- same as dac~ but with a click-to-toggle UI. The power switch for MSP audio.
 - `live.gain~` -- volume control with built-in metering. Stereo in/out. Default to -12 dB or lower.
 - `clip~` -- limits signal to a range. `clip~ -0.9 0.9` prevents dangerously loud output. Safety net before dac~.
+
+![What clipping looks like](diagrams/clipping.svg)
 
 ### Monitoring
 
