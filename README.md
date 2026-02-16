@@ -1,5 +1,7 @@
 # MUSC 320 -- Week 7: Introduction to MSP
 
+![Scan to open this repo](diagrams/repo-qr.svg)
+
 Welcome to the MSP module of MUSC 320. This repository contains everything you need for the lecture: Max patches to open and explore, a quick reference for the MSP objects we cover, and signal-flow diagrams.
 
 ## Getting started
