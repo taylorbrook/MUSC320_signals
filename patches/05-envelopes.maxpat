@@ -14,6 +14,30 @@
         "boxes": [
             {
                 "box": {
+                    "fontsize": 10.0,
+                    "id": "obj-2",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 413.0, 533.0, 234.0, 18.0 ],
+                    "presentation_linecount": 2,
+                    "text": "as a bonus, check out the help file for this object",
+                    "textcolor": [ 0.6, 0.6, 0.6, 1.0 ]
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-1",
+                    "maxclass": "newobj",
+                    "numinlets": 5,
+                    "numoutlets": 4,
+                    "outlettype": [ "signal", "signal", "", "" ],
+                    "patching_rect": [ 350.0, 531.0, 61.0, 22.0 ],
+                    "text": "adsr~"
+                }
+            },
+            {
+                "box": {
                     "fontface": 1,
                     "fontsize": 16.0,
                     "id": "obj-title",
@@ -573,6 +597,14 @@
         ],
         "parameters": {
             "obj-gain": [ "Build-05 Vol", "Vol", 0 ],
+            "parameterbanks": {
+                "0": {
+                    "index": 0,
+                    "name": "",
+                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
+                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+                }
+            },
             "inherited_shortname": 1
         },
         "autosave": 0

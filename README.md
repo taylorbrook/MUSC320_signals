@@ -16,6 +16,18 @@ If you are comfortable with Git you can also clone:
 git clone https://github.com/taylorbrook/MUSC320_signals.git
 ```
 
+## Key Concepts
+
+- **Signal flow:** Source -> Processing -> Output (always).
+- **Bridge objects:** sig~ connects the Max world to the MSP world.
+- **Amplitude matters:** Always scale signals before output. Full-amplitude noise~ directly to dac~ = dangerously loud.
+- **The output chain:** your signal -> live.gain~ -> clip~ -> dac~ (always use this pattern).
+- **DSP must be on:** Toggle ezdac~ or check Audio Status before expecting sound.
+
+## Assignment
+
+- [Create a Sound Sculpture](docs/assignment.md) -- Build your own sound sculpture using the MSP objects from class
+
 ## Patches
 
 Open these in order. Each patch builds on the previous one, leading up to a full noise-sculpture performance instrument.
@@ -63,6 +75,8 @@ Objects that transform signals.
 - `sig~` -- converts a Max number to a continuous signal. The bridge between Max and MSP.
 - `line~` -- generates smooth ramps at audio rate. Message format: `target time` (e.g., `1. 500` ramps to 1.0 over 500 ms). ("line~ is the signal version of line -- smooth ramps at audio rate instead of message rate")
 
+![Adding and multiplying signals](diagrams/adding-and-multiplying-signals.svg)
+
 ### Output and Safety
 
 Getting signal to speakers safely.
@@ -78,15 +92,3 @@ Seeing signals.
 
 - `live.scope~` -- oscilloscope display. Shows waveform shape in real time.
 - `number~` -- displays signal value at control rate. Mode 2 = display only (no output).
-
-## Key Concepts
-
-- **Signal flow:** Source -> Processing -> Output (always).
-- **Bridge objects:** sig~ connects the Max world to the MSP world.
-- **Amplitude matters:** Always scale signals before output. Full-amplitude noise~ directly to dac~ = dangerously loud.
-- **The output chain:** your signal -> live.gain~ -> clip~ -> dac~ (always use this pattern).
-- **DSP must be on:** Toggle ezdac~ or check Audio Status before expecting sound.
-
-## Assignment
-
-- [Create a Sound Sculpture](docs/assignment.md) -- Build your own sound sculpture using the MSP objects from class
