@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 195">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 202">
 
   <!-- Background -->
-  <rect x="0" y="0" width="380" height="195" rx="4" ry="4" fill="#F8F8FA"/>
+  <rect x="0" y="0" width="380" height="202" rx="4" ry="4" fill="#FFFFFF"/>
 
   <!-- Title -->
   <text x="190" y="16" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#E74C3C">Why Amplitude Matters: Clipping Distortion</text>
