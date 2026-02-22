@@ -2,7 +2,7 @@
 
 ![Scan to open this repo](diagrams/repo-qr.svg)
 
-Welcome to the MSP module of MUSC 320. This repository contains everything you need for the lecture: Max patches to open and explore, a quick reference for the MSP objects we cover, and signal-flow diagrams.
+Welcome to the Max Signal Processing (MSP) module of MUSC 320. This repository contains everything you need for the lecture: Max patches to open and explore, a quick reference for the MSP objects we cover, and signal-flow diagrams.
 
 ## Getting started
 
