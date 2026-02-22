@@ -22,7 +22,6 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [ 270.49179553985596, 104.0, 189.8524670600891, 69.0 ],
-                    "presentation_linecount": 4,
                     "text": "~ hint: look for the tilda! This means the object is working with signals or at least outputting a signal.",
                     "textcolor": [ 0.0, 0.0, 0.0, 1.0 ]
                 }

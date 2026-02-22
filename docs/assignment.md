@@ -43,6 +43,7 @@ These are optional starting points, not requirements. Try whatever sounds intere
 - **Beating:** Run two `cycle~` objects at nearly the same frequency (e.g., 220 and 223 Hz). The slight detuning creates a slow, pulsing beat.
 - **Shaped noise:** Feed `noise~` through `*~` driven by a `line~` envelope so the noise fades in and out rather than playing continuously.
 - **Modulation depth:** Multiply your `phasor~` LFO by a small number (e.g., `*~ 0.3`) before using it as a modulator. This controls how extreme the effect is.
+- **Breakpoint function:** Send `line~` a sequence of target-time pairs (e.g., `0. 0, 1. 500, 0.3 200, 0. 1000`) to create a multi-segment shape -- a custom envelope that ramps through several levels instead of just fading in or out.
 
 
 ## Submission
