@@ -73,8 +73,8 @@ Objects that transform signals.
 ![Signal flow: Source -> Processing -> Output](diagrams/signal-flow.svg)
 
 - `*~` -- multiplies two signals, or a signal by a constant. Used for amplitude control, ring modulation, AM synthesis. ("You used * to multiply numbers; *~ multiplies signals")
-- `+~` -- adds two signals. Used for mixing voices or adding DC offset. ("You added numbers with +; +~ adds signals")
-- `sig~` -- converts a Max number to a continuous signal. The bridge between Max and MSP.
+- `+~` -- adds two signals together. Used for combining or "mixing" audio streams together or adding DC offset.
+- `sig~` -- converts a Max number to a continuous MSP signal.
 - `line~` -- generates smooth ramps at audio rate. Message format: `target time` (e.g., `1. 500` ramps to 1.0 over 500 ms). ("line~ is the signal version of line -- smooth ramps at audio rate instead of message rate")
 
 ![ADSR envelope: attack, decay, sustain, release](diagrams/adsr-envelope.svg)
@@ -85,19 +85,20 @@ Objects that transform signals.
 
 Getting signal to speakers safely.
 
-- `dac~` -- digital-to-analog converter. Sends signal to speakers. Two inlets = left/right stereo.
-- `ezdac~` -- same as dac~ but with a click-to-toggle UI. The power switch for MSP audio.
-- `live.gain~` -- volume control with built-in metering. Stereo in/out. Default to -12 dB or lower.
+- `dac~` -- digital-to-analog converter. Sends the signal out to speakers. Two inlets by default = left/right stereo.
+- `ezdac~` -- same as dac~ but with a click-to-toggle UI, like the power switch in the bottom right of a MAX window.
+- `live.gain~` -- volume control with built-in metering. Stereo in/out.
 - `clip~` -- limits signal to a range. `clip~ -0.9 0.9` prevents dangerously loud output. Safety net before dac~.
 
 ![What clipping looks like](diagrams/clipping.svg)
 
 ### Monitoring
 
-Seeing signals.
+Seeing signals - great to debugging and understanding the flow in your patch.
 
 - `live.scope~` -- oscilloscope display. Shows waveform shape in real time.
 - `number~` -- displays signal value at control rate. Mode 2 = display only (no output).
+- `meter~` -- displays signal as an led-style meter. 
 
 ### Bonus
 
