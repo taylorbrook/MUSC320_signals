@@ -50,7 +50,7 @@ Open these in order. Each patch builds on the previous one, leading up to a full
 
 ## What Is a Signal?
 
-MSP objects process **signals** -- continuous streams of numbers, 48,000 or 44,100 per second. Every MSP object has a **tilde (~)** in its name. When you see ~, think "audio rate."
+MSP objects process **signals** -- continuous streams of numbers, usually 48,000 or 44,100 per second. Every MSP object has a **tilde (~)** in its name. When you see ~, think "audio rate."
 
 ![Digital audio: continuous sound becomes discrete samples](diagrams/digital-audio-waveform.svg)
 
