@@ -31,18 +31,18 @@ Your patch must use every signal object listed below at least once. Check them o
 
 ### Layers
 
-Your patch must have at least **two distinct layers** (also called voices). A layer is an independent signal path with its own source, its own processing, and its own amplitude control.
+Your patch must have at least **two distinct layers**. A layer is an independent signal path with its own source, processing, and own amplitude control.
 
-Look at Patch 06 and Patch 07 from class for examples of multi-layer architecture. In Patch 06, Voice A is a cycle~ with phasor~ tremolo and Voice B is a detuned drone -- two separate signal paths summed with `+~`. Your sculpture should follow the same principle: independent voices combined into one output.
+Look at Patch 06 and Patch 07 from class for examples of multi-layer architecture. In Patch 06, Layer A is a cycle~ with phasor~ tremolo and layer B is a detuned drone -- two separate signal paths summed with `+~`. Your sculpture should follow the same principle: independent voices combined into one output.
 
 ## Suggestions for Exploration
 
 These are optional starting points, not requirements. Try whatever sounds interesting to you.
 
-- **Tremolo:** Use `phasor~` as an LFO to modulate a `*~` amplitude control -- the volume wobbles at whatever rate you set.
-- **Beating:** Run two `cycle~` objects at nearly the same frequency (e.g., 220 and 223 Hz). The slight detuning creates a slow, pulsing beat.
+- **Tremolo:** Use `phasor~` or `cycle~` as an low frequency oscillator (LFO) to modulate a `*~` amplitude control (set the LFO frequency to < 12hz).
+- **Beating:** Sum two `cycle~` objects at nearly the same frequency (e.g., 220 and 223 Hz). The slight detuning creates a slow, pulsing beat.
 - **Shaped noise:** Feed `noise~` through `*~` driven by a `line~` envelope so the noise fades in and out rather than playing continuously.
-- **Modulation depth:** Multiply your `phasor~` LFO by a small number (e.g., `*~ 0.3`) before using it as a modulator. This controls how extreme the effect is.
+- **Modulation depth:** Multiply your `phasor~` or `cycle~` LFO by a small number (e.g., `*~ 0.3`) before using it as a modulator.
 - **Breakpoint function:** Send `line~` a sequence of target-time pairs (e.g., `0. 0, 1. 500, 0.3 200, 0. 1000`) to create a multi-segment shape -- a custom envelope that ramps through several levels instead of just fading in or out.
 
 
