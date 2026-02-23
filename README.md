@@ -20,11 +20,12 @@ git clone https://github.com/taylorbrook/MUSC320_signals.git
 
 ## Key Concepts
 
-- **Signal flow:** Source -> Processing -> Output (always).
+- **Signal (MSP) versus Control Data (MAX):** Signals are continuous, high-sample-rate audio flow, while control data is  intermittent, event-based messages. 
+- **Signal flow** Signal source -> signal processing -> output
 - **Bridge objects:** sig~ connects the Max world to the MSP world.
-- **Amplitude matters:** Always scale signals before output. Full-amplitude noise~ directly to dac~ = dangerously loud.
-- **The output chain:** your signal -> live.gain~ -> clip~ -> dac~ (always use this pattern).
-- **DSP must be on:** Toggle ezdac~ or check Audio Status before expecting sound.
+- **Amplitude matters:** Always scale signals before output using *~, gain~ or live.gain~ objects just before the sending to speakers via the dac~. Full-amplitude signals, especially noise~ can be dangerously loud.
+- **The output chain:**  signal -> live.gain~ -> clip~ -> dac~.
+- **Audio/DSP must be on:** Toggle ezdac~ or check Audio Status before expecting sound.
 
 ## Assignment
 
@@ -32,7 +33,7 @@ git clone https://github.com/taylorbrook/MUSC320_signals.git
 
 ## Patches
 
-Open these in order. Each patch builds on the previous one, leading up to a full noise-sculpture performance instrument.
+Open these in order. Each patch builds on the previous one, leading up to a full noise-sculpture patch.
 
 | # | Patch | What it covers |
 |---|-------|----------------|
@@ -54,16 +55,16 @@ MSP objects process **signals** -- continuous streams of numbers, usually 48,000
 
 ![Digital audio: continuous sound becomes discrete samples](diagrams/digital-audio-waveform.svg)
 
-**Signals vs. messages:** A Max message (bang, int, float) arrives when triggered. A signal flows continuously -- 48,000 or 44,100 values every second, whether you ask for them or not.
+**Signals vs. messages:** A Max message (bang, int, float) arrives when triggered. A signal flows continuously -- 48,000 or 44,100 values every second.
 
 ## MSP Object Reference
 
 ### Signal Sources
 
-Objects that generate signals from nothing.
+Objects that generate signals.
 
-- `cycle~` -- cosine/sine oscillator. First argument: frequency in Hz. Connect a signal to the left inlet for frequency modulation. ("metro generates bangs at intervals; cycle~ generates a smooth wave")
-- `noise~` -- white noise generator. No arguments. Outputs random values -1 to 1 at audio rate. ("random gives one random number per bang; noise~ gives one every sample")
+- `cycle~` -- cosine/sine oscillator. First argument and left input is the frequency in Hz. 
+- `noise~` -- white noise generator. Outputs random values between -1 to 1 at audio rate. ("random gives one random number per bang; noise~ gives one every sample")
 - `phasor~` -- repeating 0-to-1 ramp. First argument: frequency in Hz. Used as an LFO or automation source. ("metro fires bangs at intervals; phasor~ generates a smooth repeating ramp")
 
 ### Signal Operators
