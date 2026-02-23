@@ -40,9 +40,10 @@ git clone https://github.com/taylorbrook/MUSC320_signals.git
 Open these in order. Each patch builds on the previous one, leading up to a full noise-sculpture patch.
 
 ```{=typst}
-#set text(size: 7pt)
+#block[
+#set text(size: 6.5pt)
 #table(
-  columns: (auto, 2fr, 1.6fr),
+  columns: (auto, 1fr, 1fr),
   align: (center, left, left),
   [*\#*], [*Patch*], [*What it covers*],
   [1], [01-control-vs-signals-three-level-comparison.maxpat], [Control rate vs. signal rate vs. sample-level processing side by side],
@@ -53,6 +54,7 @@ Open these in order. Each patch builds on the previous one, leading up to a full
   [6], [06-modulation-and-mixing.maxpat], [LFO modulation, AM/ring mod, and mixing voices with `+~`],
   [7], [07-noise-sculpture-rebuild.maxpat], [Rebuilding the demo from scratch --- putting it all together],
 )
+]
 ```
 
 ### Bonus
