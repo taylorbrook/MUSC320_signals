@@ -31,19 +31,29 @@ git clone https://github.com/taylorbrook/MUSC320_signals.git
 
 - [Create a Sound Sculpture](docs/assignment.md) -- Build your own sound sculpture using the MSP objects from class
 
+```{=typst}
+#pagebreak()
+```
+
 ## Patches
 
 Open these in order. Each patch builds on the previous one, leading up to a full noise-sculpture patch.
 
-| # | Patch | What it covers |
-|---|-------|----------------|
-| 1 | [01-control-vs-signals-three-level-comparison.maxpat](patches/01-control-vs-signals-three-level-comparison.maxpat) | Control rate vs. signal rate vs. sample-level processing side by side |
-| 2 | [02-first-tone.maxpat](patches/02-first-tone.maxpat) | Controlling frequency and amplitude with `cycle~` and `*~` |
-| 3 | [03-control-meets-signal.maxpat](patches/03-control-meets-signal.maxpat) | Bridging Max messages and MSP signals with `sig~` and `number~` |
-| 4 | [04-noise-and-amplitude.maxpat](patches/04-noise-and-amplitude.maxpat) | White noise, `noise~`, and shaping amplitude |
-| 5 | [05-envelopes.maxpat](patches/05-envelopes.maxpat) | Amplitude envelopes with `line~` |
-| 6 | [06-modulation-and-mixing.maxpat](patches/06-modulation-and-mixing.maxpat) | LFO modulation, AM/ring mod, and mixing voices with `+~` |
-| 7 | [07-noise-sculpture-rebuild.maxpat](patches/07-noise-sculpture-rebuild.maxpat) | Rebuilding the demo from scratch -- putting it all together |
+```{=typst}
+#set text(size: 7pt)
+#table(
+  columns: (auto, 2fr, 1.6fr),
+  align: (center, left, left),
+  [*\#*], [*Patch*], [*What it covers*],
+  [1], [01-control-vs-signals-three-level-comparison.maxpat], [Control rate vs. signal rate vs. sample-level processing side by side],
+  [2], [02-first-tone.maxpat], [Controlling frequency and amplitude with `cycle~` and `*~`],
+  [3], [03-control-meets-signal.maxpat], [Bridging Max messages and MSP signals with `sig~` and `number~`],
+  [4], [04-noise-and-amplitude.maxpat], [White noise, `noise~`, and shaping amplitude],
+  [5], [05-envelopes.maxpat], [Amplitude envelopes with `line~`],
+  [6], [06-modulation-and-mixing.maxpat], [LFO modulation, AM/ring mod, and mixing voices with `+~`],
+  [7], [07-noise-sculpture-rebuild.maxpat], [Rebuilding the demo from scratch --- putting it all together],
+)
+```
 
 ### Bonus
 

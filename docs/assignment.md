@@ -46,6 +46,16 @@ These are optional starting points, not requirements. Try whatever sounds intere
 - **Breakpoint function:** Send `line~` a sequence of target-time pairs (e.g., `0. 0, 1. 500, 0.3 200, 0. 1000`) to create a multi-segment shape -- a custom envelope that ramps through several levels instead of just fading in or out.
 
 
+## Grading Rubric
+
+| Criterion | Excellent (A) | Good (B) | Satisfactory (C) | Incomplete (D/F) |
+|-----------|--------------|----------|-------------------|-------------------|
+| **Required Objects (30%)** | All 8 required objects present and used purposefully | All 8 present; one or two used minimally | 6--7 of the required objects present | Fewer than 6 required objects |
+| **Multi-Layer Architecture (20%)** | Two or more clearly independent voices with distinct sources, processing, and amplitude control | Two voices present but share some processing or lack independent amplitude control | Attempt at layering, but voices are not clearly separated | Single signal path with no layering |
+| **Sound Design & Musicality (25%)** | Sound evolves over time with intentional movement -- engages a listener for 30+ seconds | Some evolution; a few parameters change but overall texture is mostly static | Produces sound but feels like a test patch rather than a composition | Static tone or uncontrolled noise |
+| **Patch Organization (15%)** | Neat layout with logical signal flow; easy to trace each voice from source to output | Mostly organized; a few crossed cables or unclear sections | Functional but difficult to follow | Tangled or incomprehensible layout |
+| **Safety & Output Chain (10%)** | Complete output chain (`live.gain~` and/or `clip~` before `dac~`); no risk of dangerous levels | Output chain present but missing one safety element | Sound reaches speakers but output chain is incomplete | No volume control; risk of dangerously loud output |
+
 ## Submission
 
 [Submission instructions TBD]
