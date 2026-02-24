@@ -35,6 +35,10 @@ Your patch must have at least **two distinct layers**. A layer is an independent
 
 Look at Patch 06 and Patch 07 from class for examples of multi-layer architecture. In Patch 06, Layer A is a cycle~ with phasor~ tremolo and layer B is a detuned drone -- two separate signal paths summed with `+~`. Your sculpture should follow the same principle: independent voices combined into one output.
 
+```{=typst}
+#pagebreak()
+```
+
 ## Suggestions for Exploration
 
 These are optional starting points, not requirements. Try whatever sounds interesting to you.
@@ -46,6 +50,14 @@ These are optional starting points, not requirements. Try whatever sounds intere
 - **Breakpoint function:** Send `line~` a sequence of target-time pairs (e.g., `0. 0, 1. 500, 0.3 200, 0. 1000`) to create a multi-segment shape -- a custom envelope that ramps through several levels instead of just fading in or out.
 
 
+## Submission
+
+[Submission instructions TBD]
+
+## Reference
+
+As you build your patch, explore the helpfiles for each object -- option-click (Mac) or alt-click (Windows) any object in Max to open its helpfile. The helpfiles include working examples you can learn from.
+
 ## Grading Rubric
 
 | Criterion | Excellent (A) | Good (B) | Satisfactory (C) | Incomplete (D/F) |
@@ -55,11 +67,3 @@ These are optional starting points, not requirements. Try whatever sounds intere
 | **Sound Design & Musicality (25%)** | Sound evolves over time with intentional movement -- engages a listener for 30+ seconds | Some evolution; a few parameters change but overall texture is mostly static | Produces sound but feels like a test patch rather than a composition | Static tone or uncontrolled noise |
 | **Patch Organization (15%)** | Neat layout with logical signal flow; easy to trace each voice from source to output | Mostly organized; a few crossed cables or unclear sections | Functional but difficult to follow | Tangled or incomprehensible layout |
 | **Safety & Output Chain (10%)** | Complete output chain (`live.gain~` and/or `clip~` before `dac~`); no risk of dangerous levels | Output chain present but missing one safety element | Sound reaches speakers but output chain is incomplete | No volume control; risk of dangerously loud output |
-
-## Submission
-
-[Submission instructions TBD]
-
-## Reference
-
-As you build your patch, explore the helpfiles for each object -- option-click (Mac) or alt-click (Windows) any object in Max to open its helpfile. The helpfiles include working examples you can learn from.
