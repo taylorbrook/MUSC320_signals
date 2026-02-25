@@ -23,7 +23,7 @@ git clone https://github.com/taylorbrook/MUSC320_signals.git
 - **Signal (MSP) versus Control Data (MAX):** Signals are continuous, high-sample-rate audio flow, while control data is  intermittent, event-based messages. 
 - **Signal flow** Signal source -> signal processing -> output
 - **Bridge objects:** sig~ connects the Max world to the MSP world. Snaphot~ can be used to sample a signal to connection the MSP world to the Max world.
-- **Amplitude matters:** Always scale signals before output using '*~', 'gain~' or 'live.gain~' objects just before the sending to speakers via the dac~. Full-amplitude signals, especially noise~ can be dangerously loud.
+- **Amplitude matters:** Always scale signals before output using *~, gain~ or live.gain~ objects just before the sending to speakers via the dac~. Full-amplitude signals, especially noise~ can be dangerously loud.
 - **The output chain:**  signal -> live.gain~ -> clip~ -> dac~.
 - **Audio/DSP must be on:** Toggle ezdac~ or check Audio Status before expecting sound.
 
