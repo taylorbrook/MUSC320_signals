@@ -35,10 +35,6 @@ Your patch must have at least **two distinct layers**. A layer is an independent
 
 Look at Patch 06 and Patch 07 from class for examples of multi-layer architecture. In Patch 06, Layer A is a cycle~ with phasor~ tremolo and layer B is a detuned drone -- two separate signal paths summed with `+~`. Your sculpture should follow the same principle: independent voices combined into one output.
 
-```{=typst}
-#pagebreak()
-```
-
 ## Suggestions for Exploration
 
 These are optional starting points, not requirements. Try whatever sounds interesting to you.
